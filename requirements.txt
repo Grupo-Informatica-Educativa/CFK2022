@@ -6,3 +6,4 @@ openpyxl
 streamlit-aggrid
 pyxlsb
 xlsxwriter
+protobuf~=3.19.0
