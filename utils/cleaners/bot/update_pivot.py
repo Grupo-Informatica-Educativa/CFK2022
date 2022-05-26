@@ -39,7 +39,35 @@ pivot=pivot.fillna(0)
 pivot['Fecha'] =pd.Timestamp.today()
 pivot['Fecha']=pivot['Fecha'].dt.strftime("%d-%m-%Y")
 
-archivo_pivot = ruta.parent.parent.parent/"data/InstrumentosCFK.xlsx"
+pivot['Estado']="En proceso"
+pivot.loc[(pivot["Encuesta estudiantes"]>20)&(pivot['Encuesta docentes']>10)&(pivot['Encuesta Planes de estudio']==1)&(pivot['Encuesta Líderes']==1)&(pivot['Encuesta Directivos']>1)&(pivot['Encuesta Equipos']==1),'Estado']='Completado'
+
+pivot2=pivot.copy()
+
+pivot2["Porcentaje Cumplimiento Estudiantes"]=(pivot2["Encuesta estudiantes"]/20)*100 #>20
+pivot2["Porcentaje Cumplimiento Docentes"]=(pivot2["Encuesta docentes"]/10)*100 #>10
+pivot2["Porcentaje Cumplimiento Directivos"]=(pivot2["Encuesta Directivos"]/2)*100 #>1
+pivot2["Porcentaje Cumplimiento Equipos"]=(pivot2["Encuesta Equipos"]/1)*100
+pivot2["Porcentaje Cumplimiento Planes de Área"]=(pivot2["Encuesta Planes de estudio"]/1)*100
+pivot2["Porcentaje Cumplimiento Líderes"]=(pivot2["Encuesta Líderes"]/1)*100
+
+new_names= ['Código IE',
+ 'Encuesta Directivos', 'Porcentaje Cumplimiento Directivos',
+ 'Encuesta Equipos',  'Porcentaje Cumplimiento Equipos',
+ 'Encuesta Líderes',  'Porcentaje Cumplimiento Líderes',
+ 'Encuesta Planes de estudio', 'Porcentaje Cumplimiento Planes de Área',
+ 'Encuesta docentes',  'Porcentaje Cumplimiento Docentes',
+ 'Encuesta estudiantes',  'Porcentaje Cumplimiento Estudiantes',
+ 'Estado']
+pivot2=pivot2.reindex(new_names,axis='columns')
+
+columnasporcentaje=pivot2.filter(regex='Porcentaje').columns
+pivot2.loc[:,columnasporcentaje]=(pivot2.loc[:,columnasporcentaje]).clip(0,100)
+pivot2['Porcentaje de completitud']=(pivot2['Porcentaje Cumplimiento Estudiantes']*(1/6))+(pivot2['Porcentaje Cumplimiento Equipos']*(1/6))+(pivot2['Porcentaje Cumplimiento Líderes']*(1/6))+(pivot2['Porcentaje Cumplimiento Docentes']*(1/6))+(pivot2['Porcentaje Cumplimiento Planes de Área']*(1/6))+(pivot2['Porcentaje Cumplimiento Directivos']*(1/6))
+
+archivo_pivot2 = ruta.parent.parent.parent/"data/descargables/Instrumentos_DetalleCFK.xlsx"
+archivo_pivot = ruta.parent.parent.parent/"data/descargables/InstrumentosCFK.xlsx"
+pivot2.to_excel(archivo_pivot2)
 pivot.to_excel(archivo_pivot)
 sys.stdout.close()                # ordinary file object
 sys.stdout = temp
