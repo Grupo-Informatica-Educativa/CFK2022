@@ -26,33 +26,51 @@ def to_excel(df):
     return processed_data
 
 @st.cache
-def read_database(name):
-    return pd.read_excel(name)
+def read_database(name, index_col=None):
+    return pd.read_excel(name, index_col=index_col)
 
 def app():
     st.title('Avance consolidación 2022')
 
-    tabla = pd.read_excel('data/InstrumentosCFK.xlsx', index_col=0)
+    tabla = read_database('data/descargables/InstrumentosCFK.xlsx', index_col=0)
     st.write('Fecha de actualización:',tabla.loc[0,'Fecha'])
-    tabla2= tabla.iloc[:,:-1]
-    gb = GridOptionsBuilder.from_dataframe(tabla2)
+    tabla2= tabla.drop(columns='Fecha')
+
+    detallada = read_database('data/descargables/Instrumentos_DetalleCFK.xlsx', index_col=0)
+
+    #ver_detalle = st.checkbox('Ver porcentajes de avance')
+    ver_detalle = False
+    if ver_detalle:
+        datos_mostrar = detallada
+
+
+    else:
+        datos_mostrar = tabla2
+
+    columnas = [(x,x[9:].capitalize()) for x in datos_mostrar.columns if "Encuesta" in x]
+    columnas = dict(columnas)
+
+    datos_mostrar = datos_mostrar.rename(columns=columnas)
+    gb = GridOptionsBuilder.from_dataframe(datos_mostrar)
     gb.configure_pagination(paginationAutoPageSize=True) #Add pagination
     gb.configure_side_bar() #Add a sidebar
     #gb.configure_selection('multiple', use_checkbox=True, groupSelectsChildren="Group checkbox select children") #Enable multi-row selection
     gridOptions = gb.build()
     grid_response = AgGrid(
-    tabla2,
+    datos_mostrar,
     gridOptions=gridOptions,
     data_return_mode='AS_INPUT',
     update_mode='MODEL_CHANGED',
-    fit_columns_on_grid_load=True,
+    fit_columns_on_grid_load=False,
     theme= 'streamlit', #Add theme color to the table
     enable_enterprise_modules=False,
     height=400,
     width='100%',
-    reload_data=True
+    reload_data=False
     )
-    df_xlsx = to_excel(tabla2)
+
+
+    df_xlsx = to_excel(datos_mostrar)
     st.download_button(
      label="Descargar Avance Consolidación",
      data=df_xlsx,
@@ -68,60 +86,3 @@ def app():
     * :white_check_mark: [Bases de datos](https://drive.google.com/drive/folders/10-vecqL2rtGRXkZ4H6xkI4DY1Z5wr7fw?usp=sharing)
     * :exclamation: [Registros eliminados](https://drive.google.com/drive/folders/1xaulGr1dAuJqx2AwtGRKCcRhm9jQZCUP?usp=sharing)
     ''')
-
-
-
-    # b_col1, b_col2, b_col3 = st.columns(3)
-    #
-    # with b_col1:
-
-    #     )
-    #     docentes = read_database('data/descargables/DocentesCFK.xlsx')
-    #     df_xlsx = to_excel(docentes)
-    #     st.download_button(
-    #      label="Descargar Base de datos docentes",
-    #      data=df_xlsx,
-    #      file_name='Docentes.xlsx',
-    #      mime='text/xlsx',key=0
-    #     )
-    #
-    # with b_col2:
-    #     estudiantes = read_database('data/descargables/EstudiantesCFK.xlsx')
-    #     df_xlsx = to_excel(estudiantes)
-    #     st.download_button(
-    #      label="Descargar Base de datos estudiantes",
-    #      data=df_xlsx,
-    #      file_name='Estudiantes.xlsx',
-    #      mime='text/xlsx', key=2
-    #     )
-    #     directivos = read_database('data/descargables/DirectivosCFK.xlsx')
-    #     df_xlsx = to_excel(directivos)
-    #     st.download_button(
-    #      label="Descargar Base de datos directivos",
-    #      data=df_xlsx,
-    #      file_name='Directivos.xlsx',
-    #      mime='text/xlsx', key=2
-    #     )
-    #
-    # with b_col3:
-    #     plan = read_database('data/descargables/PlanCFK.xlsx')
-    #     df_xlsx = to_excel(plan)
-    #     st.download_button(
-    #      label="Descargar Base de datos Plan de area",
-    #      data=df_xlsx,
-    #      file_name='Plan.xlsx',
-    #      mime='text/xlsx',key=3
-    #     )
-    #
-    #     plan = read_database('data/descargables/LiderCFK.xlsx')
-    #     df_xlsx = to_excel(plan)
-    #     st.download_button(
-    #      label="Descargar Base de datos Lider de area",
-    #      data=df_xlsx,
-    #      file_name='Lider.xlsx',
-    #      mime='text/xlsx',key=4
-    #     )
-
-
-
-    #st.download_button(label='Descargar Avance', export, file_name='Avance_Consolidación.csv',mime='text/csv')
