@@ -1,10 +1,10 @@
-634    26/05
-635    26/05
-636    26/05
-637    26/05
-638    26/05
+641    26/05
+642    26/05
+643    26/05
+644    26/05
+645    26/05
 Name: Fecha, dtype: object
-Cantidad de códigos IE después de filtrar mayor y menor  228
+Cantidad de códigos IE después de filtrar mayor y menor  229
 Códigos que se mantienen:  ['206' '235' '032' '211' '021' '198' '166' '092' '066' '004' '231' '151'
  '247' '007' '076' '183' '205' '186' '176' '129' '152' '062' '088' '098'
  '174' '236' '145' '185' '213' '144' '179' '055' '043' '228' '002' '107'
@@ -23,7 +23,8 @@ Códigos que se mantienen:  ['206' '235' '032' '211' '021' '198' '166' '092' '06
  '031' '017' '227' '140' '173' '168' '068' '209' '081' '239' '105' '196'
  '014' '060' '193' '159' '087' '201' '229' '079' '135' '102' '219' '194'
  '243' '249' '029' '047' '245' '242' '190' '012' '013' '191' '207' '018'
- '086' '182' '137' '073' '139' '147' '078' '082' '192' '134' '045' '025']
+ '086' '182' '137' '073' '139' '147' '078' '082' '192' '134' '045' '025'
+ '075']
 columnas:  ['Política de datos', 'ID', 'Edad', 'Sexo', 'Cabeza de hogar', 'Estado civil', 'Líder comunitario', 'Formación STEM', 'Rol en IE', '¿En su institución hay estudiantes con algún tipo de discapacidad?', 'Estudiantes  con discapacidad intelectual', 'Estudiantes con Discapacidad física o motora', 'Estudiantes con Discapacidad auditiva', 'Estudiantes con Discapacidad visual', 'Estudiantes con Discapacidad psicosocial', 'Estudiantes con Discapacidad múltiple', 'Estudiante con Trastornos Específicos del Aprendizaje', 'Considera importante enseñar el pensamiento computacional desde los primeros niveles educativos', 'Conceptos que deben incluirse en la clase de tecnología e informática', 'Comentarios autorreporte', '1.1 Los maestros de esta Institución educativa incorporan el pensamiento computacional en sus clases', '1.2 Los esfuerzos de los maestros para enseñar conceptos de pensamiento computacional son muy valorados en esta institución educativa', '1.3 Animo a los maestros de otras disciplinas a asistir a oportunidades de desarrollo profesional enfocadas en pensamiento computacional.', '1.4 Hay alguien en mi colegio que puede asesorar a los estudiantes sobre los caminos hacia una carrera en STEM', '1.5 En los próximos tres años, espero que la cantidad de oportunidades para aprender sobre pensamiento computacional en este colegio aumenten', '1.6 Es extremadamente importante que todos los estudiantes aprendan pensamiento computacional.', '1.7 Tener educación en pensamiento computacional mejoraría significativamente las futuras opciones de carrera para los estudiantes de mi escuela.', '1.8 El pensamiento computacional se utiliza en muchos tipos diferentes de trabajos.', '1.9 Ofrecer oportunidades para aprender de pensamiento computacional tiene el mismo valor o más para el éxito futuro de un estudiante que otros cursos obligatorios como matemáticas, biología, ciencias sociales, historia e inglés', '1.10 Conozco y puedo recomendar a mis estudiantes diferentes programas de formación relacionadas al pensamiento computacional y/o ciencias de la computación', '1.11 Los estudiantes reciben asesoría vocacional sobre alternativas u oportunidades relacionadas a carreras STEM', '1.12 Informo a mis estudiantes sobre oportunidades que existen para continuar los estudios en áreas relacionadas al pensamiento computacional y/o ciencias de la computación', 'Comentarios autodiagnóstico', 'Actividades que se promueven en esta institución educativa para apoyar la formación docente enfocadas en pensamiento computacional', '¿La rotación de los docentes de tecnología e informática influye sobre la calidad y el aprendizaje del área de los estudiantes en los diferentes grados?', 'Código IE', 'Tipo de ID', 'Número de estudiantes matriculados', 'Número de docentes que laboran', 'N registro', 'Instrumento', 'Fecha']
-Publicados  (540, 42)
+Publicados  (547, 42)
 Eliminados  (99, 42)
