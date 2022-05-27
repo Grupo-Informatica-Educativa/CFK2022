@@ -38,8 +38,9 @@ def app():
 
     detallada = read_database('data/descargables/Instrumentos_DetalleCFK.xlsx', index_col=0)
 
-    #ver_detalle = st.checkbox('Ver porcentajes de avance')
     ver_detalle = False
+    #ver_detalle = st.checkbox('Ver porcentajes de avance')
+
     if ver_detalle:
         datos_mostrar = detallada
 
@@ -51,22 +52,31 @@ def app():
     columnas = dict(columnas)
 
     datos_mostrar = datos_mostrar.rename(columns=columnas)
+
     gb = GridOptionsBuilder.from_dataframe(datos_mostrar)
-    gb.configure_pagination(paginationAutoPageSize=True) #Add pagination
-    gb.configure_side_bar() #Add a sidebar
-    #gb.configure_selection('multiple', use_checkbox=True, groupSelectsChildren="Group checkbox select children") #Enable multi-row selection
+    gb.configure_pagination(paginationAutoPageSize=False,paginationPageSize=20) #Add pagination
+    gb.configure_columns()
+    gb.configure_side_bar() #Add a sidebar #gb.configure_selection('multiple', use_checkbox=True, groupSelectsChildren="Group checkbox select children") #Enable multi-row selection
+    gb.configure_auto_height(autoHeight=False)
     gridOptions = gb.build()
+    #st.write(gridOptions)
+    gridOptions["defaultColDef"]['skipHeaderOnAutoSize'] = True
+    gridOptions["defaultColDef"]['wrapText'] = True
+    gridOptions["columnDefs"][0]['pinned'] = True
+    #st.write(gridOptions["columnDefs"][0].keys())
+
+
+
     grid_response = AgGrid(
     datos_mostrar,
     gridOptions=gridOptions,
     data_return_mode='AS_INPUT',
-    update_mode='MODEL_CHANGED',
+    update_mode='NO_UPDATE',
     fit_columns_on_grid_load=False,
     theme= 'streamlit', #Add theme color to the table
     enable_enterprise_modules=False,
-    height=400,
-    width='100%',
-    reload_data=False
+    reload_data=False,
+    height=630
     )
 
 
