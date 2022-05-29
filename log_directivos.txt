@@ -1,8 +1,8 @@
-653    27/05
-654    27/05
 655    27/05
 656    27/05
 657    27/05
+658    29/05
+659    29/05
 Name: Fecha, dtype: object
 Cantidad de códigos IE después de filtrar mayor y menor  230
 Códigos que se mantienen:  ['206' '235' '032' '211' '021' '198' '166' '092' '066' '004' '231' '151'
@@ -26,5 +26,5 @@ Códigos que se mantienen:  ['206' '235' '032' '211' '021' '198' '166' '092' '06
  '086' '182' '137' '073' '139' '147' '078' '082' '192' '134' '045' '025'
  '075' '038']
 columnas:  ['Política de datos', 'ID', 'Edad', 'Sexo', 'Cabeza de hogar', 'Estado civil', 'Líder comunitario', 'Formación STEM', 'Rol en IE', '¿En su institución hay estudiantes con algún tipo de discapacidad?', 'Estudiantes  con discapacidad intelectual', 'Estudiantes con Discapacidad física o motora', 'Estudiantes con Discapacidad auditiva', 'Estudiantes con Discapacidad visual', 'Estudiantes con Discapacidad psicosocial', 'Estudiantes con Discapacidad múltiple', 'Estudiante con Trastornos Específicos del Aprendizaje', 'Considera importante enseñar el pensamiento computacional desde los primeros niveles educativos', 'Conceptos que deben incluirse en la clase de tecnología e informática', 'Comentarios autorreporte', '1.1 Los maestros de esta Institución educativa incorporan el pensamiento computacional en sus clases', '1.2 Los esfuerzos de los maestros para enseñar conceptos de pensamiento computacional son muy valorados en esta institución educativa', '1.3 Animo a los maestros de otras disciplinas a asistir a oportunidades de desarrollo profesional enfocadas en pensamiento computacional.', '1.4 Hay alguien en mi colegio que puede asesorar a los estudiantes sobre los caminos hacia una carrera en STEM', '1.5 En los próximos tres años, espero que la cantidad de oportunidades para aprender sobre pensamiento computacional en este colegio aumenten', '1.6 Es extremadamente importante que todos los estudiantes aprendan pensamiento computacional.', '1.7 Tener educación en pensamiento computacional mejoraría significativamente las futuras opciones de carrera para los estudiantes de mi escuela.', '1.8 El pensamiento computacional se utiliza en muchos tipos diferentes de trabajos.', '1.9 Ofrecer oportunidades para aprender de pensamiento computacional tiene el mismo valor o más para el éxito futuro de un estudiante que otros cursos obligatorios como matemáticas, biología, ciencias sociales, historia e inglés', '1.10 Conozco y puedo recomendar a mis estudiantes diferentes programas de formación relacionadas al pensamiento computacional y/o ciencias de la computación', '1.11 Los estudiantes reciben asesoría vocacional sobre alternativas u oportunidades relacionadas a carreras STEM', '1.12 Informo a mis estudiantes sobre oportunidades que existen para continuar los estudios en áreas relacionadas al pensamiento computacional y/o ciencias de la computación', 'Comentarios autodiagnóstico', 'Actividades que se promueven en esta institución educativa para apoyar la formación docente enfocadas en pensamiento computacional', '¿La rotación de los docentes de tecnología e informática influye sobre la calidad y el aprendizaje del área de los estudiantes en los diferentes grados?', 'Código IE', 'Tipo de ID', 'Número de estudiantes matriculados', 'Número de docentes que laboran', 'N registro', 'Instrumento', 'Fecha']
-Publicados  (559, 42)
+Publicados  (561, 42)
 Eliminados  (99, 42)
