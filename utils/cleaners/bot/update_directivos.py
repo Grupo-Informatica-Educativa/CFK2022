@@ -29,16 +29,18 @@ with open(ruta/'columnas_directivos.pkl', 'rb') as handle:
 df0 = df0.rename(columns=dict_col_est)
 df0 = df0.drop(columns=df0.filter(regex=r'eliminar').columns)
 
+
+df0['Timestamp'] = pd.to_datetime(df0['Timestamp'])
+
+df0['Fecha'] = df0.Timestamp.dt.strftime('%d/%m')
+print(df0['Fecha'][-5:])
+
 df0['N registro']=df0.index
 df4=df0.copy()
 df4['Instrumento']="Encuesta Directivos"
 df4=df4.dropna(subset=['Código IE'],inplace=False)
 df4=df4.dropna(subset=['ID'],inplace=False)
 
-df4['Timestamp'] = pd.to_datetime(df4['Timestamp'])
-df4 = df4[df4.Timestamp>'2022-04-14']
-df4['Fecha'] = df4.Timestamp.dt.strftime('%d/%m')
-print(df4['Fecha'][-5:])
 
 df4 = df4.drop(columns='Timestamp')
 
