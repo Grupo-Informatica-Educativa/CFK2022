@@ -37,6 +37,8 @@ print(df0['Fecha'][-5:])
 df0['N registro']=df0.index
 df4=df0.copy()
 df4['Instrumento']="Encuesta Directivos"
+df4 = df4[df4['N registro']>2]
+
 df4=df4.dropna(subset=['Código IE'],inplace=False)
 df4=df4.dropna(subset=['ID'],inplace=False)
 df4 = df4.drop(columns='Timestamp')
