@@ -12,16 +12,21 @@ config = plots.get_config()
 
 def app():
     st.title('Marco de consolidación institucional 2022')
+    st.write("Nota temporal: En la leyenda de la gráfica 1000 corresponde al promedio y 2000 a la moda de todos los colegios evaluados")
     marco = pd.read_excel('data/Marco acumulativo.xlsx')
+    marco['Color IE'] = marco['Código IE'].astype(str).str.replace('Promedio','1000').str.replace('Moda','2000')
+    marco['Color IE'] = marco['Color IE'].astype(float).astype(int)
 
-    IE = st.multiselect('Seleccione las instituciones que desea ver: ', list(marco['Código IE'].unique()))
-
-    marco = marco.melt(id_vars='Código IE', var_name='Dim', value_name='Nivel')
-    marco['Nivel'] = pd.Categorical(marco['Nivel'], categories=['1A', '1B', '2A', '2B', '3', '4', '5'], ordered=True)
+    IE = st.multiselect('Seleccione las instituciones que desea ver: ', list(marco['Código IE'].unique()), default=['Moda','Promedio'])
+    IE = [str(x) for x in IE]
+    marco_m = marco.melt(id_vars=['Código IE', 'Color IE'], var_name='Dim', value_name='Nivel')
+    marco_m['Código IE'] = marco_m['Código IE'].astype(str)
+    marco_m['Nivel'] = pd.Categorical(marco_m['Nivel'], categories=['1A', '1B', '2A', '2B', '3', '4', '5'], ordered=True)
     dimensiones_dict = dict(zip(["Dimensión "+str(x) for x in range(1,9)],
     ['Liderazgo','Currículo', 'Enseñanza',
     'Dllo profesional','EDI','Ed.Terciaria',
     'Impacto','Género']))
+
     descripciones={'Dimensión 7': "Logros<br>en cuanto a aprendizajes<br>de todos los estudiantes.",
     'Dimensión 8':"La IE<br>ofrece igualdad<br>de oportunidades a<br>niños y niñas.",
     'Dimensión 2':"Un plan<br>de estudios de TeI que<br>incluya pensamiento<br>computacional o ciencias<br>de la computación",
@@ -31,21 +36,23 @@ def app():
     'Dimensión 4': "Medida en que<br> los y las docentes<br>tienen acceso a formación<br>profesional docente en PC",
     "Dimensión 6": "Medida en que<br>la IE hace visibles las<br>oportunidades laborales STEM",
     }
-    marco['Dimensión'] = marco['Dim'].replace(dimensiones_dict)
-    marco['Descripción'] = marco['Dim'].replace(descripciones)
+    marco_m['Dimensión'] = marco_m['Dim'].replace(dimensiones_dict)
+    marco_m['Descripción'] = marco_m['Dim'].replace(descripciones)
     if len(IE)>0:
+
         with st.container():
             separar = st.checkbox('Ver en gráficas separadas', value=False)
-            pl_marco = marco[marco['Código IE'].isin(list(IE))]
+            pl_marco = marco_m[marco_m['Código IE'].isin(list(IE))]
+
             fig = px.line_polar(
             pl_marco, r="Nivel", theta="Dimensión",
-            color="Código IE", line_close=True,
+            color="Color IE", line_close=True,
             category_orders={'Nivel':['1A', '1B', '2A', '2B', '3', '4', '5'],
             'Dim':["Dimensión "+str(x) for x in range(1,9)],
             'Dimensión': ['Liderazgo','Currículo','Enseñanza','Dllo profesional',
             'EDI','Ed.Terciaria','Impacto', 'Género']},
             hover_name='Dim',
-            hover_data=['Descripción'],
+            hover_data={'Color IE': False,'Código IE':True,'Nivel':True, 'Descripción':True},
             range_r=['-1','6'], markers=True, render_mode='svg',
             color_discrete_sequence=px.colors.qualitative.Set2)
             if not separar:
@@ -85,7 +92,7 @@ def app():
                                 "name": str(ie),
                                 "marker": {
                                     **fig.to_dict()["data"][0]["marker"],
-                                    "color": pl_marcot["Código IE"]},
+                                    "color": pl_marcot["Color IE"]},
                                 },
                             },
                             fill = "toself"
