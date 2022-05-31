@@ -27,21 +27,17 @@ with open(ruta/'columnas_docentes.pkl', 'rb') as handle:
 
 df0 = df0.rename(columns=dict_col_est)
 df0 = df0.drop(columns=df0.filter(regex=r'eliminar').columns)
+df0['Timestamp'] = pd.to_datetime(df0['Timestamp'])
 
+df0['Fecha'] = df0.Timestamp.dt.strftime('%d/%m')
+print(df0['Fecha'][-5:])
 
 df0['N registro']=df0.index
 df3=df0.copy()
 df3['Instrumento']="Encuesta docentes"
 
-
-
-df3['Timestamp'] = pd.to_datetime(df3['Timestamp'])
-df3 = df3[df3.Timestamp>'2022-04-14']
-df3['Fecha'] = df3.Timestamp.dt.strftime('%d/%m')
-print(df3['Fecha'][-5:])
-
 df3 = df3.drop(columns='Timestamp')
-
+df3 = df3[df3['N registro']>2]
 
 df3['Implementa fichas'] = df3['Implementa fichas'].fillna("No")
 df3[df3.filter(regex='^1.*').columns] = df3[df3.filter(regex='^1.*').columns].fillna("Totalmente en Desacuerdo")
