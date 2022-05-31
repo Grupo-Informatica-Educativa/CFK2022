@@ -34,4 +34,4 @@ columnas:  Index(['Email Address', 'Código IE',
        'N registro', 'Fecha', 'Instrumento', 'ID'],
       dtype='object')
 Publicados  (241, 32)
-Eliminados  (15, 32)
+Eliminados  (16, 32)
