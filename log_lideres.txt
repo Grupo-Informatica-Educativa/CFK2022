@@ -1,8 +1,8 @@
-267    26/05
 268    26/05
 269    26/05
 270    26/05
 271    31/05
+272    01/06
 Name: Fecha, dtype: object
 Códigos líderes después de filtrar mayor menor:  ['001' '033' '004' '129' '007' '231' '092' '063' '166' '055' '213' '211'
  '151' '186' '107' '152' '066' '206' '123' '176' '235' '185' '002' '226'
@@ -74,5 +74,5 @@ Index(['Código IE',
        '4.11 Las directivas y el Consejo Directivo participan y evalúan la implementación de sistemas eficientes del plan de estudios del área.]',
        'Comentarios P4', 'N registro', 'Fecha', 'Instrumento'],
       dtype='object')
-Publicados  (264, 51)
+Publicados  (265, 51)
 Eliminados  (8, 51)
