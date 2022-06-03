@@ -1,8 +1,8 @@
-257    31/05
 258    31/05
 259    01/06
 260    01/06
 261    03/06
+262    03/06
 Name: Fecha, dtype: object
 columnas:  Index(['Email Address', 'Código IE',
        '¿Cuántas aulas de informática tiene la sede?',
@@ -33,5 +33,5 @@ columnas:  Index(['Email Address', 'Código IE',
        'Amplíe sus comentarios sobre los elementos desconectados disponibles en la sede.',
        'N registro', 'Fecha', 'Instrumento', 'ID'],
       dtype='object')
-Publicados  (246, 32)
+Publicados  (247, 32)
 Eliminados  (16, 32)
