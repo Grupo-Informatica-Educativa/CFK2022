@@ -2,9 +2,9 @@
 Error!!  LideresCFK.xlsx
 {'ID'}
 Error!!  Instrumentos_DetalleCFK.xlsx
-{'Instrumento', 'ID', 'N registro'}
+{'Instrumento', 'N registro', 'ID'}
 Error!!  InstrumentosCFK.xlsx
-{'Instrumento', 'ID', 'N registro'}
+{'Instrumento', 'N registro', 'ID'}
   N registro       Instrumento Código IE ID
 0          1  Encuesta Equipos         4  1
 1          2  Encuesta Equipos       129  2
