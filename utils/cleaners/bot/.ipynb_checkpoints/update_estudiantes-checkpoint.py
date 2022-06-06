@@ -37,8 +37,6 @@ print(df0['Fecha'][:5])
 
 df1= df0.copy()
 
-
-
 diccionariogrados={'Noveno':"09", 'Octavo':"08", 'Sexto':"06", 'Décimo':"10", 'Séptimo':"07", 'Once':"11", 'Quinto':"05"}
 
 df1["Grado"]=df1["Grado"].replace(diccionariogrados)
@@ -51,17 +49,48 @@ df1.loc[(df1['N registro'].isin(range(9022,9123)))&(df1['Código IE']==105),'Có
 
 df1 = df1.drop(columns='Timestamp')
 
-
 df1.loc[(df1['N registro'].isin(range(1928,1987)))&(df1['Código IE']==6),'Código IE'] = None
-df1.loc[(df1.index.isin(range(10,340)))&(df1['Código IE']==247),'Código IE'] = None
-df1.loc[(df1.index.isin(range(3369,4505)))&(df1['Código IE']==248),'Código IE'] = None
-df1.loc[(df1.index.isin(range(1928,1987)))&(df1['Código IE']==6),'Código IE'] = None
+df1.loc[(df1['N registro'].isin(range(10,340)))&(df1['Código IE']==247),'Código IE'] = None
+df1.loc[(df1['N registro'].isin(range(3369,4505)))&(df1['Código IE']==248),'Código IE'] = None
+df1.loc[(df1['N registro'].isin(range(1928,1987)))&(df1['Código IE']==6),'Código IE'] = None
 
 df1=df1.dropna(subset=["Código IE"], inplace=False)
-print('Colegio 250, 3 ', len(df1[df1['Código IE']==250]))
+
+df1.loc[(df1['N registro']==234),'Número de lista'] = 27
+df1.loc[(df1['N registro']==672),'Número de lista'] = 6
+df1.loc[(df1['N registro']==1701),'Número de lista'] = 16
+
+df1.loc[(df1['N registro']==2270),'Número de lista'] = 30
+df1.loc[(df1['N registro']==5497),'Número de lista'] = 13
+df1.loc[(df1['N registro']==13853),'Número de lista'] = 28
+df1.loc[(df1['N registro']==14205),'Número de lista'] = 11
+df1.loc[(df1['N registro']==14453),'Número de lista'] = 2
+df1.loc[(df1['N registro']==14533),'Número de lista'] = 3
+df1.loc[(df1['N registro']==14614),'Número de lista'] = 10
+df1.loc[(df1['N registro']==15382),'Número de lista'] = 27
+df1.loc[(df1['N registro']==16279),'Número de lista'] = 31
+df1.loc[(df1['N registro']==14614),'Número de lista'] = 10
+df1.loc[(df1['N registro']==15382),'Número de lista'] = 27
+df1.loc[(df1['N registro']==16279),'Número de lista'] = 31
+df1.loc[(df1['N registro']==16466),'Número de lista'] = 17
+df1.loc[(df1['N registro']==16628),'Número de lista'] = 15
+df1.loc[(df1['N registro']==16701),'Número de lista'] = 27
+df1.loc[(df1['N registro']==16736),'Número de lista'] = 31
+df1.loc[(df1['N registro']==16749),'Número de lista'] = 14
+df1.loc[(df1['N registro']==18501),'Número de lista'] = 28
+
+df1.loc[(df1['N registro']==261),'Grupo'] = 5
+df1.loc[(df1['N registro']==2406),'Grupo'] = 6
+df1.loc[(df1['N registro']==13600),'Grupo']= 2
+df1.loc[(df1['N registro']==13612),'Grupo'] = 2
+df1.loc[(df1['N registro']==13630),'Grupo'] = 7
+df1.loc[(df1['N registro']==13638),'Grupo'] = 7
+df1.loc[(df1['N registro']==13642),'Grupo'] = 7
+df1.loc[(df1['N registro']==14471),'Grupo'] = 7
+df1.loc[(df1['N registro']==14722),'Grupo'] = 11
+
 
 df1=df1.dropna(subset=["Grupo"], inplace=False) #para eliminar filas con valores nan
-print('Colegio 250, 4 ', len(df1[df1['Código IE']==250]))
 df1['Grupo']=df1['Grupo'].astype(str) #volver todo una cadena
 print(df1.Grupo.unique())
 

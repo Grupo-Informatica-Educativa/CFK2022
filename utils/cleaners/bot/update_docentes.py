@@ -37,19 +37,18 @@ df3=df0.copy()
 df3['Instrumento']="Encuesta docentes"
 
 df3 = df3.drop(columns='Timestamp')
-df3 = df3[df3['N registro']>2]
 
 df3['Implementa fichas'] = df3['Implementa fichas'].fillna("No")
 df3[df3.filter(regex='^1.*').columns] = df3[df3.filter(regex='^1.*').columns].fillna("Totalmente en Desacuerdo")
 df3[df3.filter(regex='^2.*').columns] = df3[df3.filter(regex='^2.*').columns].fillna("Totalmente en Desacuerdo")
 df3[df3.filter(regex='^Comentarios*').columns] = df3[df3.filter(regex='^Comentarios*').columns].fillna("")
 #%%
-df3.loc[(df3.index.isin(range(170,1799)))&(df3['Código IE']==247),'Código IE'] = None
+df3.loc[(df3['N registro'].isin(range(170,1799)))&(df3['Código IE']==247),'Código IE'] = None
 
+df3=df3.drop([4361,4367,4440,4442,4446,4449,4460,4465,5101],axis=0)
 df3=df3.dropna(subset=["Código IE"], inplace=False) #se borran 37 datos, quedan 1424
 
 diccionariodocentes={'Nueva Esperanza La Palma ':150}
-
 
 df3["Código IE"]=df3["Código IE"].replace(diccionariodocentes)
 df3["Código IE"]=df3["Código IE"].astype(str)
