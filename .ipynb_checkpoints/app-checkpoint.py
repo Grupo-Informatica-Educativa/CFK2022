@@ -3,10 +3,10 @@ import streamlit as st
 
 
 # Import each page file
-from apps import inicio
-from apps import dashboard_cons
-from apps import marco
-from apps import Avanceconsolidacion
+from pages import inicio
+from pages import dashboard_cons
+from pages import marco
+from pages import Avanceconsolidacion
 
 
 PAGES = {

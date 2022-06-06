@@ -4,7 +4,7 @@ import plotly.express as px
 import utils.plots as plots
 import json
 
-DATA_PATH = "data/pages/caracterizacion"
+DATA_PATH = "data/c_pages/caracterizacion"
 config = plots.get_config()
 
 

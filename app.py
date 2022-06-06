@@ -1,32 +1,24 @@
 # Import streamlit
 import streamlit as st
 
-
-# Import each page file
-from apps import inicio
-from apps import dashboard_cons
-from apps import marco
-from apps import Avanceconsolidacion
-
-
-PAGES = {
-    "Inicio": inicio,
-    "Avance Consolidación": Avanceconsolidacion,
-    "Caracterización Inicial": dashboard_cons,
-    "Marco de consolidación": marco
-}
-
-
 def main():
     st.set_page_config(
     layout="wide",
     page_title="CFK2022",
     page_icon="🤖")
     st.sidebar.title("CFK 2022")
-    pag = st.sidebar.radio("Página: ", list(PAGES.keys()))
 
-    PAGES[pag].app()
+    st.title('Coding For Kids 2022')
 
+    st.write("Resumen del Proyecto")
+    c1 = st.container()
+    c1.title('Formación')
+    c2 = st.container()
+    c2.title('Colegios CFK')
+    c3 = st.container()
+    c3.title('Comunidad de aprendizaje')
+    c4 = st.container()
+    c4.title('Greentic')
 
-if __name__ == "__main__":
+if __name__=="__main__":
     main()

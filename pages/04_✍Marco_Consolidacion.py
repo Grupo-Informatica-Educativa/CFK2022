@@ -135,3 +135,5 @@ def app():
                   )))
             if separar:
                 st.plotly_chart(spfig, use_container_width=False)
+if __name__=="__main__":
+    app()

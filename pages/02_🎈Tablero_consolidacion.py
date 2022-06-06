@@ -7,7 +7,7 @@ from utils.read_data import read_data
 
 #pio.templates.default = "plotly_white"
 
-import apps.pages.caracterizacion.docente as page_docente
+import pages.c_pages.caracterizacion.docente as page_docente
 
 
 config = plots.get_config()
@@ -34,3 +34,5 @@ def get_data(name):
     if (name == 'Docentes'):
         return read_data('doc_sociodemo')
 
+if __name__ == "__main__":
+    app()
