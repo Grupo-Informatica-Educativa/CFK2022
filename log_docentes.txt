@@ -1,28 +1,27 @@
-6881    03/06
-6882    03/06
 6883    03/06
 6884    05/06
 6885    05/06
+6886    06/06
+6887    06/06
 Name: Fecha, dtype: object
-Códigos IE después de reemplazo:  ['206' '231' '176' '129' '166' '55' '151' '176109000311' '211' '92'
- '166001006008' '21' '107' '76' '198' '199' '7' '183' '67' '66' '152'
- '186' '5' '128' '218' '8' '205' '179' '185' '213' '88' '203' '2' '159'
- '212' '123' '72' '46' '98' '1' '52' '54' '57' '110' '150' '64' '189' '62'
- '130' '32' '47' '252' '226' '93' '227' '235' '35' '20' '167' '121' '10'
- '27' '142' '43' '39' '178' '6' '63' '26' '96' '30' '99' '103' '74' '153'
- '165' '53' '210' '71' '119' '13' '238' '229' '230' '59' '109' '215' '90'
- '148' '237' '240' '187' '69' '145' '208' '70' '184' '168' '163' '105'
- '97' '114' '89' '180' '34' '132' '29' '214' '01' '162' '51' '48' '3'
- '177' '201' '244' '241' '49' '242' '255' '22' '100' '232' '56' '224' '94'
- '133' '217' '122' '116' '228' '36' '288' '14' '73' '68' '181' '61' '75'
- '169' '11' '23' '4' '15' '250' '127' '95' '243' '45' '112' '195' '117'
- '131' '79' '77' '149' '155' '115' '111' '12' '233' '41' '91' '154' '204'
- '50' '223' '197' '216' '188' '174' '19' '161' '251' '9' '120' '113' '221'
- '0' '191' '83' '65' '42' '28' '146' '31' '171' '200' '141' '220' '118'
- '246' '225' '24' '193' '125' '44' '38' '16' '190' '160' '236' '136' '126'
- '58' '80' '101' '108' '222' '82' '172' '156' '157' '182' '173' '170'
- '209' '245' '104' '219' '138' '164' '196' '37' '247' '140' '175' '257'
- '25' '106' '239' '207' '40' '158' '249' '17' '259' '102' '124' '194'
- '135' '60' '18' '137' '85' '144' '78' '139' '147' '248' '134' '87' '33'
- '202' '86' '81' '84']
-Columnas:  ['Política de datos', 'Código IE', 'Tipo ID', 'ID', 'Email', 'Edad', 'Sexo', 'Cabeza de hogar', 'Estado civil', 'Líder comunitario', 'Formado CFK', 'Implementa fichas', 'Formado tecnología e informática', '¿Cuáles de las siguientes áreas enseña y en qué grado? [Ciencias naturales y educación ambiental.]', '¿Cuáles de las siguientes áreas enseña y en qué grado? [Ciencias sociales, historia, geografía, constitución política y democracia.]', '¿Cuáles de las siguientes áreas enseña y en qué grado? [Educación artística.]', '¿Cuáles de las siguientes áreas enseña y en qué grado? [Educación ética y en valores humanos.]', '¿Cuáles de las siguientes áreas enseña y en qué grado? [Educación física, recreación y deportes.]', '¿Cuáles de las siguientes áreas enseña y en qué grado? [Educación religiosa.]', '¿Cuáles de las siguientes áreas enseña y en qué grado? [Humanidades, lengua castellana e idiomas extranjeros.]', '¿Cuáles de las siguientes áreas enseña y en qué grado? [Matemáticas.]', '¿Cuáles de las siguientes áreas enseña y en qué grado? [Tecnología e informática.]', '¿Cuáles de las siguientes áreas enseña y en qué grado? [Otro]', 'Enseña STEM', 'Formado STEM', 'Considera importante enseñar el pensamiento computacional desde los primeros niveles educativos', '1.1 Siento que puedo aplicar las prácticas y habilidades del pensamiento computacional a mi trabajo', '1.2 Siento que puedo definir el pensamiento computacional', '1.3 Siento que puedo describir las prácticas y habilidades que componen el pensamiento computacional a mis estudiantes', '1.4 Siento que puedo aplicar las prácticas y habilidades del pensamiento computacional a mi vida diaria', '2.1 Creo que tengo las habilidades para desarrollar el pensamiento computacional en mis estudiantes', '2.2 Siento que puedo enseñar fácilmente sobre nuevas prácticas computacionales', '2.3 Siento que puedo diseñar una clase que desarrolle el pensamiento computacional en los estudiantes', '2.4 Siento que puedo aplicar mis habilidades en pensamiento computacional para ayudar a los estudiantes a perseguir sus intereses individuales', '2.5 Siento que puedo evaluar la idoneidad de una estrategia pedagógica para desarrollar pensamiento computacional', '3.1 El colegio ofrece espacios adicionales para fomentar el pensamiento computacional', '3.2 En la programación anual del colegio existen actividades asociadas al pensamiento computacional', '3.3 Cuando he intentado enseñar pensamiento computacional me he encontrado con obstáculos para gestionar espacios y materiales en el colegio.', '3.4 Recibo apoyo del colegio cuando propongo nuevas ideas y temáticas afines al pensamiento computacional', '3.5 Siento que por más que lo he intentado mis esfuerzos por incluir pensamiento computacional en las clases no han sido efectivos por la rigidez del plan de estudio', '3.6 Los directivos incentivan la implementación de nuevas prácticas pedagógicas sobre pensamiento computacional en el aula', '3.7 Puedo incluir espacios en mis clases para implementar actividades sobre el pensamiento computacional', '3.8 Me siento frustrado porque la programación de las clases y compromisos institucionales no me permite incluir actividades de pensamiento computacional', '3.9 Tener educación en pensamiento computacional mejoraría significativamente las futuras opciones de ocupación para los estudiantes de mi escuela.', '4.1 Creo que sé cómo resolver los problemas técnicos cuando fallan las TIC', '4.2 Siento que puedo aprender sobre nuevas tecnologías fácilmente', '4.3 Creo que sé cómo usar las TIC con los estudiantes en clase', '5.1 Me apoyo en mis colegas para resolver problemas sobre cómo trabajar algún tema', '5.2 Puedo hablar con otros docentes sobre el diseño de cursos', '5.3 Siento que tengo apoyo de otros docentes para el diseño de mis cursos', '5.4 Siento que no tengo con quién conversar sobre el diseño de mis cursos', '6.1 Actividades desconectadas', '6.2 Usa-Modifica-Crea', '6.3 Clase magistral', '6.4 Programación en pares', '6.5 Lectura del código', '6.6 Le explicaría la respuesta correcta', '6.7 Le sugeriría ir paso a paso por el programa simulando su ejecución', '6.8 Le diría que revise sus notas', '6.9 Le sugeriría que revise las memorias colectivas', '7.1 Le sugeriría volver a leer el problema', '7.2 Le sugeriría intentar con varios valores para evaluar el programa', '7.3 Le explicaría el problema nuevamente', 'Comentarios P1-7', 'Un algoritmo es:', '¿Para qué sirven los algoritmos?', 'Un bucle es:', '¿Cuál es el error conceptual de Tim?', '¿Cuál es el error conceptual de Ana?', 'Comentarios Conocimientos', '¿Cuáles de las siguientes estrategias usted ha usado en sus clases?', '8.1 Es preferible que las mujeres enseñen ciencias sociales y los hombres ciencias exactas.', '8.2 Es normal que la mayoría de ingenieros mecánicos sean varones porque los hombres son mejores para los números.', '8.3 Por su esencia una mujer tiene mejor desempeño en un proyecto de alto impacto social que en un proyecto de robótica industrial.', '8.4 Los hombres son mejores para la tecnología que las mujeres.', '8.5 Las mujeres tienen mayores habilidades para proyectos sociales que tecnológicos.', '8.6 Los grandes aportes en la computación han sido hechos por hombres.', '8.7 Que la mayoría de mujeres no opte por áreas exactas es simplemente una cuestión de preferencias.', '8.8 Que la mayoría de personas en artes y humanidades sean mujeres es muestra de su sensibilidad.', '8.9 Es natural que los hombres sean buenos para los números y las mujeres para las letras.', '8.10 Los hombres son muy ágiles tomando decisiones importantes.', '8.11 Las niñas son más ordenadas que los niños.', '8.12 Muchas mujeres se caracterizan por una pureza que pocos hombres poseen.', '8.13 Las mujeres deben ser queridas y protegidas por los hombres.', '8.14 Todo hombre debe tener una mujer a quien amar.', '8.15 El hombre está incompleto sin la mujer.', '8.16 Las mujeres en comparación con los hombres, tienden a tener un sentido más refinado de la cultura y el buen gusto.', 'Comentarios género', 'Fecha', 'N registro', 'Instrumento']
+Códigos IE después de reemplazo:  ['206' '231' '176' '129' '166' '055' '151' '211' '092' '021' '107' '076'
+ '198' '199' '007' '183' '067' '066' '152' '186' '005' '128' '218' '008'
+ '205' '179' '185' '213' '088' '203' '002' '159' '212' '123' '072' '046'
+ '098' '001' '052' '054' '057' '110' '150' '064' '189' '062' '130' '032'
+ '047' '252' '226' '093' '227' '235' '035' '020' '167' '121' '010' '027'
+ '142' '043' '039' '178' '006' '063' '026' '096' '030' '099' '103' '074'
+ '153' '165' '053' '210' '071' '119' '013' '238' '229' '230' '059' '109'
+ '215' '090' '148' '237' '240' '187' '069' '145' '208' '070' '184' '168'
+ '163' '105' '097' '114' '089' '180' '034' '132' '029' '214' '162' '051'
+ '048' '003' '177' '201' '244' '241' '049' '242' '022' '100' '232' '056'
+ '224' '094' '133' '217' '122' '116' '228' '036' '014' '073' '068' '181'
+ '061' '075' '169' '011' '023' '004' '015' '250' '127' '095' '243' '045'
+ '112' '195' '117' '131' '079' '077' '149' '155' '115' '111' '012' '233'
+ '041' '091' '154' '204' '050' '223' '197' '216' '188' '174' '019' '161'
+ '251' '009' '120' '113' '221' '191' '083' '065' '042' '028' '146' '031'
+ '171' '200' '141' '220' '118' '246' '225' '024' '193' '125' '044' '038'
+ '016' '190' '160' '236' '136' '126' '058' '080' '101' '108' '222' '082'
+ '172' '156' '157' '182' '173' '170' '209' '245' '104' '219' '138' '164'
+ '196' '037' '247' '140' '175' '025' '106' '239' '207' '040' '158' '249'
+ '017' '102' '124' '194' '135' '060' '018' '137' '085' '144' '078' '139'
+ '147' '248' '134' '087' '033' '202' '086' '081' '084']

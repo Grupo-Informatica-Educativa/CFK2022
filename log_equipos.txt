@@ -1,37 +1,8 @@
-258    31/05
 259    01/06
 260    01/06
 261    03/06
 262    03/06
+263    06/06
 Name: Fecha, dtype: object
-columnas:  Index(['Email Address', 'Código IE',
-       '¿Cuántas aulas de informática tiene la sede?',
-       'Además de los equipos de cómputo en aulas de informática, ¿hay computadores en las aulas de clase?',
-       '¿Cuántas de las aulas de clase, diferentes al aula de informática, cuentan con al menos un computador?',
-       '¿Hay algún otro tipo de dispositivos en las aulas de clase? Marque todas las opciones que apliquen',
-       '¿Hay algún tipo de infraestructura de telecomunicaciones? Marque todas las opciones que apliquen',
-       'Agregue cualquier comentario u observación adicional que tenga sobre las preguntas anteriores',
-       '¿Cuántos computadores portátiles y/o de escritorio hay, en total, en las aulas de informática?',
-       '¿Cuántos de los computadores portátiles y/o de escritorio son funcionales?',
-       '¿Cuántos de estos computadores tienen instalado el MakeCode?',
-       '¿Tienen acceso a internet los computadores portátiles y/o de escritorio de la sala?',
-       '¿Qué sistema operativo tienen instalado los equipos portátiles y/o de escritorio de la sala?',
-       '¿Cuántos de los equipos portátiles y/o de escritorio tienen instalada la aplicación GreenTIC?',
-       '¿Qué tipos de programas se encuentran instalados en los computadores de la sala? (Marque todas las opciones que cuenten con, al menos, un programa instalado en la mayoría de los equipos de cómputo)',
-       '¿Tiene comentarios adicionales sobre los equipos portátiles y/o de escritorio, o del software disponibles en la sede?',
-       '¿Hay tabletas disponibles para uso de los estudiantes, en el aula?',
-       '¿Cuántas tabletas funcionales hay en el aula?',
-       '¿Las tabletas se pueden conectar a internet?',
-       '¿Cuántas tabletas tienen instalada la aplicación GreenTIC?',
-       'Indique los diferentes tipos de microprocesadores que hay disponibles para el desarrollo de proyectos de computación física.',
-       '¿Cuántas tarjetas micro:bit funcionales hay en la sede?',
-       'Indique los elementos para desarrollo de proyectos de computación física que hay disponibles en la sede.',
-       'Amplíe sus comentarios sobre elementos disponibles en la sede, para el desarrollo de proyectos de computación física.',
-       '¿Se cuenta al menos con una impresión de la versión desconectada de GreenTIC?',
-       '¿Hay, al menos, un kit de Ruta STEM disponible en la sede?',
-       '¿Hay algún otro tipo de materiales desconectados para promover el pensamiento computacional?',
-       'Amplíe sus comentarios sobre los elementos desconectados disponibles en la sede.',
-       'N registro', 'Fecha', 'Instrumento', 'ID'],
-      dtype='object')
 Publicados  (247, 32)
-Eliminados  (16, 32)
+Eliminados  (17, 32)
