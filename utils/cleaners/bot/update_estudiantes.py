@@ -34,7 +34,6 @@ df0['Timestamp'] = pd.to_datetime(df0['Timestamp'])
 df0['Fecha'] = df0.Timestamp.dt.strftime('%d/%m')
 print(df0['Fecha'][:5])
 
-
 df1= df0.copy()
 
 diccionariogrados={'Noveno':"09", 'Octavo':"08", 'Sexto':"06", 'Décimo':"10", 'Séptimo':"07", 'Once':"11", 'Quinto':"05"}
@@ -45,7 +44,6 @@ df1.loc[(df1['N registro'].isin(range(9022,9123)))&(df1['Código IE']==105),'Có
 
 ## hubo un cambio de formato de fecha que daña esta línea
 #df1 = df1[df1.Timestamp>'2022-04-14']
-
 
 df1 = df1.drop(columns='Timestamp')
 
@@ -59,7 +57,6 @@ df1=df1.dropna(subset=["Código IE"], inplace=False)
 df1.loc[(df1['N registro']==234),'Número de lista'] = 27
 df1.loc[(df1['N registro']==672),'Número de lista'] = 6
 df1.loc[(df1['N registro']==1701),'Número de lista'] = 16
-
 df1.loc[(df1['N registro']==2270),'Número de lista'] = 30
 df1.loc[(df1['N registro']==5497),'Número de lista'] = 13
 df1.loc[(df1['N registro']==13853),'Número de lista'] = 28
@@ -89,7 +86,6 @@ df1.loc[(df1['N registro']==13642),'Grupo'] = 7
 df1.loc[(df1['N registro']==14471),'Grupo'] = 7
 df1.loc[(df1['N registro']==14722),'Grupo'] = 11
 
-
 df1=df1.dropna(subset=["Grupo"], inplace=False) #para eliminar filas con valores nan
 df1['Grupo']=df1['Grupo'].astype(str) #volver todo una cadena
 print(df1.Grupo.unique())
@@ -98,12 +94,14 @@ df1["Grupo"]=df1["Grupo"].str.replace(" ","")
 df1["Grupo"]=df1["Grupo"].str.capitalize().str.replace("Sexto","").str.replace("Noveno","").str.replace("seis","")
 df1['Grupo']=df1['Grupo'].str.replace("Jornadatarde","")
 df1['Grupo']=df1['Grupo'].str.replace("colegiosansimon","")
+print("Después de eliminar Sexto, Noveno, seis como texto")
 print(df1.Grupo.unique())
 
-diccionariogrupos1={'Bo02':"02", 'Ao01':"01",'Co03':"03", 'Do04':"04", 'Eo05':"05", 'Fo06':"06", 'Go07':"07", 'Ho08':"08", 'Io09':"09", 'Jo10':"10", 'Ko11':"11", 'Lo12':"12", "Urbano":None, "Nosequesignificalodegrupo":None, "Noconozco":None, "Nose":None, ".":None} #valor exactamente igual
+diccionariogrupos1={'Bo02':"02", 'Ao01':"01",'Co03':"03", 'Do04':"04", 'Eo05':"05", 'Fo06':"06", 'Go07':"07", 'Ho08':"08", 'Io09':"09", 'Jo10':"10", 'Ko11':"11", 'Lo12':"12", "Urbano":None, "Nosequesignificalodegrupo":None, "Noconozco":None, "Nose":None, ".":None,"Único":None} #valor exactamente igual
 df1["Grupo"]=df1["Grupo"].replace(diccionariogrupos1)
 df1=df1.dropna(subset=["Grupo"], inplace=False)
 
+print("Después cambiar Ao01 (...) y No sé")
 print(df1.Grupo.unique())
 
 df1["Grupo"]=df1["Grupo"].str.replace("_","", regex=False)
@@ -113,19 +111,23 @@ df1["Grupo"]=df1["Grupo"].str.replace(":","", regex=False)
 df1["Grupo"]=df1["Grupo"].str.replace("-","", regex=False)
 df1["Grupo"]=df1["Grupo"].str.replace("'","", regex=False)
 df1["Grupo"]=df1["Grupo"].str.replace("+","", regex=False)
+print("Después de borrar caractéres")
 print(df1.Grupo.unique())
 
 df1["Grupo"]=df1["Grupo"].replace(r'[Gg](.*)',"07",regex=True)
 df1["Grupo"]=df1["Grupo"].replace(r'[Ff](.*)',"06",regex=True) #regex buscador
 df1["Grupo"]=df1["Grupo"].replace(r'[Hh](.*)',"08",regex=True)
 df1["Grupo"]=df1["Grupo"].replace(r'[Kk](.*)',"11",regex=True)
+df1["Grupo"]=df1["Grupo"].replace(r'[Ll](.*)',"12",regex=True)
+df1["Grupo"]=df1["Grupo"].replace(r'[Mm](.*)',"13",regex=True)
 df1["Grupo"]=df1["Grupo"].str.replace("No","")
+print("Después de cambiar G,F,H,K,L,M por números")
 print(df1.Grupo.unique())
 
 diccionariogrupos1={'Tres':"03",'tres':"03",'Seis3':"03",'6seis':"06"}
 df1["Grupo"]=df1["Grupo"].replace(diccionariogrupos1)
 df1=df1.dropna(subset=["Grupo"], inplace=False)
-print('Colegio 250, 6 ', len(df1[df1['Código IE']==250]))
+print("Después de eliminar tres/seis3")
 print(df1.Grupo.unique())
 
 df1["Grupo"]=df1["Grupo"].replace(r'[Aa](.*)',"01",regex=True)
@@ -134,9 +136,15 @@ df1["Grupo"]=df1["Grupo"].replace(r'[Cc](.*)',"03",regex=True)
 df1["Grupo"]=df1["Grupo"].replace(r'[Ee](.*)',"04",regex=True)
 df1["Grupo"]=df1["Grupo"].str.replace("o","")
 
+print("Después de cambiar A,B,C,E por 1,2,3,4")
+print(df1.Grupo.unique())
+
 df1["Grupo"]=df1["Grupo"].str.replace("O","", regex=False)
 df1["Grupo"]=df1["Grupo"].str.replace(".0","", regex=False)
 df1["Grupo"]=df1["Grupo"].str.replace(".","", regex=False)
+
+print("Después de eliminar signo .")
+print(df1.Grupo.unique())
 
 df1['Grupo']=[x[-2:] if int(x[-2:])<20 else x[-1] for x in df1["Grupo"]]
 df1['Grupo']=df1['Grupo'].str.zfill(2)
@@ -165,7 +173,7 @@ df1['Código IE']=df1['Código IE'].str.zfill(3)
 
 
 df1['ID']=df1['Código IE']+df1['Grado']+df1['Grupo']+df1['Número de lista']
-print(df1.head())
+df1['ID']=df1.drop_duplicates(subset="ID", keep="first")
 
 new_index=['N registro','Deseo participar en el estudio', 'Código IE', 'Grupo',
 'Nombre',  'Fecha', 'ID','Número de lista', 'Edad', 'Sexo', 'Sector vivienda', 'Internet',

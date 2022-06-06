@@ -34,7 +34,6 @@ df0['Timestamp'] = pd.to_datetime(df0['Timestamp'])
 df0['Fecha'] = df0.Timestamp.dt.strftime('%d/%m')
 print(df0['Fecha'][:5])
 
-
 df1= df0.copy()
 
 diccionariogrados={'Noveno':"09", 'Octavo':"08", 'Sexto':"06", 'Décimo':"10", 'Séptimo':"07", 'Once':"11", 'Quinto':"05"}
@@ -45,7 +44,6 @@ df1.loc[(df1['N registro'].isin(range(9022,9123)))&(df1['Código IE']==105),'Có
 
 ## hubo un cambio de formato de fecha que daña esta línea
 #df1 = df1[df1.Timestamp>'2022-04-14']
-
 
 df1 = df1.drop(columns='Timestamp')
 
@@ -59,7 +57,6 @@ df1=df1.dropna(subset=["Código IE"], inplace=False)
 df1.loc[(df1['N registro']==234),'Número de lista'] = 27
 df1.loc[(df1['N registro']==672),'Número de lista'] = 6
 df1.loc[(df1['N registro']==1701),'Número de lista'] = 16
-
 df1.loc[(df1['N registro']==2270),'Número de lista'] = 30
 df1.loc[(df1['N registro']==5497),'Número de lista'] = 13
 df1.loc[(df1['N registro']==13853),'Número de lista'] = 28
@@ -88,7 +85,6 @@ df1.loc[(df1['N registro']==13638),'Grupo'] = 7
 df1.loc[(df1['N registro']==13642),'Grupo'] = 7
 df1.loc[(df1['N registro']==14471),'Grupo'] = 7
 df1.loc[(df1['N registro']==14722),'Grupo'] = 11
-
 
 df1=df1.dropna(subset=["Grupo"], inplace=False) #para eliminar filas con valores nan
 df1['Grupo']=df1['Grupo'].astype(str) #volver todo una cadena
