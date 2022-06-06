@@ -1,0 +1,128 @@
+['B o 02' 'A o 01' 'D o 04' 'E o 05' '9-F' '9f' 'f' 'f o 06' 'F' 'f o 06 '
+ '9.f' '6g' '6G' '6 g' '6 G' 'G o 06' '6-G' 'Noveno E' '16' '11-16' '1116'
+ '906' '0 o 6' 'f o 6' '06' '6 seis' '6' 'C o 03' '6 C' '6 c' '07' '607'
+ '7' '15' '9-1' 'No 1' 'noveno 1' '9.1' '9-2' '902' '9_2' '2' 'b_2' '6-3'
+ '603' '604' '9' '905' '95' '6-8' '608' 'H O 608' '08' '6-08' '6 o 08'
+ '9-5' 'f o 08' '6 08' '0 8' '606' '9-6' '96' '09' '6`-7' '6-7' '605'
+ '9-4' 'sexto tres' 'Seis 3' 'sexto 3' 'sexto  tres' '6.3' 'sexto   tres'
+ '6-1' '809' '6a' 'o7' '0 7' 'g o 07' 'G o 07' 'G O 07' 'G o 7' 'g o7'
+ '6 o 07' 'g o  07' 'G 07' 'G 0 07' 'G 07 ' '07+' 'g  07' 'G o  07'
+ 'SEXTO G O7' '6-07' 'g' "9'07" "9'07´" ' G-07' 'G - 07' 'g 06' '9 07'
+ 'g° 07' 'co06' '6-2' '62' '901' '9.4' '6-4' '602' '9-3' '3' '9.3' '903'
+ '8-1' '11' '6.4' '6 B' '6c' '601' 'F o 06' '601 o a' 'J o 10' 'urbano'
+ 'I o 09' '12' '9-12' 'L o 12' '9_12' '14' '6-6 ' '904' '9-7' '6-6'
+ 'no se que significa lo de grupo ' '9 A' 'no conozco' 'nose' 'H o 08'
+ 'no se' '.' 'no  se' 'M 29' '704' '9-02' 'Do04' '6 o 05']
+['Bo02' 'Ao01' 'Do04' 'Eo05' '9-f' '9f' 'F' 'Fo06' '9.f' '6g' 'Go06' '6-g'
+ 'e' '16' '11-16' '1116' '906' '0o6' 'Fo6' '06' '6' 'Co03' '6c' '07' '607'
+ '7' '15' '9-1' 'No1' '1' '9.1' '9-2' '902' '9_2' '2' 'B_2' '6-3' '603'
+ '604' '9' '905' '95' '6-8' '608' 'Ho608' '08' '6-08' '6o08' '9-5' 'Fo08'
+ '606' '9-6' '96' '09' '6`-7' '6-7' '605' '9-4' 'tres' 'Seis3' '3' '6.3'
+ '6-1' '809' '6a' 'O7' 'Go07' 'Go7' '6o07' 'G07' 'G007' '07+' 'go7' '6-07'
+ 'G' "9'07" "9'07´" 'G-07' 'G06' '907' 'G°07' 'Co06' '6-2' '62' '901'
+ '9.4' '6-4' '602' '9-3' '9.3' '903' '8-1' '11' '6.4' '6b' '601' '601oa'
+ 'Jo10' 'Urbano' 'Io09' '12' '9-12' 'Lo12' '9_12' '14' '6-6' '904' '9-7'
+ 'Nosequesignificalodegrupo' '9a' 'Noconozco' 'Nose' 'Ho08' '.' 'M29'
+ '704' '9-02' '6o05']
+['02' '01' '04' '05' '9-f' '9f' 'F' '06' '9.f' '6g' 'Go06' '6-g' 'e' '16'
+ '11-16' '1116' '906' '0o6' 'Fo6' '6' '03' '6c' '07' '607' '7' '15' '9-1'
+ 'No1' '1' '9.1' '9-2' '902' '9_2' '2' 'B_2' '6-3' '603' '604' '9' '905'
+ '95' '6-8' '608' 'Ho608' '08' '6-08' '6o08' '9-5' 'Fo08' '606' '9-6' '96'
+ '09' '6`-7' '6-7' '605' '9-4' 'tres' 'Seis3' '3' '6.3' '6-1' '809' '6a'
+ 'O7' 'Go7' '6o07' 'G07' 'G007' '07+' 'go7' '6-07' 'G' "9'07" "9'07´"
+ 'G-07' 'G06' '907' 'G°07' 'Co06' '6-2' '62' '901' '9.4' '6-4' '602' '9-3'
+ '9.3' '903' '8-1' '11' '6.4' '6b' '601' '601oa' '10' '12' '9-12' '9_12'
+ '14' '6-6' '904' '9-7' '9a' 'M29' '704' '9-02' '6o05']
+['02' '01' '04' '05' '9f' 'F' '06' '9.f' '6g' 'Go06' 'e' '16' '1116' '906'
+ '0o6' 'Fo6' '6' '03' '6c' '07' '607' '7' '15' '91' 'No1' '1' '9.1' '92'
+ '902' '2' 'B2' '63' '603' '604' '9' '905' '95' '68' '608' 'Ho608' '08'
+ '6o08' 'Fo08' '606' '96' '09' '67' '605' '94' 'tres' 'Seis3' '3' '6.3'
+ '61' '809' '6a' 'O7' 'Go7' '6o07' 'G07' 'G007' 'go7' 'G' '907' 'G06'
+ 'G°07' 'Co06' '62' '901' '9.4' '64' '602' '93' '9.3' '903' '81' '11'
+ '6.4' '6b' '601' '601oa' '10' '12' '912' '14' '66' '904' '97' '9a' 'M29'
+ '704' '6o05']
+['02' '01' '04' '05' '906' '06' '9.06' '607' '07' 'e' '16' '1116' '0o6'
+ '6' '03' '6c' '7' '15' '91' '1' '9.1' '92' '902' '2' 'B2' '63' '603'
+ '604' '9' '905' '95' '68' '608' '08' '6o08' '606' '96' '09' '67' '605'
+ '94' 'tres' 'Seis3' '3' '6.3' '61' '809' '6a' 'O7' '6o07' '907' 'Co06'
+ '62' '901' '9.4' '64' '602' '93' '9.3' '903' '81' '11' '6.4' '6b' '601'
+ '601oa' '10' '12' '912' '14' '66' '904' '97' '9a' 'M29' '704' '6o05']
+['02' '01' '04' '05' '906' '06' '9.06' '607' '07' 'e' '16' '1116' '0o6'
+ '6' '03' '6c' '7' '15' '91' '1' '9.1' '92' '902' '2' 'B2' '63' '603'
+ '604' '9' '905' '95' '68' '608' '08' '6o08' '606' '96' '09' '67' '605'
+ '94' '3' '6.3' '61' '809' '6a' 'O7' '6o07' '907' 'Co06' '62' '901' '9.4'
+ '64' '602' '93' '9.3' '903' '81' '11' '6.4' '6b' '601' '601oa' '10' '12'
+ '912' '14' '66' '904' '97' '9a' 'M29' '704' '6o05']
+['02' '01' '04' '05' '06' '07' '16' '03' '15' '09' '08' '11' '10' '12'
+ '14']
+['03' '07' '30' '06' '10' '09' '02' '29' '19' '12' '22' '04' '16' '15'
+ '11' '24' '18' '23' '08' '21' '27' '13' '17' '28' '01' '14' '05' '20'
+ '31' '26' '34' '36' '32' '33' '25' '37' '35' '40' '39' '38' '41' '44'
+ '43' '42' '45' '50' '49' '46' '47' '52' '48' '54' '55']
+  Número de lista  Edad       Sexo  ...           Instrumento  Fecha         ID
+1              03  14.0  Masculino  ...  Encuesta estudiantes  19/04  166090203
+2              07  16.0  Masculino  ...  Encuesta estudiantes  19/04  166090207
+3              30  14.0   Femenino  ...  Encuesta estudiantes  19/04  166090230
+4              06  15.0  Masculino  ...  Encuesta estudiantes  19/04  166090206
+5              10  14.0   Femenino  ...  Encuesta estudiantes  19/04  166090210
+
+[5 rows x 74 columns]
+columnas antes de reindex Index(['Número de lista', 'Edad', 'Sexo', 'Sector vivienda', 'Internet',
+       'Uso del dispositivo móvil', 'Nivel escolaridad madre',
+       'Nivel escolaridad padre', 'Ocupación madre', 'Ocupación padre',
+       '¿Con quién vives?', 'Grado', '1.1. Ingeniería',
+       '2.1 Soy capaz de sacar buenas notas en esta asignatura',
+       '2.2 Si me va bien en esta asignatura, me ayudará en mi futura ocupación',
+       '2.3 A mis padres les gustaría que eligiera un futuro profesional relacionado a esta asignatura',
+       '2.4 Sé de alguien en mi familia que utiliza conocimientos relacionados a esta asignatura en su ocupación',
+       'Comentarios 1-2', 'Un algoritmo es:',
+       '¿Para qué sirven los algoritmos?', 'Un bucle es:',
+       '3.1 Siento que soy capaz de explicar lo que es el pensamiento computacional',
+       '3.2 Siento que puedo enumerar las sub-habilidades que componen el pensamiento computacional',
+       '3.3 Siento que soy capaz de dar ejemplos para explicar las sub-habilidades del pensamiento computacional',
+       '3.4 Siento que puedo explicar la forma en que las sub-habilidades del pensamiento computacional se correlacionan con la programación',
+       '3.5 Siento que puedo analizar un ejercicio y determinar qué sub-habilidades de pensamiento computacional busca desarrollar',
+       '3.6 Siento que puedo resolver problemas a través de programación',
+       '3.7 Siento que puedo implementar algoritmos',
+       '3.8 Siento que puedo crear un programa de computador',
+       '3.9 Siento que puedo automatizar tareas a través de la programación',
+       '3.10 Siento que puedo utilizar la computación para resolver problemas simples',
+       'Comentarios P3',
+       '¿Cuál de las siguientes opciones sí le permite al robot completar la misión de fotografiar cada tortuga?',
+       '¿Qué mensaje deseaba enviar la líder Wayuú?',
+       '¿Cuál de los siguientes códigos permite que el robot complete su misión sembrando café?',
+       '¿Cuál será la foto con más vistas?',
+       'Ayuda al robot verde a salir del laberinto',
+       'Óscar lleva 2 loncheras a la escuela todos los días ¿Cuál de las siguientes afirmaciones es falsa?',
+       '¿Cuál de las siguientes hamburguesas tiene los ingredientes A, E y F?',
+       '¿Qué botella debe cambiarse de color para que el resultado final sea una botella de color blanco?',
+       'Comentarios conocimiento',
+       '5.1 ¿Quién crees que ganará el concurso de matemáticas?',
+       '5.2 ¿Quién crees que es capitán del barco?',
+       '5.3 ¿Quién es la persona excluida de la construcción de la casa de madera?',
+       '5.4 ¿Quién crees que es el personaje que está sentado y esperando junto a la ventana?',
+       '5.5 ¿Quién es la persona que trabaja en educación?',
+       '5.6 ¿Quién crees que es la persona que prefiere estudiar ingeniería?',
+       'Comentarios género',
+       '4.1 Es alarmante que el ritmo de desaparición de especies en la Amazonia Colombiana sea cada vez mayor.',
+       '4.2 El aumento de la temperatura atmosférica se debe al uso creciente y continuado de combustibles fósiles (carbón, petróleo…).',
+       '4.3 La acumulación de basura procedente de las ciudades es un problema realmente grave.',
+       '4.4 Hay una disminución de la superficie forestal y de áreas naturales en el país.',
+       '4.5 El planeta está tan contaminado por productos químicos que ya supone un problema para la salud.',
+       '4.6 Conozco los riesgos que representa para la vida humana la desaparición de especies animales y vegetales.',
+       '4.7 Me preocupa lo que sucede con la tala de árboles.',
+       'Comentarios medioambiente', 'Deseo participar en el estudio',
+       '1.2 Matemáticas', '1.3 Educación', '1.4 Medicina',
+       '1.5 Diseño gráfico', '1.6 Química', '1.7 Enfermería',
+       'Tipo de discapacidad',
+       '¿Te reconoces como una persona con algún tipo de discapacidad?',
+       '1.8 Desarrollo de software', 'Conoce GreenTIC', 'Código IE', 'Grupo',
+       'Nombre', 'N registro', 'Instrumento', 'Fecha', 'ID'],
+      dtype='object')
+[False False False False False False False False False False False False
+ False False False False False False False False False False False False
+ False False False False False False False False False False False False
+ False False False False False False False False False False False False
+ False False False False False False False False False False False False
+ False False False False False False False False False False False False
+ False]

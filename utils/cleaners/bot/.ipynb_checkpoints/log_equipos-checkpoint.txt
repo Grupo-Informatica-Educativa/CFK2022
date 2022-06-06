@@ -1,63 +1,10 @@
-#!/usr/bin/env python3
-import pickle
-
-import pandas as pd
-import numpy as np
-
-from pathlib import Path
-from datetime import datetime
-
-import sys
-temp = sys.stdout                 # store original stdout object for later
-sys.stdout = open('log_equipos.txt', 'w') # redirect all prints to this log file
-
-## Estudiantes
-
-ruta =Path(__file__).parent
-
-
-sheet_id = "1VmeS6Ns0j4bxKPxLlQtQKVrUVMARhsljf6qVvqfrlfo"
-sheet_name = "Form Responses 1"
-url = f"https://docs.google.com/spreadsheets/d/{sheet_id}/gviz/tq?tqx=out:csv&sheet={sheet_name}"
-url = url.replace(" ", "%20")
-
-df0=pd.read_csv(url)
-
-# with open(ruta/'columnas_Lideres.pkl', 'rb') as handle:
-#     dict_col_est = pickle.load(handle)
-#
-# df0 = df0.rename(columns=dict_col_est)
-# df0 = df0.drop(columns=df0.filter(regex=r'eliminar').columns)
-
-df0['N registro']=df0.index
-
-
-df0['Timestamp'] = pd.to_datetime(df0['Timestamp'])
-df0['Fecha'] = df0.Timestamp.dt.strftime('%d/%m')
-print(df0['Fecha'][-5:])
-
-df0 = df0.drop(columns='Timestamp')
-
-df6=df0.copy()
-df6['Instrumento']="Encuesta Equipos"
-
-df6 = df6[df6['N registro']>0]
-
-df6=df6.rename(columns={'Código de la Institución Educativa, provisto por el proyecto':'Código IE'})
-
-df6=df6.drop([79,125,72,204,206,153,208,134,36,147,16,18,15],axis=0)
-
-df6=df6.dropna(subset=['Código IE'],inplace=False)
-
-df6['Código IE']=df6['Código IE'].astype(int)
-df6=df6[df6['Código IE']<271]
-df6=df6[df6['Código IE'] > 0]
-df6['Código IE']=df6['Código IE'].astype(str)
-df6['Código IE']=df6['Código IE'].str.zfill(3)
-
-df6['ID']=df6.index
-
-new_index = ['N registro', 'Fecha', 'Instrumento', 'Código IE','ID','Email Address',
+244    20/05
+245    20/05
+246    24/05
+247    24/05
+248    24/05
+Name: Fecha, dtype: object
+columnas:  Index(['Email Address', 'Código IE',
        '¿Cuántas aulas de informática tiene la sede?',
        'Además de los equipos de cómputo en aulas de informática, ¿hay computadores en las aulas de clase?',
        '¿Cuántas de las aulas de clase, diferentes al aula de informática, cuentan con al menos un computador?',
@@ -83,23 +30,8 @@ new_index = ['N registro', 'Fecha', 'Instrumento', 'Código IE','ID','Email Addr
        '¿Se cuenta al menos con una impresión de la versión desconectada de GreenTIC?',
        '¿Hay, al menos, un kit de Ruta STEM disponible en la sede?',
        '¿Hay algún otro tipo de materiales desconectados para promover el pensamiento computacional?',
-       'Amplíe sus comentarios sobre los elementos desconectados disponibles en la sede.'
-       ]
-df0=df0.reindex(new_index, axis='columns')
-df6=df6.reindex(new_index, axis='columns')
-
-registroseliminados=set(df0['N registro']).difference(set(df6['N registro']))
-dfe=df0[df0['N registro'].isin(registroseliminados)]
-
-
-archivo_eliminados = "eliminados/Eliminados_equipos.xlsx"
-archivo_eliminados = ruta/archivo_eliminados
-
-archivo_descargable = ruta.parent.parent.parent/"data/descargables/RecursosCFK.xlsx"
-dfe.to_excel(archivo_eliminados, index=False)
-df6.to_excel(archivo_descargable,index=False)
-
-print('Publicados ', df6.shape)
-print('Eliminados ', dfe.shape)
-sys.stdout.close()                # ordinary file object
-sys.stdout = temp
+       'Amplíe sus comentarios sobre los elementos desconectados disponibles en la sede.',
+       'N registro', 'Fecha', 'Instrumento', 'ID'],
+      dtype='object')
+Publicados  (233, 32)
+Eliminados  (15, 32)

@@ -33,7 +33,7 @@ df0['N registro']=df0.index
 
 
 df0['Timestamp'] = pd.to_datetime(df0['Timestamp'])
-
+df0 = df0[df0.Timestamp>'2022-04-14']
 df0['Fecha'] = df0.Timestamp.dt.strftime('%d/%m')
 print(df0['Fecha'][-5:])
 
@@ -41,8 +41,6 @@ df0 = df0.drop(columns='Timestamp')
 
 df5=df0.copy()
 df5['Instrumento']="Encuesta Líderes"
-
-df5 = df5[df5['N registro']>3]
 df5=df5.dropna(subset=['Código IE'],inplace=False)
 df5=df5.drop([34,70,24],axis=0)
 

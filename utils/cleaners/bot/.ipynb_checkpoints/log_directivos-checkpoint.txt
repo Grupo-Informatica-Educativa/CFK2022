@@ -1,0 +1,29 @@
+609    23/05
+610    23/05
+611    23/05
+612    23/05
+613    24/05
+Name: Fecha, dtype: object
+Cantidad de códigos IE después de filtrar mayor y menor  223
+Códigos que se mantienen:  ['206' '235' '032' '211' '021' '198' '166' '092' '066' '004' '231' '151'
+ '247' '007' '076' '183' '205' '186' '176' '129' '152' '062' '088' '098'
+ '174' '236' '145' '185' '213' '144' '179' '055' '043' '228' '002' '107'
+ '150' '054' '218' '064' '072' '226' '046' '238' '110' '130' '189' '172'
+ '252' '200' '197' '199' '035' '090' '169' '020' '167' '142' '217' '063'
+ '121' '210' '153' '119' '096' '089' '099' '103' '074' '003' '165' '053'
+ '222' '148' '069' '010' '237' '071' '170' '027' '162' '070' '114' '106'
+ '034' '097' '084' '132' '080' '051' '214' '212' '188' '202' '244' '248'
+ '157' '049' '048' '175' '163' '116' '224' '005' '187' '001' '109' '133'
+ '177' '091' '223' '149' '093' '050' '251' '131' '094' '104' '111' '113'
+ '184' '009' '022' '011' '230' '016' '161' '042' '178' '058' '052' '059'
+ '220' '221' '118' '160' '208' '136' '181' '024' '233' '234' '204' '019'
+ '225' '171' '180' '232' '246' '108' '085' '028' '030' '067' '101' '100'
+ '115' '138' '039' '095' '123' '164' '154' '026' '120' '006' '128' '146'
+ '240' '126' '083' '023' '156' '141' '056' '044' '127' '037' '008' '158'
+ '031' '017' '227' '140' '173' '168' '068' '209' '081' '239' '105' '196'
+ '014' '060' '193' '159' '087' '201' '229' '079' '135' '102' '219' '194'
+ '243' '249' '029' '047' '245' '242' '190' '012' '013' '191' '207' '018'
+ '086' '182' '137' '073' '139' '147' '078']
+columnas:  ['Política de datos', 'ID', 'Edad', 'Sexo', 'Cabeza de hogar', 'Estado civil', 'Líder comunitario', 'Formación STEM', 'Rol en IE', '¿En su institución hay estudiantes con algún tipo de discapacidad?', 'Estudiantes  con discapacidad intelectual', 'Estudiantes con Discapacidad física o motora', 'Estudiantes con Discapacidad auditiva', 'Estudiantes con Discapacidad visual', 'Estudiantes con Discapacidad psicosocial', 'Estudiantes con Discapacidad múltiple', 'Estudiante con Trastornos Específicos del Aprendizaje', 'Considera importante enseñar el pensamiento computacional desde los primeros niveles educativos', 'Conceptos que deben incluirse en la clase de tecnología e informática', 'Comentarios autorreporte', '1.1 Los maestros de esta Institución educativa incorporan el pensamiento computacional en sus clases', '1.2 Los esfuerzos de los maestros para enseñar conceptos de pensamiento computacional son muy valorados en esta institución educativa', '1.3 Animo a los maestros de otras disciplinas a asistir a oportunidades de desarrollo profesional enfocadas en pensamiento computacional.', '1.4 Hay alguien en mi colegio que puede asesorar a los estudiantes sobre los caminos hacia una carrera en STEM', '1.5 En los próximos tres años, espero que la cantidad de oportunidades para aprender sobre pensamiento computacional en este colegio aumenten', '1.6 Es extremadamente importante que todos los estudiantes aprendan pensamiento computacional.', '1.7 Tener educación en pensamiento computacional mejoraría significativamente las futuras opciones de carrera para los estudiantes de mi escuela.', '1.8 El pensamiento computacional se utiliza en muchos tipos diferentes de trabajos.', '1.9 Ofrecer oportunidades para aprender de pensamiento computacional tiene el mismo valor o más para el éxito futuro de un estudiante que otros cursos obligatorios como matemáticas, biología, ciencias sociales, historia e inglés', '1.10 Conozco y puedo recomendar a mis estudiantes diferentes programas de formación relacionadas al pensamiento computacional y/o ciencias de la computación', '1.11 Los estudiantes reciben asesoría vocacional sobre alternativas u oportunidades relacionadas a carreras STEM', '1.12 Informo a mis estudiantes sobre oportunidades que existen para continuar los estudios en áreas relacionadas al pensamiento computacional y/o ciencias de la computación', 'Comentarios autodiagnóstico', 'Actividades que se promueven en esta institución educativa para apoyar la formación docente enfocadas en pensamiento computacional', '¿La rotación de los docentes de tecnología e informática influye sobre la calidad y el aprendizaje del área de los estudiantes en los diferentes grados?', 'Código IE', 'Tipo de ID', 'Número de estudiantes matriculados', 'Número de docentes que laboran', 'N registro', 'Instrumento', 'Fecha']
+Publicados  (515, 42)
+Eliminados  (99, 42)

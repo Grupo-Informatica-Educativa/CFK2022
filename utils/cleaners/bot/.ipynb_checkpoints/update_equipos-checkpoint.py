@@ -33,6 +33,7 @@ df0['N registro']=df0.index
 
 
 df0['Timestamp'] = pd.to_datetime(df0['Timestamp'])
+df0 = df0[df0.Timestamp>'2022-04-14']
 df0['Fecha'] = df0.Timestamp.dt.strftime('%d/%m')
 print(df0['Fecha'][-5:])
 
@@ -40,9 +41,6 @@ df0 = df0.drop(columns='Timestamp')
 
 df6=df0.copy()
 df6['Instrumento']="Encuesta Equipos"
-
-df6 = df6[df6['N registro']>0]
-
 df6=df6.rename(columns={'Código de la Institución Educativa, provisto por el proyecto':'Código IE'})
 
 df6=df6.drop([79,125,72,204,206,153,208,134,36,147,16,18,15],axis=0)
