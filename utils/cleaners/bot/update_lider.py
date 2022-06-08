@@ -31,7 +31,6 @@ df0 = df0.drop(columns=df0.filter(regex=r'eliminar').columns)
 
 df0['N registro']=df0.index
 
-
 df0['Timestamp'] = pd.to_datetime(df0['Timestamp'])
 
 df0['Fecha'] = df0.Timestamp.dt.strftime('%d/%m')
@@ -44,7 +43,7 @@ df5['Instrumento']="Encuesta Líderes"
 
 df5 = df5[df5['N registro']>3]
 df5=df5.dropna(subset=['Código IE'],inplace=False)
-df5=df5.drop([34,70,24],axis=0)
+df5=df5.drop([24,34,70,104,149,162,255],axis=0)
 
 df5['Código IE']=df5['Código IE'].astype(int)
 df5=df5[df5['Código IE'] > 0]

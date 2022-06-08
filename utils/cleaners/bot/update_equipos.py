@@ -45,7 +45,9 @@ df6 = df6[df6['N registro']>0]
 
 df6=df6.rename(columns={'Código de la Institución Educativa, provisto por el proyecto':'Código IE'})
 
-df6=df6.drop([79,125,72,204,206,153,208,134,36,147,16,18,15],axis=0)
+df6=df6.drop([15,16,18,36,72,79,125,134,147,153,204,206,208,223,228],axis=0)
+
+df6.loc[(df6['N registro']==125),'Número de lista'] = 39
 
 df6=df6.dropna(subset=['Código IE'],inplace=False)
 
