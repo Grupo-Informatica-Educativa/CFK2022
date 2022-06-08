@@ -70,11 +70,19 @@ columnas>  Index(['Timestamp', 'Política de datos', 'Código IE', 'Tipo ID', 'I
        '8.16 Las mujeres en comparación con los hombres, tienden a tener un sentido más refinado de la cultura y el buen gusto.',
        'Comentarios género'],
       dtype='object')
+<<<<<<< Updated upstream
 6890    06/06
 6891    06/06
 6892    06/06
 6893    06/06
 6894    06/06
+=======
+6888    06/06
+6889    06/06
+6890    06/06
+6891    06/06
+6892    06/06
+>>>>>>> Stashed changes
 Name: Fecha, dtype: object
 Códigos IE después de reemplazo:  ['206' '231' '176' '129' '166' '055' '151' '211' '092' '021' '107' '076'
  '198' '199' '007' '183' '067' '066' '152' '186' '005' '128' '218' '008'
