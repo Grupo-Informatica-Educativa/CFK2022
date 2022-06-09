@@ -8,9 +8,9 @@ from utils.read_data import read_data
 
 st.title("Seguimiento a respuestas GreenTIC")
 respuestas = pd.read_csv('https://docs.google.com/spreadsheets/d/e/2PACX-1vTtRvfE21QbkKtj0cTQu-jsy56CxGjF4Q3xRIcTk-2emRMVHj30aBSjJWgSC78sxJX-VATwfLhf71xB/pub?gid=1769383466&single=true&output=csv')
-respuestas_mostrar = respuestas.loc[:,['Marca temporal', 'Código de tu colegio', '¿Cómo te llamas?']]
+respuestas_mostrar = respuestas.loc[:,['Marca temporal', 'Código de tu colegio', '¿Cómo te llamas?','Número de lista','Grado','Grupo']]
 
-st.dataframe(respuestas_mostrar)
+st.dataframe(respuestas_mostrar, 1200)
 
 
 st.write("## Total por colegio")
