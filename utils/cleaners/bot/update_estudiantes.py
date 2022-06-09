@@ -54,6 +54,7 @@ df1.loc[(df1['N registro'].isin(range(3369,4505)))&(df1['Código IE']==248),'Có
 df1.loc[(df1['N registro'].isin(range(1928,1987)))&(df1['Código IE']==6),'Código IE'] = None
 df1.loc[(df1['N registro']==20836),'Código IE'] = None
 df1.loc[(df1['N registro']==19496),'Código IE'] = None
+df1.loc[(df1['N registro'].isin(range(1795,14911)))&(df1['Código IE']==186)&(df1['Grado']=='07')&(df1['Grupo']=='B o 02'),'Código IE'] = None
 
 df1=df1.dropna(subset=["Código IE"], inplace=False)
 
@@ -245,9 +246,10 @@ df1['Grupo']=[x[-2:] if int(x[-2:])<20 else x[-1] for x in df1["Grupo"]]
 df1['Grupo']=df1['Grupo'].str.zfill(2)
 print(df1.Grupo.unique())
 
+df1['Número de lista']=df1['Número de lista'].astype(float).astype(int)
+df1= df1[df1['Número de lista'] > 0]
 df1= df1[df1['Número de lista'] < 101]
 
-df1['Número de lista']=df1['Número de lista'].astype(int)
 df1['Número de lista']=df1['Número de lista'].astype(str)
 df1['Número de lista']=df1['Número de lista'].str.zfill(2)
 print(df1['Número de lista'].unique())
