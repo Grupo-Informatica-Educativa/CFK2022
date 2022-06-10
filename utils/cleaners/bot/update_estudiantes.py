@@ -246,6 +246,7 @@ df1['Grupo']=[x[-2:] if int(x[-2:])<20 else x[-1] for x in df1["Grupo"]]
 df1['Grupo']=df1['Grupo'].str.zfill(2)
 print(df1.Grupo.unique())
 
+print('Número de lista nulos \n',df1.loc[df1['Número de lista'].isna(),['N registro','Grupo', 'Código IE']])
 df1['Número de lista']=df1['Número de lista'].astype(float).astype(int)
 df1= df1[df1['Número de lista'] > 0]
 df1= df1[df1['Número de lista'] < 101]
