@@ -273,7 +273,7 @@ df1.loc[(df1['N registro'].isin(range(8265,8601)))&(df1['Código IE']==33)&(df1[
 df1=df1.dropna(subset=["Código IE"], inplace=False)
 
 df1['ID']=df1['Código IE']+df1['Grado']+df1['Grupo']+df1['Número de lista']
-df1['ID']=df1.drop_duplicates(subset="ID", keep="first")
+df1 = df1.drop_duplicates(subset="ID", keep="first")
 
 new_index=['N registro','Deseo participar en el estudio', 'Código IE', 'Grupo',
 'Nombre',  'Fecha', 'ID','Número de lista', 'Edad', 'Sexo', 'Sector vivienda', 'Internet',

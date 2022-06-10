@@ -55,7 +55,7 @@ df4= df4[df4['ID'] >= 1000000]
 df4= df4[df4['ID'] < 3000000000]
 
 df4=df4.dropna(subset=['ID'],inplace=False)
-df4['ID']=df4.drop_duplicates(subset="ID", keep="first")
+df4 = df4.drop_duplicates(subset="ID", keep="first")
 
 new_index= ['N registro', 'Instrumento', 'Fecha','Política de datos', 'ID',
  'Edad', 'Sexo', 'Cabeza de hogar', 'Estado civil', 'Líder comunitario',

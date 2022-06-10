@@ -1,0 +1,12 @@
+/home/mariana/Documents/GitHub/CFK2022/utils/cleaners/bot
+Error!!  Instrumentos_DetalleCFK.xlsx
+{'Instrumento', 'ID', 'N registro'}
+Error!!  InstrumentosCFK.xlsx
+{'Instrumento', 'ID', 'N registro'}
+  N registro        Instrumento Código IE          ID
+0          4  Encuesta docentes       206     5828243
+1          5  Encuesta docentes       206    93377927
+2          6  Encuesta docentes       206    38363769
+3          7  Encuesta docentes       206     5827991
+4          8  Encuesta docentes       206  1110495748
+Tamaño pivot (252, 7)

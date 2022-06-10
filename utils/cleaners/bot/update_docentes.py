@@ -85,7 +85,7 @@ df3['ID']=df3['ID'].astype(float).astype(int)
 df3= df3[df3['ID'] >= 1000000]
 df3= df3[df3['ID'] < 3000000000]
 df3=df3.dropna(subset=["Código IE"], inplace=False)
-df3['ID']=df3.drop_duplicates(subset="ID", keep="first")
+df3 = df3.drop_duplicates(subset="ID", keep="first")
 
 new_index = ['N registro', 'Instrumento', 'Fecha','Política de datos', 'Código IE',
              'Tipo ID', 'ID', 'Email', 'Edad', 'Sexo', 'Cabeza de hogar', 'Estado civil',
