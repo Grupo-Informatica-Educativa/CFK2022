@@ -50,7 +50,7 @@ df3[df3.filter(regex='^Comentarios*').columns] = df3[df3.filter(regex='^Comentar
 df3.loc[(df3['N registro'].isin(range(5535,5846)))&(df3['Código IE']==14),'Código IE'] = 13
 df3.loc[(df3['N registro'].isin(range(170,1799)))&(df3['Código IE']==247),'Código IE'] = None
 
-df3=df3.drop([233,321,389,489,494,538,1694,3758,4116,4361,4367,4440,4442,4446,4449,4460,4465,5101,5633,5837,6578],axis=0)
+df3=df3.drop([321,389,489,494,538,1694,3758,4116,4361,4367,4440,4442,4446,4449,4460,4465,5101,5633,5837,6578],axis=0)
 df3=df3.dropna(subset=["Código IE"], inplace=False) #se borran 37 datos, quedan 1424
 
 diccionariodocentes={'Nueva Esperanza La Palma ':150}
@@ -85,7 +85,7 @@ df3['ID']=df3['ID'].astype(float).astype(int)
 df3= df3[df3['ID'] >= 1000000]
 df3= df3[df3['ID'] < 3000000000]
 df3=df3.dropna(subset=["Código IE"], inplace=False)
-df3['ID']=df3.drop_duplicates(subset="ID", keep="first")
+df3 = df3.drop_duplicates(subset="ID", keep="first")
 
 new_index = ['N registro', 'Instrumento', 'Fecha','Política de datos', 'Código IE',
              'Tipo ID', 'ID', 'Email', 'Edad', 'Sexo', 'Cabeza de hogar', 'Estado civil',

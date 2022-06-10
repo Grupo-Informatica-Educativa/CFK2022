@@ -37,7 +37,7 @@ df0['N registro']=df0.index
 df4=df0.copy()
 df4['Instrumento']="Encuesta Directivos"
 
-df4=df4.drop([152,194,368,370,378,612],axis=0)
+df4=df4.drop([150,233,152,194,368,370,378,612],axis=0)
 
 df4=df4.dropna(subset=['Código IE'],inplace=False)
 df4=df4.dropna(subset=['ID'],inplace=False)
@@ -55,7 +55,7 @@ df4= df4[df4['ID'] >= 1000000]
 df4= df4[df4['ID'] < 3000000000]
 
 df4=df4.dropna(subset=['ID'],inplace=False)
-df4['ID']=df4.drop_duplicates(subset="ID", keep="first")
+df4 = df4.drop_duplicates(subset="ID", keep="first")
 
 new_index= ['N registro', 'Instrumento', 'Fecha','Política de datos', 'ID',
  'Edad', 'Sexo', 'Cabeza de hogar', 'Estado civil', 'Líder comunitario',

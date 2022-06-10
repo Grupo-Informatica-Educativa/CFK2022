@@ -35,6 +35,7 @@ df0['Fecha'] = df0.Timestamp.dt.strftime('%d/%m')
 print(df0['Fecha'][:5])
 
 df1= df0.copy()
+df1['Número de lista'] = df1['Número de lista'].astype(str)
 
 diccionariogrados={'Noveno':"09", 'Octavo':"08", 'Sexto':"06", 'Décimo':"10", 'Séptimo':"07", 'Once':"11", 'Quinto':"05"}
 
@@ -246,7 +247,9 @@ df1['Grupo']=[x[-2:] if int(x[-2:])<20 else x[-1] for x in df1["Grupo"]]
 df1['Grupo']=df1['Grupo'].str.zfill(2)
 print(df1.Grupo.unique())
 
+print('Número de lista nulos 2 \n',df1.loc[df1['Número de lista'].isna(),['N registro','Grupo', 'Código IE']])
 df1['Número de lista']=df1['Número de lista'].astype(float).astype(int)
+df1= df1[df1['Número de lista'] > 0]
 df1= df1[df1['Número de lista'] < 101]
 
 df1['Número de lista']=df1['Número de lista'].astype(str)
@@ -272,7 +275,7 @@ df1.loc[(df1['N registro'].isin(range(8265,8601)))&(df1['Código IE']==33)&(df1[
 df1=df1.dropna(subset=["Código IE"], inplace=False)
 
 df1['ID']=df1['Código IE']+df1['Grado']+df1['Grupo']+df1['Número de lista']
-df1['ID']=df1.drop_duplicates(subset="ID", keep="first")
+df1 = df1.drop_duplicates(subset="ID", keep="first")
 
 new_index=['N registro','Deseo participar en el estudio', 'Código IE', 'Grupo',
 'Nombre',  'Fecha', 'ID','Número de lista', 'Edad', 'Sexo', 'Sector vivienda', 'Internet',
