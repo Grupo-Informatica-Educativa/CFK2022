@@ -35,6 +35,7 @@ df0['Fecha'] = df0.Timestamp.dt.strftime('%d/%m')
 print(df0['Fecha'][:5])
 
 df1= df0.copy()
+df1['Número de lista'] = df1['Número de lista'].astype(str)
 
 diccionariogrados={'Noveno':"09", 'Octavo':"08", 'Sexto':"06", 'Décimo':"10", 'Séptimo':"07", 'Once':"11", 'Quinto':"05"}
 
@@ -246,7 +247,7 @@ df1['Grupo']=[x[-2:] if int(x[-2:])<20 else x[-1] for x in df1["Grupo"]]
 df1['Grupo']=df1['Grupo'].str.zfill(2)
 print(df1.Grupo.unique())
 
-print('Número de lista nulos \n',df1.loc[df1['Número de lista'].isna(),['N registro','Grupo', 'Código IE']])
+print('Número de lista nulos 2 \n',df1.loc[df1['Número de lista'].isna(),['N registro','Grupo', 'Código IE']])
 df1['Número de lista']=df1['Número de lista'].astype(float).astype(int)
 df1= df1[df1['Número de lista'] > 0]
 df1= df1[df1['Número de lista'] < 101]
