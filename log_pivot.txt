@@ -1,14 +1,12 @@
 /home/ubuntu/docker-compose/streamlit/CFK2022/utils/cleaners/bot
-Error!!  LideresCFK.xlsx
-{'ID'}
 Error!!  Instrumentos_DetalleCFK.xlsx
-{'N registro', 'ID', 'Instrumento'}
+{'ID', 'Instrumento', 'N registro'}
 Error!!  InstrumentosCFK.xlsx
-{'N registro', 'ID', 'Instrumento'}
+{'ID', 'Instrumento', 'N registro'}
   N registro       Instrumento Código IE ID
 0          1  Encuesta Equipos         4  1
 1          2  Encuesta Equipos       129  2
 2          3  Encuesta Equipos       231  3
 3          4  Encuesta Equipos       198  4
 4          5  Encuesta Equipos        29  5
-Tamaño pivot (251, 6)
+Tamaño pivot (252, 7)
