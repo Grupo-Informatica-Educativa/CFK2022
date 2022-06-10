@@ -37,13 +37,11 @@ df0['N registro']=df0.index
 df4=df0.copy()
 df4['Instrumento']="Encuesta Directivos"
 
-df4 = df4[df4['N registro']>2]
-
-df4=df4.drop([194],axis=0)
+df4=df4.drop([152,194,368,370,378,612],axis=0)
 
 df4=df4.dropna(subset=['Código IE'],inplace=False)
 df4=df4.dropna(subset=['ID'],inplace=False)
-df4 = df4.drop(columns='Timestamp')
+df4 =df4.drop(columns='Timestamp')
 
 df4['Código IE']=df4['Código IE'].astype(int)
 df4=df4[df4['Código IE'] > 0]
@@ -53,10 +51,11 @@ df4['Código IE']=df4['Código IE'].str.zfill(3)
 print('Cantidad de códigos IE después de filtrar mayor y menor ',len(df4['Código IE'].unique()))
 print('Códigos que se mantienen: ',df4['Código IE'].unique())
 
-
 df4= df4[df4['ID'] >= 1000000]
-df4= df4[df4['ID'] < 3000000000] #quedan 156
+df4= df4[df4['ID'] < 3000000000]
+
 df4=df4.dropna(subset=['ID'],inplace=False)
+df4 = df4.drop_duplicates(subset="ID", keep="first")
 
 new_index= ['N registro', 'Instrumento', 'Fecha','Política de datos', 'ID',
  'Edad', 'Sexo', 'Cabeza de hogar', 'Estado civil', 'Líder comunitario',

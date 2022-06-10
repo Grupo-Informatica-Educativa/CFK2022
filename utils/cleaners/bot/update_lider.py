@@ -31,6 +31,7 @@ df0 = df0.drop(columns=df0.filter(regex=r'eliminar').columns)
 
 df0['N registro']=df0.index
 
+df0['ID']=df0.index
 
 df0['Timestamp'] = pd.to_datetime(df0['Timestamp'])
 
@@ -44,7 +45,7 @@ df5['Instrumento']="Encuesta Líderes"
 
 df5 = df5[df5['N registro']>3]
 df5=df5.dropna(subset=['Código IE'],inplace=False)
-df5=df5.drop([34,70,24],axis=0)
+df5=df5.drop([24,34,70,104,149,162,255],axis=0)
 
 df5['Código IE']=df5['Código IE'].astype(int)
 df5=df5[df5['Código IE'] > 0]
@@ -53,7 +54,7 @@ df5['Código IE']=df5['Código IE'].astype(str)
 df5['Código IE']=df5['Código IE'].str.zfill(3)
 print('Códigos líderes después de filtrar mayor menor: ', df5['Código IE'].unique()) #se mantienen 158 datos
 print(df5.columns)
-new_index=['N registro', 'Fecha', 'Instrumento','Código IE',
+new_index=['N registro', 'Fecha', 'Instrumento','Código IE','ID',
        '1.1 Los docentes encargados del área son los responsables de definir lo que se enseña',
        '1.2 El plan de estudios del área cuenta con mejoras realizadas por los docentes de la IE gracias a espacios colaborativos',
        '1.3 El plan de estudio incluye actividades básicas de ofimática y/o alfabetización digital, programación y/o desarrollo del pensamiento computacional.',

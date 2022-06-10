@@ -40,19 +40,20 @@ df3=df0.copy()
 df3['Instrumento']="Encuesta docentes"
 
 df3 = df3.drop(columns='Timestamp')
-df3 = df3[df3['N registro']>2]
 
 df3['Implementa fichas'] = df3['Implementa fichas'].fillna("No")
 df3[df3.filter(regex='^1.*').columns] = df3[df3.filter(regex='^1.*').columns].fillna("Totalmente en Desacuerdo")
 df3[df3.filter(regex='^2.*').columns] = df3[df3.filter(regex='^2.*').columns].fillna("Totalmente en Desacuerdo")
 df3[df3.filter(regex='^Comentarios*').columns] = df3[df3.filter(regex='^Comentarios*').columns].fillna("")
 #%%
-df3.loc[(df3.index.isin(range(170,1799)))&(df3['Código IE']==247),'Código IE'] = None
 
+df3.loc[(df3['N registro'].isin(range(5535,5846)))&(df3['Código IE']==14),'Código IE'] = 13
+df3.loc[(df3['N registro'].isin(range(170,1799)))&(df3['Código IE']==247),'Código IE'] = None
+
+df3=df3.drop([233,321,389,489,494,538,1694,3758,4116,4361,4367,4440,4442,4446,4449,4460,4465,5101,5633,5837,6578],axis=0)
 df3=df3.dropna(subset=["Código IE"], inplace=False) #se borran 37 datos, quedan 1424
 
 diccionariodocentes={'Nueva Esperanza La Palma ':150}
-
 
 df3["Código IE"]=df3["Código IE"].replace(diccionariodocentes)
 df3["Código IE"]=df3["Código IE"].astype(str)
@@ -66,10 +67,25 @@ df3['Código IE']=df3['Código IE'].astype(str)
 df3['Código IE']=df3['Código IE'].str.zfill(3)
 print('Códigos IE después de reemplazo: ',df3["Código IE"].unique())
 
-df3['ID']=df3['ID'].astype(float).astype(int) #empezamos con 1416
-df3= df3[df3['ID'] >= 1000000] #perdemos 12 datos
-df3= df3[df3['ID'] < 3000000000] #no hay datos con más de 10 cifras, quedan 1404 datos
+df3.loc[(df3['N registro']==3206),'ID'] = 24586700
+df3.loc[(df3['N registro']==932),'ID'] = 29540947
+df3.loc[(df3['N registro']==4448),'ID'] = 36953660
+df3.loc[(df3['N registro']==4615),'ID'] = 27159828
+df3.loc[(df3['N registro']==4626),'ID'] = 27096608
+df3.loc[(df3['N registro']==6117),'ID'] = 59312868
+df3.loc[(df3['N registro']==6473),'ID'] = 30716158
+df3.loc[(df3['N registro']==353),'ID'] = 66745606
+df3.loc[(df3['N registro']==714),'ID'] = 31386953
+df3.loc[(df3['N registro']==3291),'ID'] = 5092322
+df3.loc[(df3['N registro']==6686),'ID'] = 31988705
+df3.loc[(df3['N registro']==3730),'ID'] = 42489542
+df3.loc[(df3['N registro']==6515),'Código IE'] = 139
+
+df3['ID']=df3['ID'].astype(float).astype(int)
+df3= df3[df3['ID'] >= 1000000]
+df3= df3[df3['ID'] < 3000000000]
 df3=df3.dropna(subset=["Código IE"], inplace=False)
+df3 = df3.drop_duplicates(subset="ID", keep="first")
 
 new_index = ['N registro', 'Instrumento', 'Fecha','Política de datos', 'Código IE',
              'Tipo ID', 'ID', 'Email', 'Edad', 'Sexo', 'Cabeza de hogar', 'Estado civil',

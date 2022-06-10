@@ -32,7 +32,7 @@ df0 = df0.drop(columns=df0.filter(regex=r'eliminar').columns)
 df0['N registro']=df0.index
 
 df0['Timestamp'] = pd.to_datetime(df0['Timestamp'])
-df0 = df0[df0.Timestamp>'2022-04-14']
+
 df0['Fecha'] = df0.Timestamp.dt.strftime('%d/%m')
 print(df0['Fecha'][-5:])
 
@@ -40,10 +40,10 @@ df0 = df0.drop(columns='Timestamp')
 
 df7=df0.copy()
 df7['Instrumento']="Encuesta Planes de estudio"
-#df7=df7.rename(columns={'Código de la institución educativa asignado por el proyecto':'Código IE'})
+
 df7=df7.dropna(subset=['Código IE'],inplace=False)
 
-df7=df7.drop([114],axis=0)
+df7=df7.drop([57,85,114,160,210],axis=0)
 
 df7['Código IE']=df7['Código IE'].astype(int)
 df7=df7[df7['Código IE']<253]

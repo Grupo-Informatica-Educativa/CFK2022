@@ -41,10 +41,9 @@ df0 = df0.drop(columns='Timestamp')
 df7=df0.copy()
 df7['Instrumento']="Encuesta Planes de estudio"
 
-
 df7=df7.dropna(subset=['Código IE'],inplace=False)
 
-df7=df7.drop([114],axis=0)
+df7=df7.drop([57,85,114,160,210],axis=0)
 
 df7['Código IE']=df7['Código IE'].astype(int)
 df7=df7[df7['Código IE']<253]
