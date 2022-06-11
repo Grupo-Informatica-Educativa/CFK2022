@@ -1,8 +1,8 @@
-256    03/06
-257    03/06
 258    10/06
 259    10/06
 260    10/06
+261    11/06
+262    11/06
 Name: Fecha, dtype: object
 Códigos después de filtrar:  ['063' '007' '066' '107' '062' '092' '110' '252' '098' '064' '197' '198'
  '199' '200' '067' '213' '055' '054' '053' '109' '119' '142' '059' '069'
@@ -44,5 +44,5 @@ Columnas  Index(['Código IE',
        'Visión de la institución educativa', 'N registro', 'Fecha',
        'Instrumento'],
       dtype='object')
-Publicados  (255, 22)
+Publicados  (257, 22)
 Eliminados  (6, 22)
