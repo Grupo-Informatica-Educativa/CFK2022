@@ -1,2 +1,2 @@
-Tamaño final descargables:  (24783, 74)
-Tamaño final eliminados:  (816, 74)
+Tamaño final descargables:  (22904, 74)
+Tamaño final eliminados:  (683, 74)
