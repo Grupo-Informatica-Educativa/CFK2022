@@ -40,7 +40,7 @@ pivot['Fecha'] =pd.Timestamp.today()
 pivot['Fecha']=pivot['Fecha'].dt.strftime("%d-%m-%Y")
 
 pivot['Estado']="En proceso"
-pivot.loc[(pivot["Encuesta estudiantes"]>20)&(pivot['Encuesta docentes']>10)&(pivot['Encuesta Planes de estudio']>0)&(pivot['Encuesta Líderes']>0)&(pivot['Encuesta Directivos']>0)&(pivot['Encuesta Equipos']>0),'Estado']='Completado'
+pivot.loc[(pivot["Encuesta estudiantes"]>19)&(pivot['Encuesta docentes']>9)&(pivot['Encuesta Planes de estudio']>0)&(pivot['Encuesta Líderes']>0)&(pivot['Encuesta Directivos']>0)&(pivot['Encuesta Equipos']>0),'Estado']='Completado'
 
 pivot2=pivot.copy()
 
