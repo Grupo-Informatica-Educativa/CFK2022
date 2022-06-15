@@ -55,6 +55,37 @@ df1.loc[(df1['N registro'].isin(range(3369,4505)))&(df1['Código IE']==248),'Có
 df1.loc[(df1['N registro'].isin(range(1928,1987)))&(df1['Código IE']==6),'Código IE'] = None
 df1.loc[(df1['N registro']==20836),'Código IE'] = None
 df1.loc[(df1['N registro']==19496),'Código IE'] = None
+df1.loc[(df1['N registro']==18995),'Código IE'] = None
+df1.loc[(df1['N registro']==12634),'Código IE'] = None
+df1.loc[(df1['N registro']==13324),'Código IE'] = None
+df1.loc[(df1['N registro']==15405),'Código IE'] = None
+df1.loc[(df1['N registro']==15497),'Código IE'] = None
+df1.loc[(df1['N registro']==15518),'Código IE'] = None
+df1.loc[(df1['N registro']==15549),'Código IE'] = None
+df1.loc[(df1['N registro']==15630),'Código IE'] = None
+df1.loc[(df1['N registro']==15639),'Código IE'] = None
+
+df1.loc[(df1['N registro']==15660),'Código IE'] = None
+df1.loc[(df1['N registro']==15670),'Código IE'] = None
+df1.loc[(df1['N registro']==15683),'Código IE'] = None
+df1.loc[(df1['N registro']==15690),'Código IE'] = None
+df1.loc[(df1['N registro']==15723),'Código IE'] = None
+df1.loc[(df1['N registro']==15730),'Código IE'] = None
+df1.loc[(df1['N registro']==15757),'Código IE'] = None
+df1.loc[(df1['N registro']==15773),'Código IE'] = None
+df1.loc[(df1['N registro']==17237),'Código IE'] = None
+df1.loc[(df1['N registro']==17241),'Código IE'] = None
+df1.loc[(df1['N registro']==17245),'Código IE'] = None
+df1.loc[(df1['N registro']==17255),'Código IE'] = None
+df1.loc[(df1['N registro']==17292),'Código IE'] = None
+df1.loc[(df1['N registro']==17300),'Código IE'] = None
+df1.loc[(df1['N registro']==17310),'Código IE'] = None
+df1.loc[(df1['N registro']==17315),'Código IE'] = None
+df1.loc[(df1['N registro']==17317),'Código IE'] = None
+df1.loc[(df1['N registro']==17327),'Código IE'] = None
+df1.loc[(df1['N registro']==4505),'Código IE'] = None
+df1.loc[(df1['N registro']==4508),'Código IE'] = None
+
 df1.loc[(df1['N registro'].isin(range(1795,14911)))&(df1['Código IE']==186)&(df1['Grado']=='07')&(df1['Grupo']=='B o 02'),'Código IE'] = None
 
 df1=df1.dropna(subset=["Código IE"], inplace=False)
@@ -168,6 +199,11 @@ df1.loc[(df1['N registro']==18655),'Número de lista'] = 3
 df1.loc[(df1['N registro']==18657),'Número de lista'] = 2
 df1.loc[(df1['N registro']==19100),'Número de lista'] =34
 df1.loc[(df1['N registro']==19685),'Número de lista'] =6
+df1.loc[(df1['N registro']==7867),'Número de lista'] = 23 
+df1.loc[(df1['N registro']==2229),'Número de lista'] = 34
+df1.loc[(df1['N registro']==2157),'Número de lista'] = 35
+df1.loc[(df1['N registro']==2106),'Número de lista'] = 17
+df1.loc[(df1['N registro']==1381),'Número de lista'] = 33
 
 df1.loc[(df1['N registro']==10714),'Grupo'] = 3
 df1.loc[(df1['N registro']==261),'Grupo'] = 5
@@ -182,6 +218,9 @@ df1.loc[(df1['N registro']==13638),'Grupo'] = 7
 df1.loc[(df1['N registro']==13642),'Grupo'] = 7
 df1.loc[(df1['N registro']==14471),'Grupo'] = 7
 df1.loc[(df1['N registro']==14722),'Grupo'] = 11
+
+df1.loc[(df1['N registro']==10714),'Grado'] = '08'
+df1.loc[(df1['N registro']==261),'Grado'] = '08'
 
 df1=df1.dropna(subset=["Grupo"], inplace=False)
 df1['Grupo']=df1['Grupo'].astype(str)
@@ -275,7 +314,6 @@ df1.loc[(df1['N registro'].isin(range(8265,8601)))&(df1['Código IE']==33)&(df1[
 df1=df1.dropna(subset=["Código IE"], inplace=False)
 
 df1['ID']=df1['Código IE']+df1['Grado']+df1['Grupo']+df1['Número de lista']
-df1 = df1.drop_duplicates(subset="ID", keep="first")
 
 new_index=['N registro','Deseo participar en el estudio', 'Código IE', 'Grupo',
 'Nombre',  'Fecha', 'ID','Número de lista', 'Edad', 'Sexo', 'Sector vivienda', 'Internet',
