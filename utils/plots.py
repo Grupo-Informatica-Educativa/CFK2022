@@ -26,3 +26,18 @@ def get_config(scrollZoom=True,displaylogo=False,responsive=True,editable=True,h
             'scale': scale  # Multiply title/legend/axis/canvas sizes by this factor
         }
     }
+
+def legend_position(fig,orientation="h",yanchor="bottom",xanchor="left"):
+    fig.update_layout(legend=dict(
+        orientation=orientation,
+        yanchor=yanchor,
+        y=-0.2,
+        xanchor=xanchor,
+        x=0
+    ))
+
+def text_position(fig,pos="outside"):
+    fig.update_traces(textposition=pos)
+
+def labels(fig,xlabel=None,ylabel=None):
+    fig.update_layout(xaxis_title=xlabel, yaxis_title=ylabel)
