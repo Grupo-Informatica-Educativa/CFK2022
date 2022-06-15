@@ -85,6 +85,12 @@ df1.loc[(df1['N registro']==17317),'Código IE'] = None
 df1.loc[(df1['N registro']==17327),'Código IE'] = None
 df1.loc[(df1['N registro']==4505),'Código IE'] = None
 df1.loc[(df1['N registro']==4508),'Código IE'] = None
+df1.loc[(df1['N registro']==8629),'Código IE'] = None
+df1.loc[(df1['N registro']==8697),'Código IE'] = None
+df1.loc[(df1['N registro']==8710),'Código IE'] = None
+df1.loc[(df1['N registro']==8727),'Código IE'] = None
+df1.loc[(df1['N registro']==12304),'Código IE'] = None
+
 
 df1.loc[(df1['N registro'].isin(range(1795,14911)))&(df1['Código IE']==186)&(df1['Grado']=='07')&(df1['Grupo']=='B o 02'),'Código IE'] = None
 

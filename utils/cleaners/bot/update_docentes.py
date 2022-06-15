@@ -79,6 +79,8 @@ df3.loc[(df3['N registro']==714),'ID'] = 31386953
 df3.loc[(df3['N registro']==3291),'ID'] = 5092322
 df3.loc[(df3['N registro']==6686),'ID'] = 31988705
 df3.loc[(df3['N registro']==3730),'ID'] = 42489542
+df3.loc[(df3['N registro']==1819),'ID'] = 35601960
+df3.loc[(df3['N registro']==1196),'ID'] = 21994344
 df3.loc[(df3['N registro']==6515),'Código IE'] = 139
 
 df3['ID']=df3['ID'].astype(float).astype(int)
