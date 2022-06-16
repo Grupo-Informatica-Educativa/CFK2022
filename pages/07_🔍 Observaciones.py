@@ -37,7 +37,7 @@ def app():
 # Observaciones acorde a asignaturas STEM - No STEM
 def grafica1():
     data = read_data("observaciones",1)
-    data.rename(columns={"EsSTEM": "Es STEM"},inplace=True)
+    data.rename(columns={"isSTEM": "Es STEM"},inplace=True)
     fig = px.bar(data,x='Sesión',y='Count',
              color="Es STEM",
              barmode="group",
