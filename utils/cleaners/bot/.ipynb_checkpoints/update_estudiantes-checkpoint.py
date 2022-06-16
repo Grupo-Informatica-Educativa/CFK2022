@@ -64,7 +64,8 @@ df1.loc[(df1['N registro']==15518),'Código IE'] = None
 df1.loc[(df1['N registro']==15549),'Código IE'] = None
 df1.loc[(df1['N registro']==15630),'Código IE'] = None
 df1.loc[(df1['N registro']==15639),'Código IE'] = None
-
+df1.loc[(df1['N registro']==19494),'Código IE'] = None
+df1.loc[(df1['N registro']==7014),'Código IE'] = None
 df1.loc[(df1['N registro']==15660),'Código IE'] = None
 df1.loc[(df1['N registro']==15670),'Código IE'] = None
 df1.loc[(df1['N registro']==15683),'Código IE'] = None
