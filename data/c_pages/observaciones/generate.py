@@ -2,10 +2,11 @@ import pandas as pd
 import textdistance
 
 instantanea = pd.read_excel("instantenea.xlsx");
-tablero = pd.read_excel("tablero.xlsx",engine='openpyxl',sheet_name='Reporte Consolidación 2022 - Co')
+#tablero = pd.read_excel("tablero.xlsx",engine='openpyxl',sheet_name='Reporte Consolidación 2022 - Co')
 observaciones =  pd.read_excel("observaciones.xlsx",engine='openpyxl')
+tablero = pd.read_excel("tablero.xlsx",engine='openpyxl')
 
-
+'''
 tablero = tablero[tablero['Estado Obs Aula'] == 'Realizada']
 tablero = tablero[tablero['Observación de Aula'].notnull()]
 mentores_observaciones = observaciones['Nombre del observador(a)'].unique()
@@ -31,6 +32,8 @@ observaciones['Asignatura en la que se hace la observación (implementa fichas)'
 
 _list = observaciones['Asignatura en la que se hace la observación (implementa fichas)'].unique()
 
+'''
+
 STEM = [
     'TECNOLOGÍA E INFORMÁTICA',
     'TECNOLOGÍA E INFORMATICA',
@@ -44,8 +47,8 @@ STEM = [
 ]
 
 
-observaciones['isSTEM'] = observaciones['Asignatura en la que se hace la observación (implementa fichas)'].isin(STEM)
 
+observaciones['isSTEM'] = observaciones['Asignatura en la que se hace la observación (implementa fichas)'].isin(STEM)
 
 
 # Generating graphs
@@ -58,7 +61,9 @@ temp.columns = ['isSTEM','Count']
 temp['Sesión'] = 'Total'
 data_graf = data_graf.value_counts().reset_index()
 data_graf.columns = ['Sesión','isSTEM','Count']
+
 data = pd.concat([data_graf,temp],axis=0,ignore_index=True)
+data['isSTEM'].replace({True: "Sí", False: "No"},inplace=True)
 
 data.to_feather('datasets/grafica1.feather')
 

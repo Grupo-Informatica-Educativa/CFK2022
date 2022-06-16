@@ -37,8 +37,9 @@ def app():
 # Observaciones acorde a asignaturas STEM - No STEM
 def grafica1():
     data = read_data("observaciones",1)
+    data.rename(columns={"isSTEM": "Es STEM"},inplace=True)
     fig = px.bar(data,x='Sesión',y='Count',
-             color="isSTEM",
+             color="Es STEM",
              barmode="group",
              color_discrete_sequence=px.colors.qualitative.Set2,
              template="plotly_white",
