@@ -54,10 +54,11 @@ observaciones['isSTEM'] = observaciones['Asignatura en la que se hace la observa
 
 data_graf = observaciones[['Sesión','isSTEM']].copy()
 temp = data_graf.groupby('isSTEM').count().reset_index()
-temp.columns = ['isSTEM','Count']
+temp.columns = ['Es STEM','Count']
 temp['Sesión'] = 'Total'
 data_graf = data_graf.value_counts().reset_index()
-data_graf.columns = ['Sesión','isSTEM','Count']
+data_graf.columns = ['Sesión','EsSTEM','Count']
+data_graf['EsSTEM'] = data_graf['EsSTEM'].astype(str).replace({'True': "Sí", 'False': "No"})
 data = pd.concat([data_graf,temp],axis=0,ignore_index=True)
 
 data.to_feather('datasets/grafica1.feather')
