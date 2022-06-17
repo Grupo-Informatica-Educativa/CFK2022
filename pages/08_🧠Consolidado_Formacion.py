@@ -34,6 +34,7 @@ def app():
         datos = read_data(files[0]["file"])
 
         datos = datos.dropna(subset=['Género'])
+        datos['Género'] = datos['Género'].replace({1:'Masculino',2:'Femenino'})
         datos['Año'] = datos['Año'].astype(str)
         #st.dataframe(datos.head())
 
