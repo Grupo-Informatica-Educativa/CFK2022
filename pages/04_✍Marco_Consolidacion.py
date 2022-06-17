@@ -4,16 +4,39 @@ import numpy as np
 import utils.plots as plots
 import plotly.express as px
 import plotly.graph_objects as go
+from io import BytesIO
 
 from plotly.subplots import make_subplots
 
 config = plots.get_config()
 
+@st.cache
+def to_excel(df):
+    output = BytesIO()
+    writer = pd.ExcelWriter(output, engine='xlsxwriter')
+    df.to_excel(writer, index=False, sheet_name='Sheet1')
+    workbook = writer.book
+    worksheet = writer.sheets['Sheet1']
+    format1 = workbook.add_format({'num_format': '0.00'})
+    worksheet.set_column('A:A', None, format1)
+    writer.save()
+    processed_data = output.getvalue()
+    return processed_data
 
 def app():
     st.title('Marco de consolidación institucional 2022')
+
     st.write("Nota temporal: En la leyenda de la gráfica 1000 corresponde al promedio y 2000 a la moda de todos los colegios evaluados")
+
     marco = pd.read_excel('data/Marco acumulativo.xlsx')
+    df_xlsx = to_excel(marco)
+    st.download_button(
+    label="Descargar Resultados por institución",
+    data=df_xlsx,
+    file_name='Consolidado_Marco.xlsx',
+    mime='text/xlsx',key=1)
+
+
     marco['Color IE'] = marco['Código IE'].astype(str).str.replace('Promedio','1000').str.replace('Moda','2000')
     marco['Color IE'] = marco['Color IE'].astype(float).astype(int)
 
@@ -135,5 +158,7 @@ def app():
                   )))
             if separar:
                 st.plotly_chart(spfig, use_container_width=False)
+
+
 if __name__=="__main__":
     app()

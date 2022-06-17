@@ -1,7 +1,7 @@
 import pandas as pd
 import textdistance
 
-instantanea = pd.read_excel("instantenea.xlsx");
+instantanea = pd.read_excel("instantanea.xlsx");
 #tablero = pd.read_excel("tablero.xlsx",engine='openpyxl',sheet_name='Reporte Consolidación 2022 - Co')
 observaciones =  pd.read_excel("observaciones.xlsx",engine='openpyxl')
 tablero = pd.read_excel("tablero.xlsx",engine='openpyxl')
