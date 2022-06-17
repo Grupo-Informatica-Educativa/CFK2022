@@ -26,7 +26,7 @@ def app():
     # Nombre de la columna cuyos datos son únicos para cada respuesta
     columna_unica = 'CC'
     # A partir de esta columna comienzan las preguntas (columnas de interés)
-    col_preguntas = 5
+    col_preguntas = 6
 
 
     file=True
