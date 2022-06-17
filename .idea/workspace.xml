@@ -5,9 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bc0c9467-b847-4fbd-9488-4b314c66b165" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/CFK2022.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/CFK2022.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/05_Analisis_Consolidacion.py" afterPathEscaped="$PROJECT_DIR$/pages/05_📊Analisis_Consolidacion.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/pruebas con marco.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/data/pruebas con marco.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/04_✍Marco_Consolidacion.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/04_✍Marco_Consolidacion.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/03_✅Seguimiento_Consolidacion.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/03_✅Seguimiento_Consolidacion.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/05_Encuestas_Greentic.py" beforePathEscaped="$PROJECT_DIR$/pages/05_🌱Encuestas_Greentic.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/07_Encuestas_Greentic.py" afterPathEscaped="$PROJECT_DIR$/pages/07_🌱Encuestas_Greentic.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/06_Consolidado_Formacion.py" beforePathEscaped="$PROJECT_DIR$/pages/06_🧠Consolidado_Formacion.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/08_Consolidado_Formacion.py" afterPathEscaped="$PROJECT_DIR$/pages/08_🧠Consolidado_Formacion.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/07_ Observaciones.py" beforePathEscaped="$PROJECT_DIR$/pages/07_🔍 Observaciones.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/09_ Observaciones.py" afterPathEscaped="$PROJECT_DIR$/pages/09_🔍 Observaciones.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/cleaners/Observaciones/observaciones_instantaneas.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/utils/cleaners/Observaciones/observaciones_instantaneas.ipynb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,13 +30,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/marianaarboleda/DataspellProjects/CFK2022/pages"
   }
-}</component>
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\marianaarboleda\DataspellProjects\CFK2022\pages" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">

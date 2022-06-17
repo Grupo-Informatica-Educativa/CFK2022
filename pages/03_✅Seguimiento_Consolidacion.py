@@ -96,5 +96,6 @@ def app():
     * :white_check_mark: [Bases de datos](https://drive.google.com/drive/folders/10-vecqL2rtGRXkZ4H6xkI4DY1Z5wr7fw?usp=sharing)
     * :exclamation: [Registros eliminados](https://drive.google.com/drive/folders/1xaulGr1dAuJqx2AwtGRKCcRhm9jQZCUP?usp=sharing)
     ''')
+
 if __name__ == "__main__":
     app()

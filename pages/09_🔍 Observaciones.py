@@ -54,13 +54,16 @@ def grafica1():
 # Número de Observaciones por Tipo de sesión
 def grafica2():
     data = read_data("observaciones",2)
+
     fig = px.bar(data,x='Percentage',
              y='Sesión', 
              orientation='h',
              color_discrete_sequence=px.colors.qualitative.Set2,
              template="plotly_white",
-             text_auto="0.3s")
-    plots.text_position(fig,"inside")
+             text_auto="0.3s",
+                 text='Percentage')
+    fig.update_traces(textposition='inside', texttemplate='%{text}%')
+    fig.update_xaxes(range=(0,100))
     plots.labels(fig,"Porcentaje de observaciones")
     st.plotly_chart(fig,use_container_width=True)
 
