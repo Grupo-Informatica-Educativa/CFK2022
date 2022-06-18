@@ -1,8 +1,8 @@
-260    10/06
 261    11/06
 262    11/06
 263    15/06
 264    17/06
+265    18/06
 Name: Fecha, dtype: object
 Códigos después de filtrar:  ['063' '007' '066' '107' '062' '092' '110' '252' '098' '064' '197' '198'
  '199' '200' '067' '213' '055' '054' '053' '109' '119' '142' '059' '069'
@@ -24,7 +24,7 @@ Códigos después de filtrar:  ['063' '007' '066' '107' '062' '092' '110' '252' 
  '085' '087' '207' '137' '033' '078' '113' '014' '148' '149' '150' '151'
  '153' '154' '152' '175' '245' '248' '081' '025' '104' '139' '136' '099'
  '100' '101' '102' '103' '105' '159' '134' '157' '125' '037' '038' '039'
- '040' '041' '042' '036' '192' '194' '193' '143' '195']
+ '040' '041' '042' '036' '192' '194' '193' '143' '195' '242']
 Columnas  Index(['Código IE',
        '1.1 En el plan de estudios se especifica como responsables de su elaboración a los docentes encargados del área',
        '1.2 El plan de estudio incluye actividades básicas de ofimática y/o alfabetización digital, y de programación y/o desarrollo del pensamiento computacional.',
@@ -44,5 +44,5 @@ Columnas  Index(['Código IE',
        'Visión de la institución educativa', 'N registro', 'Fecha',
        'Instrumento'],
       dtype='object')
-Publicados  (259, 22)
+Publicados  (260, 22)
 Eliminados  (6, 22)
