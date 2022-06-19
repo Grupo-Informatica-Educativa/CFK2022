@@ -1,8 +1,8 @@
-264    07/06
 265    08/06
 266    09/06
 267    09/06
 268    09/06
+269    18/06
 Name: Fecha, dtype: object
-Publicados  (250, 32)
+Publicados  (251, 32)
 Eliminados  (19, 32)

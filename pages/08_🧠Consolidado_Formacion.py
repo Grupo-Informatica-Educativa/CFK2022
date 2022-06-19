@@ -26,7 +26,7 @@ def app():
     # Nombre de la columna cuyos datos son únicos para cada respuesta
     columna_unica = 'CC'
     # A partir de esta columna comienzan las preguntas (columnas de interés)
-    col_preguntas = 5
+    col_preguntas = 6
 
 
     file=True
@@ -34,6 +34,7 @@ def app():
         datos = read_data(files[0]["file"])
 
         datos = datos.dropna(subset=['Género'])
+        datos['Género'] = datos['Género'].replace({1:'Masculino',2:'Femenino'})
         datos['Año'] = datos['Año'].astype(str)
         #st.dataframe(datos.head())
 
