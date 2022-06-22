@@ -63,36 +63,66 @@ def app():
     marco_m['Descripción'] = marco_m['Dim'].replace(descripciones)
     marco_m = marco_m[marco_m['Nivel']!=0]
 
-    with st.container():
-        pl_marco = marco_m[marco_m['Tipo de observación'] == 'Institución']
-        pl_marco = pl_marco.pivot_table(index=['Dimensión','Nivel'],
-                                       values='Color IE',
-                                       aggfunc='nunique').rename(columns={'Color IE':"Cant.IE"}).reset_index()
+    #st.write(marco_m)
 
-        total = pl_marco.groupby('Dimensión')['Cant.IE'].sum().reset_index().rename(columns={"Cant.IE":"Total"})
+    ## Preparando datos para gráfica agrupada horizontal
+    pl_marco = marco_m[marco_m['Tipo de observación'] == 'Institución']
+    pl_marco = pl_marco.pivot_table(index=['Dimensión','Nivel'],
+                                   values='Color IE',
+                                   aggfunc='nunique').rename(columns={'Color IE':"Cant.IE"}).reset_index()
 
-        pl_marco = pl_marco.merge(total, on='Dimensión')
-        pl_marco['Frecuencia'] = pl_marco['Cant.IE'] / pl_marco["Total"]
-        dimensiones = marco_m.loc[:,['Dim','Dimensión','Descripción']]
-        dimensiones = dimensiones.drop_duplicates()
+    total = pl_marco.groupby('Dimensión')['Cant.IE'].sum().reset_index().rename(columns={"Cant.IE":"Total"})
 
-        pl_marco = pl_marco.merge(dimensiones, on='Dimensión', how='left')
+    pl_marco = pl_marco.merge(total, on='Dimensión')
+    pl_marco['Frecuencia'] = pl_marco['Cant.IE'] / pl_marco["Total"]
+    dimensiones = marco_m.loc[:,['Dim','Dimensión','Descripción']]
+    dimensiones = dimensiones.drop_duplicates()
 
-        fig = px.bar(pl_marco, y="Dimensión", x="Frecuencia",
-                     orientation='h',color="Nivel",
-        category_orders={'Nivel':['1A', '1B', '2A', '2B', '3', '4', '5'],
-        'Dim':["Dimensión "+str(x) for x in range(1,9)],
-        'Dimensión': ['Liderazgo','Currículo','Enseñanza','Dllo profesional',
-        'EDI','Ed.Terciaria','Impacto', 'Género']},
-                     text='Frecuencia',
-        hover_name='Dim',
-        hover_data={'Nivel':True, 'Descripción':True},
-        color_discrete_sequence=px.colors.qualitative.Pastel)
+    pl_marco = pl_marco.merge(dimensiones, on='Dimensión', how='left')
 
-        fig.for_each_xaxis(lambda yaxis: yaxis.update(tickformat=',.0%'))
-        fig.update_traces(textposition='inside', texttemplate='%{text:,.2%}')
+    ### Gráfica agrupada horizontal
+    fig_h = px.bar(pl_marco, y="Dimensión", x="Frecuencia",
+                 orientation='h',color="Nivel",
+    category_orders={'Nivel':['1A', '1B', '2A', '2B', '3', '4', '5'],
+    'Dim':["Dimensión "+str(x) for x in range(1,9)],
+    'Dimensión': ['Liderazgo','Currículo','Enseñanza','Dllo profesional',
+    'EDI','Ed.Terciaria','Impacto', 'Género']},
+                 text='Frecuencia',
+    hover_name='Dim',
+    hover_data={'Nivel':True, 'Descripción':True},
+    color_discrete_sequence=px.colors.qualitative.Pastel, height=600)
 
-    st.plotly_chart(fig, config=config)
+    fig_h.for_each_xaxis(lambda yaxis: yaxis.update(tickformat=',.0%'))
+    fig_h.update_traces(textposition='inside', texttemplate='%{text:,.2%}')
+
+
+
+    ### Gráfica vertical dividida por col
+    fig_v = px.bar(pl_marco, y="Frecuencia", x="Nivel", facet_col='Dimensión',
+                 barmode='group', facet_col_wrap=2,
+                 orientation='v',
+                 category_orders={'Nivel':['1A', '1B', '2A', '2B', '3', '4', '5'],
+                                  'Dim':["Dimensión "+str(x) for x in range(1,9)],
+                                  'Dimensión': ['Liderazgo','Currículo','Enseñanza','Dllo profesional',
+                                                'EDI','Ed.Terciaria','Impacto', 'Género']},
+                 text='Frecuencia',
+                 hover_name='Dim',
+                 hover_data={'Nivel':True, 'Descripción':True},
+                 color_discrete_sequence=px.colors.qualitative.Pastel,
+                height=1200)
+    fig_v.for_each_annotation(
+        lambda a: a.update(text=a.text.split("=")[-1]))
+    fig_v.for_each_yaxis(lambda yaxis: yaxis.update(tickformat=',.0%'))
+    fig_v.update_traces(textposition='outside', texttemplate='%{text:,.2%}')
+
+
+    st.write("### Resultados agrupados por dimensión")
+    st.plotly_chart(fig_h, config=config)
+
+    st.write("### Distribución de clasificación en niveles por dimensión")
+    st.plotly_chart(fig_v, config=config, use_container_width=True, heigth=1200)
+
+
 
 
 

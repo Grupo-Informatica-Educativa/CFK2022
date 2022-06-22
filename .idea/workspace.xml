@@ -5,8 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bc0c9467-b847-4fbd-9488-4b314c66b165" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/data/c_pages/observaciones/observaciones_vertical.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/08_Consolidado_Formacion.py" beforePathEscaped="$PROJECT_DIR$/pages/08_🧠Consolidado_Formacion.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/08_Consolidado_Formacion.py" afterPathEscaped="$PROJECT_DIR$/pages/08_🧠Consolidado_Formacion.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/05_Analisis_Consolidacion.py" beforePathEscaped="$PROJECT_DIR$/pages/05_📊Analisis_Consolidacion.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/05_Analisis_Consolidacion.py" afterPathEscaped="$PROJECT_DIR$/pages/05_📊Analisis_Consolidacion.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,6 +24,35 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitToolBoxStore">
+    <option name="recentBranches">
+      <RecentBranches>
+        <option name="branchesForRepo">
+          <list>
+            <RecentBranchesForRepo>
+              <option name="branches">
+                <list>
+                  <RecentBranch>
+                    <option name="branchName" value="mariana" />
+                    <option name="lastUsedInstant" value="1655831462" />
+                  </RecentBranch>
+                  <RecentBranch>
+                    <option name="branchName" value="feature/karen" />
+                    <option name="lastUsedInstant" value="1655829038" />
+                  </RecentBranch>
+                  <RecentBranch>
+                    <option name="branchName" value="master" />
+                    <option name="lastUsedInstant" value="1655484081" />
+                  </RecentBranch>
+                </list>
+              </option>
+              <option name="repositoryRootUrl" value="file://$PROJECT_DIR$" />
+            </RecentBranchesForRepo>
+          </list>
+        </option>
+      </RecentBranches>
+    </option>
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -36,12 +66,13 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/marianaarboleda/DataspellProjects/CFK2022/pages&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/marianaarboleda/DataspellProjects/CFK2022/data&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
   }
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\marianaarboleda\DataspellProjects\CFK2022\data" />
       <recent name="C:\Users\marianaarboleda\DataspellProjects\CFK2022\pages" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
