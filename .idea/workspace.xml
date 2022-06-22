@@ -5,7 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bc0c9467-b847-4fbd-9488-4b314c66b165" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/data/c_pages/observaciones/observaciones_vertical.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/05_Analisis_Consolidacion.py" beforePathEscaped="$PROJECT_DIR$/pages/05_📊Analisis_Consolidacion.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/05_Analisis_Consolidacion.py" afterPathEscaped="$PROJECT_DIR$/pages/05_📊Analisis_Consolidacion.py" afterDir="false" />
     </list>

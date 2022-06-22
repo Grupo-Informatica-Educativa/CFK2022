@@ -63,7 +63,7 @@ def app():
     marco_m['Descripción'] = marco_m['Dim'].replace(descripciones)
     marco_m = marco_m[marco_m['Nivel']!=0]
 
-    #st.write(marco_m)
+
 
     ## Preparando datos para gráfica agrupada horizontal
     pl_marco = marco_m[marco_m['Tipo de observación'] == 'Institución']
@@ -115,6 +115,41 @@ def app():
     fig_v.for_each_yaxis(lambda yaxis: yaxis.update(tickformat=',.0%'))
     fig_v.update_traces(textposition='outside', texttemplate='%{text:,.2%}')
 
+    zonas_marco = marco_m[marco_m['Tipo de observación'] == 'Institución']
+    zonas_marco = zonas_marco.pivot_table(index=['Dimensión','Nivel','Zona'],
+                                    values='Color IE',
+                                    aggfunc='nunique').rename(columns={'Color IE':"Cant.IE"}).reset_index()
+
+    totalz = zonas_marco.groupby(['Dimensión','Zona'])['Cant.IE'].sum().reset_index().rename(columns={"Cant.IE":"Total"})
+    st.write(totalz)
+    zonas_marco = zonas_marco.merge(totalz, on=['Dimensión','Zona'])
+    st.write(zonas_marco)
+    zonas_marco['Frecuencia'] = zonas_marco['Cant.IE'] /zonas_marco["Total"]
+
+    dimensiones = marco_m.loc[:,['Dim','Dimensión','Descripción']]
+    dimensiones = dimensiones.drop_duplicates()
+
+    zonas_marco = zonas_marco.merge(dimensiones, on='Dimensión', how='left')
+    st.write(zonas_marco)
+
+
+### Gráfica vertical dividida por col
+    fig_z = px.bar(zonas_marco, y="Frecuencia", x="Nivel", facet_col='Dimensión',
+                   barmode='group', facet_col_wrap=2, color='Zona',
+                   orientation='v',
+                   category_orders={'Nivel':['1A', '1B', '2A', '2B', '3', '4', '5'],
+                                    'Dim':["Dimensión "+str(x) for x in range(1,9)],
+                                    'Dimensión': ['Liderazgo','Currículo','Enseñanza','Dllo profesional',
+                                                  'EDI','Ed.Terciaria','Impacto', 'Género']},
+                   text='Frecuencia',
+                   hover_name='Dim',
+                   hover_data={'Nivel':True, 'Descripción':True},
+                   color_discrete_sequence=px.colors.qualitative.Pastel,
+                   height=1200)
+    fig_z.for_each_annotation(
+        lambda a: a.update(text=a.text.split("=")[-1]))
+    fig_z.for_each_yaxis(lambda yaxis: yaxis.update(tickformat=',.0%'))
+    fig_z.update_traces(textposition='outside', texttemplate='%{text:,.2%}')
 
     st.write("### Resultados agrupados por dimensión")
     st.plotly_chart(fig_h, config=config)
@@ -122,6 +157,8 @@ def app():
     st.write("### Distribución de clasificación en niveles por dimensión")
     st.plotly_chart(fig_v, config=config, use_container_width=True, heigth=1200)
 
+    st.write("### Distribución de clasificación en niveles por zona")
+    st.plotly_chart(fig_z, config=config, use_container_width=True, heigth=1200)
 
 
 
