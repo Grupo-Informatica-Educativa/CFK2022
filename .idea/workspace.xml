@@ -5,8 +5,40 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bc0c9467-b847-4fbd-9488-4b314c66b165" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/CFK2022.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/CFK2022.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/08_Consolidado_Formacion.py" beforePathEscaped="$PROJECT_DIR$/pages/08_🧠Consolidado_Formacion.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/08_Consolidado_Formacion.py" afterPathEscaped="$PROJECT_DIR$/pages/08_🧠Consolidado_Formacion.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/Marco acumulativo.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/data/Marco acumulativo.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/Marco con categorias.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/data/Marco con categorias.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/descargables/EstudiantesCFK.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/data/descargables/EstudiantesCFK.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/descargables/InstrumentosCFK.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/data/descargables/InstrumentosCFK.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/descargables/Instrumentos_DetalleCFK.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/data/descargables/Instrumentos_DetalleCFK.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/pruebas con marco.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/data/pruebas con marco.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/cleaners/Marco_consolidacion/Acumulativo.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/utils/cleaners/Marco_consolidacion/Acumulativo.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/cleaners/Marco_consolidacion/Dimension 4.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/utils/cleaners/Marco_consolidacion/Dimension 4.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/cleaners/Marco_consolidacion/Dimensión 1.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/utils/cleaners/Marco_consolidacion/Dimensión 1.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/cleaners/Marco_consolidacion/Dimensión 2.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/utils/cleaners/Marco_consolidacion/Dimensión 2.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/cleaners/Marco_consolidacion/Dimensión 3.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/utils/cleaners/Marco_consolidacion/Dimensión 3.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/cleaners/Marco_consolidacion/Dimensión 5.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/utils/cleaners/Marco_consolidacion/Dimensión 5.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/cleaners/Marco_consolidacion/Dimensión 6.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/utils/cleaners/Marco_consolidacion/Dimensión 6.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/cleaners/Marco_consolidacion/Dimensión 7.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/utils/cleaners/Marco_consolidacion/Dimensión 7.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/cleaners/Marco_consolidacion/Dimensión 8.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/utils/cleaners/Marco_consolidacion/Dimensión 8.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/cleaners/Marco_consolidacion/Marco acumulativo.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/utils/cleaners/Marco_consolidacion/Marco acumulativo.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/cleaners/Marco_consolidacion/consolidacion_D1.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/utils/cleaners/Marco_consolidacion/consolidacion_D1.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/cleaners/Marco_consolidacion/consolidacion_D2.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/utils/cleaners/Marco_consolidacion/consolidacion_D2.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/cleaners/Marco_consolidacion/consolidacion_D3.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/utils/cleaners/Marco_consolidacion/consolidacion_D3.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/cleaners/Marco_consolidacion/consolidacion_D4.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/utils/cleaners/Marco_consolidacion/consolidacion_D4.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/cleaners/Marco_consolidacion/consolidacion_D5.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/utils/cleaners/Marco_consolidacion/consolidacion_D5.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/cleaners/Marco_consolidacion/consolidacion_D6.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/utils/cleaners/Marco_consolidacion/consolidacion_D6.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/cleaners/Marco_consolidacion/consolidacion_D7.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/utils/cleaners/Marco_consolidacion/consolidacion_D7.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/cleaners/Marco_consolidacion/consolidación_D8.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/utils/cleaners/Marco_consolidacion/consolidación_D8.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/cleaners/bot/eliminados/Eliminados_estudiantes.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/utils/cleaners/bot/eliminados/Eliminados_estudiantes.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/cleaners/bot/log_desconectadas_est.txt" beforeDir="false" afterPath="$PROJECT_DIR$/utils/cleaners/bot/log_desconectadas_est.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/cleaners/bot/log_directivos.txt" beforeDir="false" afterPath="$PROJECT_DIR$/utils/cleaners/bot/log_directivos.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/cleaners/bot/log_estudiantes.txt" beforeDir="false" afterPath="$PROJECT_DIR$/utils/cleaners/bot/log_estudiantes.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/cleaners/bot/log_pivot.txt" beforeDir="false" afterPath="$PROJECT_DIR$/utils/cleaners/bot/log_pivot.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/cleaners/bot/update_directivos.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/cleaners/bot/update_directivos.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/cleaners/bot/update_estudiantes.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/cleaners/bot/update_estudiantes.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,6 +55,35 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitToolBoxStore">
+    <option name="recentBranches">
+      <RecentBranches>
+        <option name="branchesForRepo">
+          <list>
+            <RecentBranchesForRepo>
+              <option name="branches">
+                <list>
+                  <RecentBranch>
+                    <option name="branchName" value="mariana" />
+                    <option name="lastUsedInstant" value="1655831462" />
+                  </RecentBranch>
+                  <RecentBranch>
+                    <option name="branchName" value="feature/karen" />
+                    <option name="lastUsedInstant" value="1655829038" />
+                  </RecentBranch>
+                  <RecentBranch>
+                    <option name="branchName" value="master" />
+                    <option name="lastUsedInstant" value="1655484081" />
+                  </RecentBranch>
+                </list>
+              </option>
+              <option name="repositoryRootUrl" value="file://$PROJECT_DIR$" />
+            </RecentBranchesForRepo>
+          </list>
+        </option>
+      </RecentBranches>
+    </option>
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -31,17 +92,18 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/marianaarboleda/DataspellProjects/CFK2022/pages&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/marianaarboleda/DataspellProjects/CFK2022/data",
+    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\marianaarboleda\DataspellProjects\CFK2022\data" />
       <recent name="C:\Users\marianaarboleda\DataspellProjects\CFK2022\pages" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
