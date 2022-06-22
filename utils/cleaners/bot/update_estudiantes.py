@@ -233,7 +233,7 @@ df1['Grupo']=df1['Grupo'].str.replace("colegiosansimon","")
 print("Después de eliminar Sexto, Noveno, seis como texto")
 print(df1.Grupo.unique())
 
-diccionariogrupos1={'Bo02':"02", 'Ao01':"01",'Co03':"03", 'Do04':"04", 'Eo05':"05", 'Fo06':"06", 'Go07':"07", 'Ho08':"08", 'Io09':"09", 'Jo10':"10", 'Ko11':"11", 'Lo12':"12", "Urbano":None, "Nosequesignificalodegrupo":None, "Noconozco":None, "Nose":None, ".":None,"Único":None} #valor exactamente igual
+diccionariogrupos1={'Bo02':"02", 'Ao01':"01",'Co03':"03", 'Do04':"04", 'Eo05':"05", 'Fo06':"06", 'Go07':"07", 'Ho08':"08", 'Io09':"09", 'Jo10':"10", 'Ko11':"11", 'Lo12':"12", "Urbano":None, "Nosequesignificalodegrupo":None, "Noconozco":None, "Nose":None, ".":None,"Único":"01"} #valor exactamente igual
 df1["Grupo"]=df1["Grupo"].replace(diccionariogrupos1)
 df1=df1.dropna(subset=["Grupo"], inplace=False)
 
