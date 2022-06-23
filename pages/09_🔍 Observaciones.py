@@ -34,8 +34,12 @@ def app():
     st.write("Cantidad de graficas pedagogicas implementadas")
     grafica10()
     st.write("Fidelidad de la implementación")
-    graficajose()
 
+    graficajose_unida()
+    st.write("Fidelidad de la implementación por ficha")
+    for f in ['Ficha 1', 'Ficha 2', 'Ficha 3', 'Ficha 4', 'Sin respuesta']:
+        st.write(f)
+        graficajose(f)
 # Observaciones acorde a asignaturas STEM - No STEM
 def grafica1():
     data = read_data("observaciones",1)
@@ -175,7 +179,24 @@ def grafica10():
     plots.labels(fig)
     st.plotly_chart(fig,use_container_width=True)
 
-def graficajose():
+def graficajose(ficha):
+    data = read_data("grafica_jose")
+    data = data[data['Ficha']==ficha]
+    fig = px.bar(data, x='Concepto',y='Frecuencia', color='Implementación',  color_discrete_sequence=px.colors.qualitative.Pastel,
+                 template="plotly_white", category_orders={'Implementación':['Si','Parcialmente','No'],
+                                                           'Concepto' : ['Presenta Ob', 'Conocimientos previos', 'Conceptos claves',
+       'Preparación de material', 'Gestión de materiales', 'Comparte solución',
+       'Cierre formal', 'Lenguaje técnico', 'Conexión vida diaria',
+       'Metacognición']}, facet_col_wrap=3, height=500, text='Frecuencia')
+
+    plots.text_position(fig, pos="inside")
+    plots.labels(fig)
+    plots.percentage_labelsy(fig,xlabel=None,ylabel=None)
+    fig.for_each_annotation(
+        lambda a: a.update(text=a.text.split("=")[-1]))
+    st.plotly_chart(fig,use_container_width=True, config=config)
+
+def graficajose_unida():
     data = read_data("grafica_jose")
     fig = px.bar(data, x='Concepto',y='Frecuencia', color='Implementación', facet_col='Ficha',  color_discrete_sequence=px.colors.qualitative.Pastel,
                  template="plotly_white", category_orders={'Implementación':['Si','Parcialmente','No'],
@@ -190,8 +211,6 @@ def graficajose():
     fig.for_each_annotation(
         lambda a: a.update(text=a.text.split("=")[-1]))
     st.plotly_chart(fig,use_container_width=True, config=config)
-
-
 
 if __name__=="__main__":
     app()
