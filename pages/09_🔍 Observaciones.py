@@ -182,14 +182,14 @@ def graficajose():
                                                            'Concepto' : ['Presenta Ob', 'Conocimientos previos', 'Conceptos claves',
        'Preparación de material', 'Gestión de materiales', 'Comparte solución',
        'Cierre formal', 'Lenguaje técnico', 'Conexión vida diaria',
-       'Metacognición']}, facet_col_wrap=2, height=1400, text='Frecuencia')
+       'Metacognición']}, facet_col_wrap=3, height=1400, text='Frecuencia')
 
     plots.text_position(fig, pos="inside")
     plots.labels(fig)
     plots.percentage_labelsy(fig,xlabel=None,ylabel=None)
     fig.for_each_annotation(
         lambda a: a.update(text=a.text.split("=")[-1]))
-    st.plotly_chart(fig,use_container_width=True)
+    st.plotly_chart(fig,use_container_width=True, config=config)
 
 
 
