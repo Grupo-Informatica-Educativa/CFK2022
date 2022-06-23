@@ -7,7 +7,7 @@
     <list default="true" id="bc0c9467-b847-4fbd-9488-4b314c66b165" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/09_ Observaciones.py" beforePathEscaped="$PROJECT_DIR$/pages/09_🔍 Observaciones.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/09_ Observaciones.py" afterPathEscaped="$PROJECT_DIR$/pages/09_🔍 Observaciones.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/cleaners/Observaciones/observaciones_instantaneas.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/utils/cleaners/Observaciones/observaciones_instantaneas.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/10_ Observaciones_Género.py" beforePathEscaped="$PROJECT_DIR$/pages/10_🔍 Observaciones_Género.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/10_ Observaciones_Género.py" afterPathEscaped="$PROJECT_DIR$/pages/10_🔍 Observaciones_Género.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,15 +66,15 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/marianaarboleda/DataspellProjects/CFK2022/data/c_pages/observaciones/datasets",
-    "settings.editor.selected.configurable": "preferences.keymap"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/marianaarboleda/DataspellProjects/CFK2022/data/c_pages/observaciones/datasets&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\marianaarboleda\DataspellProjects\CFK2022\data\c_pages\observaciones\datasets" />
