@@ -5,18 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bc0c9467-b847-4fbd-9488-4b314c66b165" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/pages/10_ Observaciones_Género.py" afterPathEscaped="$PROJECT_DIR$/pages/10_🔍 Observaciones_Género.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/utils/cleaners/CAP/CAP_SEGUIDORES.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/utils/cleaners/Formacion/formacion.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_22_06_2022_12_40_AM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_22_06_2022_12_40_AM__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.ipynb_checkpoints/app-checkpoint.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.ipynb_checkpoints/log_estudiantes-checkpoint.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.ipynb_checkpoints/requirements-checkpoint.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/05_Analisis_Consolidacion.py" beforePathEscaped="$PROJECT_DIR$/pages/05_📊Analisis_Consolidacion.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/05_Analisis_Consolidacion.py" afterPathEscaped="$PROJECT_DIR$/pages/05_📊Analisis_Consolidacion.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/cleaners/Marco_consolidacion/Pasar respuestas a numeros.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/utils/cleaners/Marco_consolidacion/Pasar respuestas a numeros.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/10_ Observaciones_Género.py" beforePathEscaped="$PROJECT_DIR$/pages/10_🔍 Observaciones_Género.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/10_ Observaciones_Género.py" afterPathEscaped="$PROJECT_DIR$/pages/10_🔍 Observaciones_Género.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/utils/plots.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/plots.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/read_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/read_data.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,15 +66,15 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/marianaarboleda/DataspellProjects/CFK2022/pages",
-    "settings.editor.selected.configurable": "preferences.keymap"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/marianaarboleda/DataspellProjects/CFK2022/pages&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\marianaarboleda\DataspellProjects\CFK2022\pages" />

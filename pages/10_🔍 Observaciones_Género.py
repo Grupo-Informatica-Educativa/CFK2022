@@ -21,12 +21,14 @@ def app():
     grafica02_1()
     st.write("## Cantidad de prácticas implementadas por género")
     grafica02_2()
-    # st.write("## ¿Se presentan los objetivos de aprendizaje de la lección?")
-    # grafica3()
-    # st.write("## Exploración de los conocimientos previos")
-    # grafica4()
-    # st.write("## Actividad desconectada")
-    # grafica5()
+    st.write("## ¿Quiénes están socializando su trabajo?")
+    grafica_inst(1)
+    st.write("## ¿Quiénes no están involucrados en las actividades propuestas?")
+    grafica_inst(2)
+    st.write("## ¿Quiénes están manipulando los materiales?")
+    grafica_inst(3)
+    st.write("## ¿Quiénes están ejerciendo roles de liderazgo?")
+    grafica_inst(4)
     # st.write("## Momentos Progresión Usa-Modifica-Crea")
     # grafica6()
     # st.write("¿Se usa el vocabulario adecuado para la enseñanza del pensamiento computacional (terminología correcta)?")
@@ -68,7 +70,7 @@ def grafica01_1():
     plots.legend_position(fig)
     plots.percentage_labelsy(fig)
     plots.percentage_labelsx(fig)
-    st.plotly_chart(fig,use_container_width=True)
+    st.plotly_chart(fig,use_container_width=True, config=config)
 
 def grafica01_2():
     data = read_data_xlsx("observaciones_gen","01")
@@ -102,7 +104,7 @@ def grafica01_2():
     plots.legend_position(fig)
     plots.percentage_labelsy(fig)
     plots.percentage_labelsx(fig)
-    st.plotly_chart(fig,use_container_width=True)
+    st.plotly_chart(fig,use_container_width=True, config=config)
 
 # Número de Observaciones por Tipo de sesión
 def grafica02_1():
@@ -127,7 +129,7 @@ def grafica02_1():
     plots.text_position(fig)
     plots.legend_position(fig)
     plots.percentage_labelsy(fig)
-    st.plotly_chart(fig,use_container_width=True)
+    st.plotly_chart(fig,use_container_width=True, config=config)
 
 
 def grafica02_2():
@@ -152,21 +154,46 @@ def grafica02_2():
     fig.update_layout(autosize=True)
     fig.update_yaxes(range=(0,1))
     plots.text_position(fig)
-    plots.legend_position(fig)
+    plots.legend_position(fig, orientation='v', xanchor='right', yanchor='top', y=1, x=1.2)
     plots.percentage_labelsy(fig)
-    st.plotly_chart(fig,use_container_width=True)
+    st.plotly_chart(fig,use_container_width=True, config=config)
 
 # ¿Se presentan los objetivos de aprendizaje de la lección?
-def grafica3():
-    data = read_data_xlsx("observaciones_gen",3)
-    fig = px.bar(data,
-            x='Respuesta',
-            y='Número de observaciones',
+def grafica_inst(n):
+    data = read_data_xlsx("observaciones_gen",n)
+    data['Opción'] = data['Opción'].str.split(",").str[0]
+    #st.write(list(data['Opción'].unique()))
+    total = data.groupby('Opción').ID.nunique().reset_index().rename(columns={'ID':'Total'})
+
+    piv_data = data.pivot_table(index=['Opción','Categoría'],
+                                values=['ID'],
+                                aggfunc={'ID':'count'}).rename(columns={'ID':'Cant'}).reset_index()
+
+    piv_data = piv_data.merge(total, on='Opción')
+    piv_data['Frecuencia'] = piv_data['Cant']/piv_data['Total']
+    fig = px.bar(piv_data,
+            x='Frecuencia',
+            y='Opción',
+            color='Categoría',
             color_discrete_sequence=px.colors.qualitative.Set2,
-            text_auto=True,
-            template="plotly_white")
-    plots.text_position(fig)
-    st.plotly_chart(fig,use_container_width=True)
+            text='Frecuencia',
+            template="plotly_white", category_orders={'Categoría': ['0 - 20 casi nunca',
+                                                                    '20 - 40 poco frecuente',
+                                                                    '40 - 60 frecuente',
+                                                                    '60 - 80 muy frecuente',
+                                                                    '80 - 100 casi siempre'],
+                                                      'Opción': ["Sólo los niños",
+                                                                 "Principalmente los niños",
+                                                                 "Niños y niñas por igual",
+                                                                 "Principalmente las niñas",
+                                                                 "Sólo las niñas",
+                                                                 ]})
+    fig.update_layout(autosize=True)
+    plots.text_position(fig, pos="inside")
+    plots.legend_position(fig, orientation='v', xanchor='right', yanchor='top', y=1, x=1.5)
+    plots.percentage_labelsy(fig)
+    plots.percentage_labelsx(fig)
+    st.plotly_chart(fig,use_container_width=True, config=config)
 
 # Exploración de los conocimientos previos"
 def grafica4():

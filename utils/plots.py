@@ -27,13 +27,13 @@ def get_config(scrollZoom=True,displaylogo=False,responsive=True,editable=True,h
         }
     }
 
-def legend_position(fig,orientation="h",yanchor="bottom",xanchor="left"):
+def legend_position(fig,orientation="h",yanchor="bottom",xanchor="left",y=-0.2, x=0):
     fig.update_layout(legend=dict(
         orientation=orientation,
         yanchor=yanchor,
-        y=-0.2,
+        y=y,
         xanchor=xanchor,
-        x=0
+        x=x
     ))
 
 def text_position(fig,pos="outside"):
@@ -44,7 +44,7 @@ def labels(fig,xlabel=None,ylabel=None):
 
 def percentage_labelsy(fig,xlabel=None,ylabel=None):
     fig.for_each_yaxis(lambda yaxis: yaxis.update(tickformat=',.0%'))
-    fig.update_traces(textposition='outside', texttemplate='%{text:,.0%}')
+    fig.update_traces(texttemplate='%{text:,.0%}')
 
 def percentage_labelsx(fig,xlabel=None,ylabel=None):
     fig.for_each_xaxis(lambda yaxis: yaxis.update(tickformat=',.0%'))
