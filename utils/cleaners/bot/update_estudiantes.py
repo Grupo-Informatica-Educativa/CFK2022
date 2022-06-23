@@ -255,6 +255,13 @@ df1.loc[(df1['N registro']==11874),'Número de lista'] =6
 df1.loc[(df1['N registro']==11989),'Número de lista'] =24
 df1.loc[(df1['N registro']==12340),'Número de lista'] =38
 
+#excepciones a la regla de número de lista
+df1.loc[(df1['N registro']==4490),'Número de lista'] = 1
+df1.loc[(df1['N registro']==2621),'Número de lista'] = 2
+df1.loc[(df1['N registro']==1119),'Número de lista'] = 3
+df1.loc[(df1['N registro']==1116),'Número de lista'] = 4
+df1.loc[(df1['N registro']==1105),'Número de lista'] = 5
+
 df1.loc[(df1['N registro']==10714),'Grupo'] = 3
 df1.loc[(df1['N registro']==261),'Grupo'] = 5
 df1.loc[(df1['N registro']==2406),'Grupo'] = 6
@@ -360,6 +367,13 @@ print('Número de lista nulos 2 \n',df1.loc[df1['Número de lista'].isna(),['N r
 df1['Número de lista']=df1['Número de lista'].astype(float).astype(int)
 df1= df1[df1['Número de lista'] > 0]
 df1= df1[df1['Número de lista'] < 101]
+
+#excepciones a la regla de número de lista
+df1.loc[(df1['N registro']==4490),'Número de lista'] =2018078131 
+df1.loc[(df1['N registro']==2621),'Número de lista'] = 2018079766
+df1.loc[(df1['N registro']==1119),'Número de lista'] = 2022091311
+df1.loc[(df1['N registro']==1116),'Número de lista'] =2021028000
+df1.loc[(df1['N registro']==1105),'Número de lista'] = 2022089766
 
 df1['Número de lista']=df1['Número de lista'].astype(str)
 df1['Número de lista']=df1['Número de lista'].str.zfill(2)

@@ -68,15 +68,13 @@ df4.loc[(df4['N registro'].isin(range(290,293)))&&(df1['Código IE']==61),'Núme
 df4.loc[(df4['N registro']==292),'Comentarios autodiagnóstico'] = 'Ninguno'
 df4.loc[(df4['N registro']==536),'Comentarios autodiagnóstico'] = 'Ninguno'
 
-df4.loc[(df4['N registro']==524),'Estudiantes  con discapacidad intelectual'] = 8
+df4.loc[(df4['N registro']==524),'Estudiantes con discapacidad intelectual'] = 8
 df4.loc[(df4['N registro']==524),'Estudiantes con Discapacidad física o motora'] = 2
 df4.loc[(df4['N registro']==524),'Estudiantes con Discapacidad auditiva'] = 0
 df4.loc[(df4['N registro']==524),'Estudiantes con Discapacidad visual'] =4
 df4.loc[(df4['N registro']==524),'Estudiantes con Discapacidad psicosocial'] = 5
 df4.loc[(df4['N registro']==524),'Estudiantes con Discapacidad múltiple'] = 1
 df4.loc[(df4['N registro']==524),'Estudiante con Trastornos Específicos del Aprendizaje'] = 10
-
-#El n registro 677 digitó la cédula incorrecta
 
 df4=df4[df4['Código IE'] > 0]
 df4=df4[df4['Código IE']<253]
@@ -85,8 +83,13 @@ df4['Código IE']=df4['Código IE'].str.zfill(3)
 print('Cantidad de códigos IE después de filtrar mayor y menor ',len(df4['Código IE'].unique()))
 print('Códigos que se mantienen: ',df4['Código IE'].unique())
 
+#excepciones a la regla de número de cédula
+df4.loc[(df4['N registro']==677),'ID'] = 22534255
+
 df4= df4[df4['ID'] >= 1000000]
 df4= df4[df4['ID'] < 3000000000]
+
+df4.loc[(df4['N registro']==677),'ID'] = 3046440334
 
 df4=df4.dropna(subset=['ID'],inplace=False)
 print("antes de quitar duplicados ID", df4.shape)
