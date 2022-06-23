@@ -5,9 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bc0c9467-b847-4fbd-9488-4b314c66b165" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/data/c_pages/observaciones/observaciones_vertical.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/05_Analisis_Consolidacion.py" beforePathEscaped="$PROJECT_DIR$/pages/05_📊Analisis_Consolidacion.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/05_Analisis_Consolidacion.py" afterPathEscaped="$PROJECT_DIR$/pages/05_📊Analisis_Consolidacion.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/10_ Observaciones_Género.py" beforePathEscaped="$PROJECT_DIR$/pages/10_🔍 Observaciones_Género.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/10_ Observaciones_Género.py" afterPathEscaped="$PROJECT_DIR$/pages/10_🔍 Observaciones_Género.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,6 +20,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitToolBoxStore">
@@ -34,7 +37,7 @@
                 <list>
                   <RecentBranch>
                     <option name="branchName" value="mariana" />
-                    <option name="lastUsedInstant" value="1655831462" />
+                    <option name="lastUsedInstant" value="1655928940" />
                   </RecentBranch>
                   <RecentBranch>
                     <option name="branchName" value="feature/karen" />
@@ -66,14 +69,14 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/marianaarboleda/DataspellProjects/CFK2022/data&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/marianaarboleda/DataspellProjects/CFK2022/pages&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;
   }
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\marianaarboleda\DataspellProjects\CFK2022\data" />
       <recent name="C:\Users\marianaarboleda\DataspellProjects\CFK2022\pages" />
+      <recent name="C:\Users\marianaarboleda\DataspellProjects\CFK2022\data" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\marianaarboleda\DataspellProjects\CFK2022\data" />
