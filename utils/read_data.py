@@ -14,3 +14,8 @@ def read_data(file, number=None):
         "genero_2021_d_a": "data/c_pages/genero/genero_2021_discriminado_avanzado_c2.feather",
     }
     return pd.read_feather(file_dict[file])
+
+def read_data_xlsx(file,number=None):
+    file_dict  = {'observaciones_gen': f'data/c_pages/observaciones/datasets/gen{number}.xlsx',
+                  }
+    return pd.read_excel(file_dict[file])

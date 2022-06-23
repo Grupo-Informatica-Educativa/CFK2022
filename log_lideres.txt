@@ -1,8 +1,8 @@
-279    10/06
 280    10/06
 281    10/06
 282    11/06
 283    15/06
+284    17/06
 Name: Fecha, dtype: object
 Códigos líderes después de filtrar mayor menor:  ['001' '033' '004' '129' '007' '231' '092' '063' '166' '055' '213' '211'
  '151' '186' '107' '152' '066' '206' '176' '235' '185' '002' '226' '098'
@@ -24,7 +24,7 @@ Códigos líderes después de filtrar mayor menor:  ['001' '033' '004' '129' '00
  '135' '246' '085' '212' '215' '141' '060' '142' '144' '145' '146' '209'
  '197' '198' '199' '200' '201' '202' '208' '137' '018' '029' '236' '113'
  '207' '139' '078' '084' '134' '248' '245' '014' '192' '031' '034' '195'
- '038' '232' '081' '025' '157' '125' '234' '143' '191' '194' '193']
+ '038' '232' '081' '025' '157' '125' '234' '143' '191' '194' '193' '242']
 Index(['Código IE',
        '1.1 Los docentes encargados del área son los responsables de definir lo que se enseña',
        '1.2 El plan de estudios del área cuenta con mejoras realizadas por los docentes de la IE gracias a espacios colaborativos',
@@ -74,5 +74,5 @@ Index(['Código IE',
        '4.11 Las directivas y el Consejo Directivo participan y evalúan la implementación de sistemas eficientes del plan de estudios del área.]',
        'Comentarios P4', 'N registro', 'ID', 'Fecha', 'Instrumento'],
       dtype='object')
-Publicados  (270, 52)
+Publicados  (271, 52)
 Eliminados  (14, 52)
