@@ -29,16 +29,7 @@ def app():
     grafica_inst(3)
     st.write("## ¿Quiénes están ejerciendo roles de liderazgo?")
     grafica_inst(4)
-    # st.write("## Momentos Progresión Usa-Modifica-Crea")
-    # grafica6()
-    # st.write("¿Se usa el vocabulario adecuado para la enseñanza del pensamiento computacional (terminología correcta)?")
-    # grafica7()
-    # st.write("¿Se hace uso de la memoria colectiva?")
-    # grafica8()
-    # st.write("Fidelidad de implementación de la ficha")
-    # grafica9()
-    # st.write("Cantidad de graficas pedagogicas implementadas")
-    # grafica10()
+
 
 # Observaciones acorde a asignaturas STEM - No STEM
 def grafica01_1():
@@ -175,7 +166,7 @@ def grafica_inst(n):
             x='Frecuencia',
             y='Opción',
             color='Categoría',
-            color_discrete_sequence=px.colors.qualitative.Set2,
+            color_discrete_sequence=px.colors.qualitative.Pastel,
             text='Frecuencia',
             template="plotly_white", category_orders={'Categoría': ['0 - 20 casi nunca',
                                                                     '20 - 40 poco frecuente',
@@ -195,99 +186,6 @@ def grafica_inst(n):
     plots.percentage_labelsx(fig)
     st.plotly_chart(fig,use_container_width=True, config=config)
 
-# Exploración de los conocimientos previos"
-def grafica4():
-    data = read_data_xlsx("observaciones_gen",4)
-    fig = px.bar(data,
-            x='Respuesta',
-            y='Número de observaciones',
-            color_discrete_sequence=px.colors.qualitative.Set2,
-            text_auto=True,
-            template="plotly_white")
-    plots.text_position(fig)
-    st.plotly_chart(fig,use_container_width=True)
-
-# Actividad desconectada
-def grafica5():
-    data = read_data_xlsx("observaciones_gen",5)
-    fig = px.bar(data,x='Observacion',y='Número de observaciones',
-                color="Pregunta",
-                barmode="group",
-                color_discrete_sequence=px.colors.qualitative.Set2,
-                template="plotly_white",
-                text_auto=True)
-    plots.text_position(fig)
-    plots.legend_position(fig)
-    fig.update_layout(xaxis_title=None)
-    st.plotly_chart(fig,use_container_width=True)
-
-# Momentos Progresión Usa-Modifica-Crea
-def grafica6():
-    data = read_data_xlsx("observaciones_gen",6)
-    fig = px.bar(data,x='Conteo',y='Tipo',
-             color="Accion",
-             barmode="group",
-             color_discrete_sequence=px.colors.qualitative.Set2,
-             template="plotly_white",
-             orientation='h',
-             text_auto=True)
-    plots.text_position(fig)
-    plots.legend_position(fig)
-    plots.labels(fig)
-    st.plotly_chart(fig,use_container_width=True)
-
-# ¿Se usa el vocabulario adecuado para la enseñanza del pensamiento computacional (terminología correcta)?
-def grafica7():
-    data = read_data_xlsx("observaciones_gen",7)
-    fig = px.bar(data,
-            x='Respuesta',
-            y='Número de observaciones',
-            color_discrete_sequence=px.colors.qualitative.Set2,
-            text_auto=True,
-            template="plotly_white")
-    plots.text_position(fig)
-    plots.labels(fig)
-    st.plotly_chart(fig,use_container_width=True)
-
-# ¿Se hace uso de la memoria colectiva?
-def grafica8():
-    data = read_data_xlsx("observaciones_gen",8)
-    fig = px.bar(data,
-        x='Porcentaje de observaciones',
-        orientation='h',
-        y='Respuesta',
-        color_discrete_sequence=px.colors.qualitative.Set2,
-        text_auto='0.3s',
-        template="plotly_white")
-    plots.text_position(fig)
-    fig.update_layout(yaxis_title=None)
-    st.plotly_chart(fig,use_container_width=True)
-
-# Fidelidad de implementación de la ficha
-def grafica9():
-    data = read_data_xlsx("observaciones_gen",9)
-    fig = px.bar(data,
-        x='Respuesta',
-        y='Número de observaciones',
-        color_discrete_sequence=px.colors.qualitative.Set2,
-        text_auto='0.3s',
-        template="plotly_white")
-    plots.text_position(fig)
-    fig.update_layout(yaxis_title=None)
-    st.plotly_chart(fig,use_container_width=True)
-
-# Cantidad de graficas pedagogicas implementadas
-def grafica10():
-    data = read_data_xlsx("observaciones_gen",10)
-    fig = px.bar(data,
-        x='Cantidad',
-        y='Porcentaje de observaciones',
-        color_discrete_sequence=px.colors.qualitative.Set2,
-        text_auto='0.3s',
-        template="plotly_white")
-    plots.text_position(fig)
-    plots.labels(fig)
-    st.plotly_chart(fig,use_container_width=True)
 
 
 
