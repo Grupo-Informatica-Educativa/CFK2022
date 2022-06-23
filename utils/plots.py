@@ -41,3 +41,11 @@ def text_position(fig,pos="outside"):
 
 def labels(fig,xlabel=None,ylabel=None):
     fig.update_layout(xaxis_title=xlabel, yaxis_title=ylabel)
+
+def percentage_labelsy(fig,xlabel=None,ylabel=None):
+    fig.for_each_yaxis(lambda yaxis: yaxis.update(tickformat=',.0%'))
+    fig.update_traces(textposition='outside', texttemplate='%{text:,.0%}')
+
+def percentage_labelsx(fig,xlabel=None,ylabel=None):
+    fig.for_each_xaxis(lambda yaxis: yaxis.update(tickformat=',.0%'))
+    fig.update_xaxes( range=(0,1))
