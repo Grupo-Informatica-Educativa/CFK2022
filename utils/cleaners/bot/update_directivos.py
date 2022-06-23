@@ -85,11 +85,14 @@ print('Códigos que se mantienen: ',df4['Código IE'].unique())
 
 #excepciones a la regla de número de cédula
 df4.loc[(df4['N registro']==677),'ID'] = 22534255
+df4.loc[(df4['N registro']==109),'ID'] = 22534255
 
 df4= df4[df4['ID'] >= 1000000]
 df4= df4[df4['ID'] < 3000000000]
 
+#Cédulas excepciones
 df4.loc[(df4['N registro']==677),'ID'] = 3046440334
+df4.loc[(df4['N registro']==109),'ID'] = 456
 
 df4=df4.dropna(subset=['ID'],inplace=False)
 print("antes de quitar duplicados ID", df4.shape)
