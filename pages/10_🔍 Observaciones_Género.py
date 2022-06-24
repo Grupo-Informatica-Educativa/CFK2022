@@ -23,12 +23,16 @@ def app():
     grafica02_2()
     st.write("## ¿Quiénes están socializando su trabajo?")
     grafica_inst(1)
+    grafica_inst_gen(1)
     st.write("## ¿Quiénes no están involucrados en las actividades propuestas?")
     grafica_inst(2)
+    grafica_inst_gen(2)
     st.write("## ¿Quiénes están manipulando los materiales?")
     grafica_inst(3)
+    grafica_inst_gen(3)
     st.write("## ¿Quiénes están ejerciendo roles de liderazgo?")
     grafica_inst(4)
+    grafica_inst_gen(4)
 
 
 # Observaciones acorde a asignaturas STEM - No STEM
@@ -184,6 +188,45 @@ def grafica_inst(n):
     plots.legend_position(fig, orientation='v', xanchor='right', yanchor='top', y=1, x=1.5)
     plots.percentage_labelsy(fig)
     plots.percentage_labelsx(fig)
+    st.plotly_chart(fig,use_container_width=True, config=config)
+
+def grafica_inst_gen(n):
+    data = read_data_xlsx("observaciones_gen",n)
+    data['Opción'] = data['Opción'].str.split(",").str[0]
+    #st.write(list(data['Opción'].unique()))
+    total = data.groupby(['Opción','Género']).ID.nunique().reset_index().rename(columns={'ID':'Total'})
+
+    piv_data = data.pivot_table(index=['Opción','Categoría','Género'],
+                                values=['ID'],
+                                aggfunc={'ID':'count'}).rename(columns={'ID':'Cant'}).reset_index()
+
+    piv_data = piv_data.merge(total, on=['Opción','Género'])
+    piv_data['Frecuencia'] = piv_data['Cant']/piv_data['Total']
+    fig = px.bar(piv_data,
+            x='Frecuencia',
+            y='Opción',
+            color='Categoría',
+            facet_col='Género',
+            color_discrete_sequence=px.colors.qualitative.Pastel,
+            text='Frecuencia',
+            template="plotly_white", category_orders={'Categoría': ['0 - 20 casi nunca',
+                                                                    '20 - 40 poco frecuente',
+                                                                    '40 - 60 frecuente',
+                                                                    '60 - 80 muy frecuente',
+                                                                    '80 - 100 casi siempre'],
+                                                      'Opción': ["Sólo los niños",
+                                                                 "Principalmente los niños",
+                                                                 "Niños y niñas por igual",
+                                                                 "Principalmente las niñas",
+                                                                 "Sólo las niñas",
+                                                                 ]})
+    fig.update_layout(autosize=True)
+    plots.text_position(fig, pos="inside")
+    plots.legend_position(fig, orientation='v', xanchor='right', yanchor='top', y=1, x=1.5)
+    plots.percentage_labelsy(fig)
+    plots.percentage_labelsx(fig)
+    fig.for_each_annotation(
+        lambda a: a.update(text=a.text.split("=")[-1]))
     st.plotly_chart(fig,use_container_width=True, config=config)
 
 

@@ -48,4 +48,4 @@ def percentage_labelsy(fig,xlabel=None,ylabel=None):
 
 def percentage_labelsx(fig,xlabel=None,ylabel=None):
     fig.for_each_xaxis(lambda yaxis: yaxis.update(tickformat=',.0%'))
-    fig.update_xaxes( range=(0,1))
+    fig.update_xaxes( range=(-0.1,1.1))

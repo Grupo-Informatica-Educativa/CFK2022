@@ -43,7 +43,39 @@ df4=df4.dropna(subset=['Código IE'],inplace=False)
 df4=df4.dropna(subset=['ID'],inplace=False)
 df4 =df4.drop(columns='Timestamp')
 
+df4.loc[(df4['N registro']==52),'Rol en IE'] = 'Rector/a'
+df4.loc[(df4['N registro']==239),'Rol en IE'] = 'Coordinador/a de área'
+df4.loc[(df4['N registro']==663),'Rol en IE'] = 'Coordinador/a de área'
+
 df4['Código IE']=df4['Código IE'].astype(int)
+
+df4.loc[(df4['N registro']==54),'Código IE'] = None
+df4.loc[(df4['N registro']==56),'Código IE'] = None
+df4.loc[(df4['N registro']==57),'Código IE'] = None
+df4.loc[(df4['N registro']==66),'Código IE'] = None
+df4.loc[(df4['N registro']==271),'Código IE'] = None
+df4.loc[(df4['N registro']==276),'Código IE'] = None
+df4.loc[(df4['N registro']==281),'Código IE'] = None
+df4.loc[(df4['N registro']==282),'Código IE'] = None
+df4.loc[(df4['N registro']==428),'Código IE'] = None
+df4.loc[(df4['N registro']==23),'Código IE'] = None
+df4.loc[(df4['N registro']==320),'Código IE'] = None
+
+df4=df4.dropna(subset=["Código IE"], inplace=False)
+
+df4.loc[(df4['N registro'].isin(range(290,293)))&&(df1['Código IE']==61),'Número de docentes que laboran'] = 55
+
+df4.loc[(df4['N registro']==292),'Comentarios autodiagnóstico'] = 'Ninguno'
+df4.loc[(df4['N registro']==536),'Comentarios autodiagnóstico'] = 'Ninguno'
+
+df4.loc[(df4['N registro']==524),'Estudiantes con discapacidad intelectual'] = 8
+df4.loc[(df4['N registro']==524),'Estudiantes con Discapacidad física o motora'] = 2
+df4.loc[(df4['N registro']==524),'Estudiantes con Discapacidad auditiva'] = 0
+df4.loc[(df4['N registro']==524),'Estudiantes con Discapacidad visual'] =4
+df4.loc[(df4['N registro']==524),'Estudiantes con Discapacidad psicosocial'] = 5
+df4.loc[(df4['N registro']==524),'Estudiantes con Discapacidad múltiple'] = 1
+df4.loc[(df4['N registro']==524),'Estudiante con Trastornos Específicos del Aprendizaje'] = 10
+
 df4=df4[df4['Código IE'] > 0]
 df4=df4[df4['Código IE']<253]
 df4['Código IE']=df4['Código IE'].astype(str)
@@ -51,12 +83,21 @@ df4['Código IE']=df4['Código IE'].str.zfill(3)
 print('Cantidad de códigos IE después de filtrar mayor y menor ',len(df4['Código IE'].unique()))
 print('Códigos que se mantienen: ',df4['Código IE'].unique())
 
+#excepciones a la regla de número de cédula
+df4.loc[(df4['N registro']==677),'ID'] = 22534255
+df4.loc[(df4['N registro']==109),'ID'] = 22534255
+
 df4= df4[df4['ID'] >= 1000000]
 df4= df4[df4['ID'] < 3000000000]
 
-df4=df4.dropna(subset=['ID'],inplace=False)
-df4 = df4.drop_duplicates(subset="ID", keep="first")
+#Cédulas excepciones
+df4.loc[(df4['N registro']==677),'ID'] = 3046440334
+df4.loc[(df4['N registro']==109),'ID'] = 456
 
+df4=df4.dropna(subset=['ID'],inplace=False)
+print("antes de quitar duplicados ID", df4.shape)
+df4 = df4.drop_duplicates(subset="ID", keep="first")
+print("despues de quitar duplicados ID", df4.shape)
 new_index= ['N registro', 'Instrumento', 'Fecha','Política de datos', 'ID',
  'Edad', 'Sexo', 'Cabeza de hogar', 'Estado civil', 'Líder comunitario',
  'Formación STEM', 'Rol en IE', '¿En su institución hay estudiantes con algún tipo de discapacidad?',

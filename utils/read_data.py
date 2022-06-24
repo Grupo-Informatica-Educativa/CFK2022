@@ -12,6 +12,8 @@ def read_data(file, number=None):
         "genero_2021_sd_a": "data/c_pages/genero/genero_2021_sin_discriminado_avanzado_c2.feather",
         "genero_2021_d_i": "data/c_pages/genero/genero_2021_discriminado_inicial_c2.feather",
         "genero_2021_d_a": "data/c_pages/genero/genero_2021_discriminado_avanzado_c2.feather",
+        'grafica_jose': f'data/c_pages/observaciones/datasets/graficajose.feather',
+        'mon_cons': f"data/c_pages/monitoreo/mon_cons{number}.feather",
     }
     return pd.read_feather(file_dict[file])
 

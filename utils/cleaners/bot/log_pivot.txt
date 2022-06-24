@@ -4,9 +4,9 @@ Error!!  InstrumentosCFK.xlsx
 Error!!  Instrumentos_DetalleCFK.xlsx
 {'ID', 'N registro', 'Instrumento'}
   N registro          Instrumento Código IE        ID
-0          3  Encuesta Directivos       206  93410609
-1          4  Encuesta Directivos       206   5933717
-2          5  Encuesta Directivos       235  60311721
-3          6  Encuesta Directivos       235  98525547
-4          7  Encuesta Directivos        32  14244219
+0          3  Encuesta Directivos     206.0  93410609
+1          4  Encuesta Directivos     206.0   5933717
+2          5  Encuesta Directivos     235.0  60311721
+3          6  Encuesta Directivos     235.0  98525547
+4          7  Encuesta Directivos      32.0  14244219
 Tamaño pivot (252, 7)

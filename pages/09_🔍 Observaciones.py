@@ -33,7 +33,13 @@ def app():
     grafica9() 
     st.write("Cantidad de graficas pedagogicas implementadas")
     grafica10()
+    st.write("Fidelidad de la implementación")
 
+    graficajose_unida()
+    st.write("Fidelidad de la implementación por ficha")
+    for f in ['Ficha 1', 'Ficha 2', 'Ficha 3', 'Ficha 4', 'Sin respuesta']:
+        st.write(f)
+        graficajose(f)
 # Observaciones acorde a asignaturas STEM - No STEM
 def grafica1():
     data = read_data("observaciones",1)
@@ -49,7 +55,7 @@ def grafica1():
     plots.text_position(fig)
     plots.legend_position(fig)
     plots.labels(fig)
-    st.plotly_chart(fig,use_container_width=True)
+    st.plotly_chart(fig,use_container_width=True, config=config)
 
 # Número de Observaciones por Tipo de sesión
 def grafica2():
@@ -65,7 +71,7 @@ def grafica2():
     fig.update_traces(textposition='inside', texttemplate='%{text}%')
     fig.update_xaxes(range=(0,100))
     plots.labels(fig,"Porcentaje de observaciones")
-    st.plotly_chart(fig,use_container_width=True)
+    st.plotly_chart(fig,use_container_width=True, config=config)
 
 # ¿Se presentan los objetivos de aprendizaje de la lección?
 def grafica3():
@@ -77,7 +83,7 @@ def grafica3():
             text_auto=True,
             template="plotly_white")
     plots.text_position(fig)
-    st.plotly_chart(fig,use_container_width=True)
+    st.plotly_chart(fig,use_container_width=True, config=config)
 
 # Exploración de los conocimientos previos"
 def grafica4():
@@ -89,7 +95,7 @@ def grafica4():
             text_auto=True,
             template="plotly_white")
     plots.text_position(fig)
-    st.plotly_chart(fig,use_container_width=True)
+    st.plotly_chart(fig,use_container_width=True, config=config)
 
 # Actividad desconectada
 def grafica5():
@@ -103,7 +109,7 @@ def grafica5():
     plots.text_position(fig)
     plots.legend_position(fig)
     fig.update_layout(xaxis_title=None)
-    st.plotly_chart(fig,use_container_width=True)
+    st.plotly_chart(fig,use_container_width=True, config=config)
 
 # Momentos Progresión Usa-Modifica-Crea
 def grafica6():
@@ -118,7 +124,7 @@ def grafica6():
     plots.text_position(fig)
     plots.legend_position(fig)
     plots.labels(fig)
-    st.plotly_chart(fig,use_container_width=True)
+    st.plotly_chart(fig,use_container_width=True, config=config)
 
 # ¿Se usa el vocabulario adecuado para la enseñanza del pensamiento computacional (terminología correcta)?
 def grafica7():
@@ -131,7 +137,7 @@ def grafica7():
             template="plotly_white")
     plots.text_position(fig)
     plots.labels(fig)
-    st.plotly_chart(fig,use_container_width=True)
+    st.plotly_chart(fig,use_container_width=True, config=config)
 
 # ¿Se hace uso de la memoria colectiva?
 def grafica8():
@@ -145,7 +151,7 @@ def grafica8():
         template="plotly_white")
     plots.text_position(fig)
     fig.update_layout(yaxis_title=None)
-    st.plotly_chart(fig,use_container_width=True)
+    st.plotly_chart(fig,use_container_width=True, config=config)
 
 # Fidelidad de implementación de la ficha
 def grafica9():
@@ -158,7 +164,7 @@ def grafica9():
         template="plotly_white")
     plots.text_position(fig)
     fig.update_layout(yaxis_title=None)
-    st.plotly_chart(fig,use_container_width=True)
+    st.plotly_chart(fig,use_container_width=True, config=config)
 
 # Cantidad de graficas pedagogicas implementadas
 def grafica10():
@@ -171,9 +177,40 @@ def grafica10():
         template="plotly_white")
     plots.text_position(fig)
     plots.labels(fig)
-    st.plotly_chart(fig,use_container_width=True)
+    st.plotly_chart(fig,use_container_width=True, config=config)
 
+def graficajose(ficha):
+    data = read_data("grafica_jose")
+    data = data[data['Ficha']==ficha]
+    fig = px.bar(data, x='Concepto',y='Frecuencia', color='Implementación',  color_discrete_sequence=px.colors.qualitative.Pastel,
+                 template="plotly_white", category_orders={'Implementación':['Si','Parcialmente','No'],
+                                                           'Concepto' : ['Presenta Ob', 'Conocimientos previos', 'Conceptos claves',
+       'Preparación de material', 'Gestión de materiales', 'Comparte solución',
+       'Cierre formal', 'Lenguaje técnico', 'Conexión vida diaria',
+       'Metacognición']}, facet_col_wrap=3, height=500, text='Frecuencia')
 
+    plots.text_position(fig, pos="inside")
+    plots.labels(fig)
+    plots.percentage_labelsy(fig,xlabel=None,ylabel=None)
+    fig.for_each_annotation(
+        lambda a: a.update(text=a.text.split("=")[-1]))
+    st.plotly_chart(fig,use_container_width=True, config=config)
+
+def graficajose_unida():
+    data = read_data("grafica_jose")
+    fig = px.bar(data, x='Concepto',y='Frecuencia', color='Implementación', facet_col='Ficha',  color_discrete_sequence=px.colors.qualitative.Pastel,
+                 template="plotly_white", category_orders={'Implementación':['Si','Parcialmente','No'],
+                                                           'Concepto' : ['Presenta Ob', 'Conocimientos previos', 'Conceptos claves',
+       'Preparación de material', 'Gestión de materiales', 'Comparte solución',
+       'Cierre formal', 'Lenguaje técnico', 'Conexión vida diaria',
+       'Metacognición']}, facet_col_wrap=3, height=1400, text='Frecuencia')
+
+    plots.text_position(fig, pos="inside")
+    plots.labels(fig)
+    plots.percentage_labelsy(fig,xlabel=None,ylabel=None)
+    fig.for_each_annotation(
+        lambda a: a.update(text=a.text.split("=")[-1]))
+    st.plotly_chart(fig,use_container_width=True, config=config)
 
 if __name__=="__main__":
     app()
