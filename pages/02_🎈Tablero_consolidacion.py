@@ -1,6 +1,4 @@
 import streamlit as st
-import numpy as np
-import pandas as pd
 import plotly.express as px
 import utils.plots as plots
 from utils.read_data import read_data
@@ -15,13 +13,13 @@ config = plots.get_config()
 def app():
     plots.plotly_settings(px)
     st.title('Consolidación')
-    _type = st.selectbox('Elija el grupo que desea ver',["Estudiantes","Docentes","Directivos"])
+    _type = st.selectbox('Elija el grupo que desea ver',["Monitoreo","Estudiantes","Docentes","Directivos"])
     st.write("##")
 
     df = get_data(_type)
 
     if(_type =='Docentes'):
-        page_docente.app(df)    
+        page_docente.app(df)
     
 
 # Helpers
