@@ -58,7 +58,7 @@ diccionariodocentes={'Nueva Esperanza La Palma ':150}
 df3["Código IE"]=df3["Código IE"].replace(diccionariodocentes)
 df3["Código IE"]=df3["Código IE"].astype(str)
 df3["Código IE"]=df3["Código IE"].str.replace(".0","", regex=False)
-df3["Código IE"]=df3["Código IE"].str.replace(".","")
+df3["Código IE"]=df3["Código IE"].str.replace(".","",regex=False)
 df3['Código IE']=df3['Código IE'].astype(float)
 df3['Código IE']=df3['Código IE'].astype(int)
 
@@ -108,7 +108,7 @@ df3.loc[(df3['N registro']==3844),'Código IE'] = None
 
 df3=df3.dropna(subset=['Código IE'], inplace=False)
 
-df3['ID']=df3['ID'].astype(float).astype(int)
+df3['ID']=df3['ID'].astype(float).astype("int64")
 df3= df3[df3['ID'] >= 1000000]
 df3= df3[df3['ID'] < 3000000000]
 

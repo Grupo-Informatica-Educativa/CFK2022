@@ -63,7 +63,7 @@ df4.loc[(df4['N registro']==320),'Código IE'] = None
 
 df4=df4.dropna(subset=["Código IE"], inplace=False)
 
-df4.loc[(df4['N registro'].isin(range(290,293)))&&(df1['Código IE']==61),'Número de docentes que laboran'] = 55
+df4.loc[(df4['N registro'].isin(range(290,293)))&(df4['Código IE']==61),'Número de docentes que laboran'] = 55
 
 df4.loc[(df4['N registro']==292),'Comentarios autodiagnóstico'] = 'Ninguno'
 df4.loc[(df4['N registro']==536),'Comentarios autodiagnóstico'] = 'Ninguno'
@@ -87,6 +87,13 @@ print('Códigos que se mantienen: ',df4['Código IE'].unique())
 df4.loc[(df4['N registro']==677),'ID'] = 22534255
 df4.loc[(df4['N registro']==109),'ID'] = 22534255
 
+df4.loc[(df4['N registro']==290),'ID'] =10000001 
+df4.loc[(df4['N registro']==291),'ID'] =10000002
+df4.loc[(df4['N registro']==292),'ID'] =10000003
+df4.loc[(df4['N registro']==524),'ID'] =10000004
+df4.loc[(df4['N registro']==536),'ID'] =10000005
+df4.loc[(df4['N registro']==607),'ID'] =10000006
+
 df4= df4[df4['ID'] >= 1000000]
 df4= df4[df4['ID'] < 3000000000]
 
@@ -95,9 +102,18 @@ df4.loc[(df4['N registro']==677),'ID'] = 3046440334
 df4.loc[(df4['N registro']==109),'ID'] = 456
 
 df4=df4.dropna(subset=['ID'],inplace=False)
+
 print("antes de quitar duplicados ID", df4.shape)
 df4 = df4.drop_duplicates(subset="ID", keep="first")
 print("despues de quitar duplicados ID", df4.shape)
+
+df4.loc[(df4['N registro']==290),'ID'] =6882411
+df4.loc[(df4['N registro']==291),'ID'] =17323767
+df4.loc[(df4['N registro']==292),'ID'] =60252841
+df4.loc[(df4['N registro']==524),'ID'] =51565161
+df4.loc[(df4['N registro']==536),'ID'] =12980288
+df4.loc[(df4['N registro']==607),'ID'] =40398374
+
 new_index= ['N registro', 'Instrumento', 'Fecha','Política de datos', 'ID',
  'Edad', 'Sexo', 'Cabeza de hogar', 'Estado civil', 'Líder comunitario',
  'Formación STEM', 'Rol en IE', '¿En su institución hay estudiantes con algún tipo de discapacidad?',

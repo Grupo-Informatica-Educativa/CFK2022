@@ -1,10 +1,10 @@
-278    09/06
-279    10/06
 280    10/06
 281    10/06
 282    11/06
+283    15/06
+284    17/06
 Name: Fecha, dtype: object
-C√≥digos l√≠deres despu√©s de filtrar mayor menor:  ['001' '033' '004' '129' '007' '231' '092' '063' '166' '055' '213' '211'
+CÛdigos lÌderes despuÈs de filtrar mayor menor:  ['001' '033' '004' '129' '007' '231' '092' '063' '166' '055' '213' '211'
  '151' '186' '107' '152' '066' '206' '176' '235' '185' '002' '226' '098'
  '062' '130' '054' '150' '183' '064' '218' '046' '043' '110' '167' '006'
  '182' '237' '121' '072' '165' '228' '096' '003' '053' '067' '162' '227'
@@ -24,55 +24,55 @@ C√≥digos l√≠deres despu√©s de filtrar mayor menor:  ['001' '033' '004' '129' '00
  '135' '246' '085' '212' '215' '141' '060' '142' '144' '145' '146' '209'
  '197' '198' '199' '200' '201' '202' '208' '137' '018' '029' '236' '113'
  '207' '139' '078' '084' '134' '248' '245' '014' '192' '031' '034' '195'
- '038' '232' '081' '025' '157' '125' '234' '143' '191' '194' '193']
-Index(['C√≥digo IE',
-       '1.1 Los docentes encargados del √°rea son los responsables de definir lo que se ense√±a',
-       '1.2 El plan de estudios del √°rea cuenta con mejoras realizadas por los docentes de la IE gracias a espacios colaborativos',
-       '1.3 El plan de estudio incluye actividades b√°sicas de ofim√°tica y/o alfabetizaci√≥n digital, programaci√≥n y/o desarrollo del pensamiento computacional.',
+ '038' '232' '081' '025' '157' '125' '234' '143' '191' '194' '193' '242']
+Index(['CÛdigo IE',
+       '1.1 Los docentes encargados del ·rea son los responsables de definir lo que se enseÒa',
+       '1.2 El plan de estudios del ·rea cuenta con mejoras realizadas por los docentes de la IE gracias a espacios colaborativos',
+       '1.3 El plan de estudio incluye actividades b·sicas de ofim·tica y/o alfabetizaciÛn digital, programaciÛn y/o desarrollo del pensamiento computacional.',
        '1.4 En el plan de estudio se da mayor relevancia al pensamiento computacional',
-       '1.5 El plan de estudio del √°rea promueve la transici√≥n desde la alfabetizaci√≥n digital a las ciencias de la computaci√≥n',
-       '1.6 El plan de estudios del √°rea comprende el pensamiento computacional y su impacto dentro del proceso ense√±anza-aprendizaje',
-       '1.7 El plan de estudios del √°rea es coherente con la transici√≥n de un grado a otro y permite al estudiante desarrollar conocimientos, habilidades y comprensi√≥n del pensamiento computacional',
-       '1.8 El plan de estudios del √°rea incluye trabajo pr√°ctico para el desarrollo del pensamiento computacional.',
-       '1.9 El plan de estudio del √°rea cuenta con espacios de socializaci√≥n a los estudiantes de personas que trabajan en ocupaciones relacionadas al √°rea STEM',
+       '1.5 El plan de estudio del ·rea promueve la transiciÛn desde la alfabetizaciÛn digital a las ciencias de la computaciÛn',
+       '1.6 El plan de estudios del ·rea comprende el pensamiento computacional y su impacto dentro del proceso enseÒanza-aprendizaje',
+       '1.7 El plan de estudios del ·rea es coherente con la transiciÛn de un grado a otro y permite al estudiante desarrollar conocimientos, habilidades y comprensiÛn del pensamiento computacional',
+       '1.8 El plan de estudios del ·rea incluye trabajo pr·ctico para el desarrollo del pensamiento computacional.',
+       '1.9 El plan de estudio del ·rea cuenta con espacios de socializaciÛn a los estudiantes de personas que trabajan en ocupaciones relacionadas al ·rea STEM',
        '1.10 El plan de estudio de las asignaturas No-STEM integran eficientemente los aprendizajes adquiridos por sus estudiantes sobre pensamiento computacional',
-       '1.11 La visi√≥n institucional menciona el impacto y lugar de la ense√±anza del desarrollo del pensamiento computacional dentro del plan de estudios.',
+       '1.11 La visiÛn institucional menciona el impacto y lugar de la enseÒanza del desarrollo del pensamiento computacional dentro del plan de estudios.',
        'Comentarios P1',
        '2.1 La IE identifica a los estudiantes que cuentan con necesidades educativas especiales',
-       '2.2 La IE implementa algunas acciones para brindar apoyo a los estudiantes con necesidades educativas especiales en su participaci√≥n en el √°rea',
-       '2.3 La IE establece un plan para la atenci√≥n de estudiantes con necesidades educativas especiales para su participaci√≥n en actividades asociadas al pensamiento computacional',
-       '2.4 La IE promueve la participaci√≥n de personas con necesidades educativas especiales en actividades extracurricules para garantiza la inclusi√≥n y participaci√≥n en √°reas STEM',
-       '2.5 La IE genera estrategias que visibilizan modelos a seguir en carreras en √°reas STEM en estudiantes con necesidades educativas especiales',
-       '2.6 Los docentes del √°rea que incluyen pensamiento computacional y/o ciencias de la computaci√≥n muestran la asignatura como accesible para todos(as)',
-       '2.7 La IE promueve al trabajo conjunto entre los docente y profesionales externos para impulsar pr√°cticas inclusivas en la ense√±anza de la computaci√≥n y/o pensamiento computacional',
-       '2.8 El plan de estudio considera aspectos para la inclusi√≥n de estudiantes con trastornos de aprendizaje y/o discapacidad',
-       '2.9 El plan de estudios del √°rea incluye acciones de apoyo y adecuaciones a los materiales educativos articuladas con las estrategias de atenci√≥n de estudiantes con necesidades educativas especiales',
-       '2.10  El plan de estudios del √°rea y los recursos educativos se revisan con apoyo de personal experto en la atenci√≥n a estudiantes con necesidades educativas especiales',
-       '2.11 El plan de estudios del √°rea hace expl√≠cita la pedagog√≠a a utilizar que incluye adaptaciones para estudiantes con necesidades educativas especiales',
+       '2.2 La IE implementa algunas acciones para brindar apoyo a los estudiantes con necesidades educativas especiales en su participaciÛn en el ·rea',
+       '2.3 La IE establece un plan para la atenciÛn de estudiantes con necesidades educativas especiales para su participaciÛn en actividades asociadas al pensamiento computacional',
+       '2.4 La IE promueve la participaciÛn de personas con necesidades educativas especiales en actividades extracurricules para garantiza la inclusiÛn y participaciÛn en ·reas STEM',
+       '2.5 La IE genera estrategias que visibilizan modelos a seguir en carreras en ·reas STEM en estudiantes con necesidades educativas especiales',
+       '2.6 Los docentes del ·rea que incluyen pensamiento computacional y/o ciencias de la computaciÛn muestran la asignatura como accesible para todos(as)',
+       '2.7 La IE promueve al trabajo conjunto entre los docente y profesionales externos para impulsar pr·cticas inclusivas en la enseÒanza de la computaciÛn y/o pensamiento computacional',
+       '2.8 El plan de estudio considera aspectos para la inclusiÛn de estudiantes con trastornos de aprendizaje y/o discapacidad',
+       '2.9 El plan de estudios del ·rea incluye acciones de apoyo y adecuaciones a los materiales educativos articuladas con las estrategias de atenciÛn de estudiantes con necesidades educativas especiales',
+       '2.10  El plan de estudios del ·rea y los recursos educativos se revisan con apoyo de personal experto en la atenciÛn a estudiantes con necesidades educativas especiales',
+       '2.11 El plan de estudios del ·rea hace explÌcita la pedagogÌa a utilizar que incluye adaptaciones para estudiantes con necesidades educativas especiales',
        'Comentarios P2',
-       '3.1 La IE hace seguimiento de las diferencias de g√©nero en los resultados y el desempe√±o acad√©mico de ni√±os y ni√±as en √°reas STEM',
-       '3.2 La IE crea espacios de reflexi√≥n sobre las causas y or√≠genes de las diferencias entre ni√±os y ni√±as',
-       '3.3 La IE realiza iniciativas c√≠vicas y campa√±as comunicativas con estudiantes para visibilizar las diferencias de g√©nero en √°reas STEM',
-       '3.4 La IE toma acciones concretas para disminuir la diferencias de resultados entre ni√±os y ni√±as Por ejemplo: organizar competencias diferenciadas entre ni√±os y ni√±as en √°reas STEM',
-       '3.5 La IE tiene alianzas con entidades externas que promuevan la equidad g√©nero en las √°reas STEM',
-       '3.6 La instituci√≥n posee una propuesta estructurada donde garantiza que los ni√±os y ni√±as contin√∫en su trayectoria de formaci√≥n educativa en pensamiento computacional y/o ciencias de la computaci√≥n.',
-       '3.7 El plan de estudios del √°rea promueve en ni√±os y ni√±as el desarrollo de sus conocimientos, habilidades y actitudes',
-       '3.8 El plan de estudio del √°rea cuentan con una estructura clara que permite disminuir las diferencias en el desempe√±o de ni√±os y ni√±as',
-       '3.9 El plan de estudio del √°rea se encuentran en constante revisi√≥n e incorporan nuevas estrategias para promover la igualdad en el desempe√±o de ni√±os y ni√±as',
-       '3.10 El plan de estudio considera aspectos para disminuir las diferencias entre ni√±os y ni√±as y la inclusi√≥n de estudiantes con trastornos de aprendizaje y/o discapacidad',
+       '3.1 La IE hace seguimiento de las diferencias de gÈnero en los resultados y el desempeÒo acadÈmico de niÒos y niÒas en ·reas STEM',
+       '3.2 La IE crea espacios de reflexiÛn sobre las causas y orÌgenes de las diferencias entre niÒos y niÒas',
+       '3.3 La IE realiza iniciativas cÌvicas y campaÒas comunicativas con estudiantes para visibilizar las diferencias de gÈnero en ·reas STEM',
+       '3.4 La IE toma acciones concretas para disminuir la diferencias de resultados entre niÒos y niÒas Por ejemplo: organizar competencias diferenciadas entre niÒos y niÒas en ·reas STEM',
+       '3.5 La IE tiene alianzas con entidades externas que promuevan la equidad gÈnero en las ·reas STEM',
+       '3.6 La instituciÛn posee una propuesta estructurada donde garantiza que los niÒos y niÒas contin˙en su trayectoria de formaciÛn educativa en pensamiento computacional y/o ciencias de la computaciÛn.',
+       '3.7 El plan de estudios del ·rea promueve en niÒos y niÒas el desarrollo de sus conocimientos, habilidades y actitudes',
+       '3.8 El plan de estudio del ·rea cuentan con una estructura clara que permite disminuir las diferencias en el desempeÒo de niÒos y niÒas',
+       '3.9 El plan de estudio del ·rea se encuentran en constante revisiÛn e incorporan nuevas estrategias para promover la igualdad en el desempeÒo de niÒos y niÒas',
+       '3.10 El plan de estudio considera aspectos para disminuir las diferencias entre niÒos y niÒas y la inclusiÛn de estudiantes con trastornos de aprendizaje y/o discapacidad',
        'Comentarios P3',
        '4.1 La IE tiene en cuenta el plan de estudios para determinar las actividades de desarrollo profesional',
        '4.2 La IE identifica las necesidades de los docentes para determinar actividades de desarrollo profesional',
-       '4.3 La IE cuenta con espacios de discusi√≥n y planeaci√≥n para actividades de desarrollo profesional',
-       '4.4 La IE capacita a los docentes en temas de equidad de g√©nero y apoya la implementaci√≥n de acciones afirmativas en el aula de clases',
-       '4.5 La IE lleva un registro formal de las necesidades y participaci√≥n de los docentes en actividades de desarrollo profesional',
-       '4.6 Los docentes de otras √°reas se interesan por el √°rea de tecnolog√≠a e inform√°tica y la integran a su ense√±anza',
-       '4.7 La IE incentiva el trabajo coordinado entre los/las responsables del √°rea',
-       '4.8 La IE tiene en cuenta los conocimientos del personal docente para enriquecer la visi√≥n institucional sobre la ense√±anza de la computaci√≥n y potenciar la comprensi√≥n de las/los estudiantes y desarrollo',
-       '4.9 La IE promueve al trabajo conjunto entre los docente y profesionales l√≠deres externos para impulsar pr√°cticas inclusivas en la ense√±anza de la computaci√≥n y/o pensamiento computacional',
-       '4.10 El Consejo Directivo del colegio est√° al tanto de que en la instituci√≥n se est√° ense√±ando ciencias de la computaci√≥n, y se encuentran involucrados en el proceso.',
-       '4.11 Las directivas y el Consejo Directivo participan y eval√∫an la implementaci√≥n de sistemas eficientes del plan de estudios del √°rea.]',
+       '4.3 La IE cuenta con espacios de discusiÛn y planeaciÛn para actividades de desarrollo profesional',
+       '4.4 La IE capacita a los docentes en temas de equidad de gÈnero y apoya la implementaciÛn de acciones afirmativas en el aula de clases',
+       '4.5 La IE lleva un registro formal de las necesidades y participaciÛn de los docentes en actividades de desarrollo profesional',
+       '4.6 Los docentes de otras ·reas se interesan por el ·rea de tecnologÌa e inform·tica y la integran a su enseÒanza',
+       '4.7 La IE incentiva el trabajo coordinado entre los/las responsables del ·rea',
+       '4.8 La IE tiene en cuenta los conocimientos del personal docente para enriquecer la visiÛn institucional sobre la enseÒanza de la computaciÛn y potenciar la comprensiÛn de las/los estudiantes y desarrollo',
+       '4.9 La IE promueve al trabajo conjunto entre los docente y profesionales lÌderes externos para impulsar pr·cticas inclusivas en la enseÒanza de la computaciÛn y/o pensamiento computacional',
+       '4.10 El Consejo Directivo del colegio est· al tanto de que en la instituciÛn se est· enseÒando ciencias de la computaciÛn, y se encuentran involucrados en el proceso.',
+       '4.11 Las directivas y el Consejo Directivo participan y eval˙an la implementaciÛn de sistemas eficientes del plan de estudios del ·rea.]',
        'Comentarios P4', 'N registro', 'ID', 'Fecha', 'Instrumento'],
       dtype='object')
 Publicados  (269, 52)
-Eliminados  (14, 52)
+Eliminados  (16, 52)
