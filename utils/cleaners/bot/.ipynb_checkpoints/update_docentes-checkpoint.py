@@ -50,7 +50,7 @@ df3[df3.filter(regex='^Comentarios*').columns] = df3[df3.filter(regex='^Comentar
 df3.loc[(df3['N registro'].isin(range(5535,5846)))&(df3['Código IE']==14),'Código IE'] = 13
 df3.loc[(df3['N registro'].isin(range(170,1799)))&(df3['Código IE']==247),'Código IE'] = None
 
-df3=df3.drop([321,389,489,494,538,1694,3758,4116,4361,4367,4440,4442,4446,4449,4460,4465,5101,5633,5837,6207,6303,6578],axis=0)
+df3=df3.drop([321,389,489,494,538,1694,3758,4116,4361,4367,4440,4442,4446,4449,4460,4465,5101,5633,5837,6205,6301,6578],axis=0)
 df3=df3.dropna(subset=["Código IE"], inplace=False)
 
 diccionariodocentes={'Nueva Esperanza La Palma ':150}
@@ -61,6 +61,9 @@ df3["Código IE"]=df3["Código IE"].str.replace(".0","", regex=False)
 df3["Código IE"]=df3["Código IE"].str.replace(".","")
 df3['Código IE']=df3['Código IE'].astype(float)
 df3['Código IE']=df3['Código IE'].astype(int)
+
+df3.loc[(df3['N registro']==6515),'Código IE'] = 139
+
 df3= df3[df3['Código IE'] > 0]
 df3=df3[df3['Código IE']<253]
 df3['Código IE']=df3['Código IE'].astype(str)
@@ -79,12 +82,39 @@ df3.loc[(df3['N registro']==714),'ID'] = 31386953
 df3.loc[(df3['N registro']==3291),'ID'] = 5092322
 df3.loc[(df3['N registro']==6686),'ID'] = 31988705
 df3.loc[(df3['N registro']==3730),'ID'] = 42489542
-df3.loc[(df3['N registro']==6515),'Código IE'] = 139
+df3.loc[(df3['N registro']==1819),'ID'] = 35601960
+df3.loc[(df3['N registro']==1196),'ID'] = 21994344
+df3.loc[(df3['N registro']==955),'ID'] = 31377497
+
+#excepciones a la regla de número de cédula
+df3.loc[(df3['N registro']==296),'ID'] = 22534255
+df3.loc[(df3['N registro']==554),'ID'] = 22534255
+df3.loc[(df3['N registro']==6853),'ID'] = 22534255
+
+df3.loc[(df3['N registro']==6853),'Implementa fichas'] = 'No'
+
+df3.loc[(df3['N registro']==4667),'Código IE'] = None
+df3.loc[(df3['N registro']==158),'Código IE'] = None
+df3.loc[(df3['N registro']==1320),'Código IE'] = None
+df3.loc[(df3['N registro']==4081),'Código IE'] = None
+df3.loc[(df3['N registro']==5106),'Código IE'] = None
+df3.loc[(df3['N registro']==5116),'Código IE'] = None
+df3.loc[(df3['N registro']==3469),'Código IE'] = None
+df3.loc[(df3['N registro']==4174),'Código IE'] = None
+df3.loc[(df3['N registro']==2093),'Código IE'] = None
+df3.loc[(df3['N registro']==6579),'Código IE'] = None
+df3.loc[(df3['N registro']==6727),'Código IE'] = None
+df3.loc[(df3['N registro']==3844),'Código IE'] = None
+
+df3=df3.dropna(subset=['Código IE'], inplace=False)
 
 df3['ID']=df3['ID'].astype(float).astype(int)
 df3= df3[df3['ID'] >= 1000000]
 df3= df3[df3['ID'] < 3000000000]
-df3=df3.dropna(subset=["Código IE"], inplace=False)
+
+df3.loc[(df3['N registro']==296),'ID'] = 3146635187
+df3.loc[(df3['N registro']==554),'ID'] = 479159
+df3.loc[(df3['N registro']==6853),'ID'] = 3104790177
 
 new_index = ['N registro', 'Instrumento', 'Fecha','Política de datos', 'Código IE',
              'Tipo ID', 'ID', 'Email', 'Edad', 'Sexo', 'Cabeza de hogar', 'Estado civil',

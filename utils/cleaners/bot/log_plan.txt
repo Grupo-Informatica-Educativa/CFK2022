@@ -1,48 +1,48 @@
-258    10/06
-259    10/06
-260    10/06
 261    11/06
 262    11/06
+263    15/06
+264    17/06
+265    18/06
 Name: Fecha, dtype: object
-C贸digos despu茅s de filtrar:  ['063' '007' '066' '107' '062' '092' '110' '252' '098' '064' '197' '198'
- '199' '200' '067' '213' '055' '054' '053' '109' '119' '142' '059' '069'
- '027' '026' '116' '236' '108' '121' '224' '218' '222' '238' '051' '056'
- '096' '097' '201' '202' '237' '235' '061' '023' '070' '112' '072' '075'
- '231' '226' '228' '088' '090' '068' '073' '071' '076' '111' '057' '077'
- '050' '052' '230' '229' '122' '074' '250' '183' '185' '186' '189' '251'
- '117' '004' '002' '001' '006' '003' '005' '129' '130' '132' '123' '093'
- '095' '233' '162' '163' '165' '166' '167' '131' '028' '184' '094' '058'
- '188' '187' '177' '180' '178' '176' '179' '114' '227' '015' '181' '019'
- '021' '020' '035' '232' '249' '225' '239' '138' '241' '243' '011' '013'
- '008' '009' '012' '168' '045' '164' '044' '049' '182' '106' '240' '089'
- '032' '118' '115' '196' '190' '127' '048' '128' '133' '047' '086' '140'
- '046' '030' '173' '169' '170' '124' '171' '172' '120' '223' '220' '065'
- '091' '203' '244' '024' '155' '156' '158' '160' '161' '247' '043' '126'
- '191' '234' '212' '060' '211' '214' '215' '217' '216' '079' '135' '080'
- '082' '083' '141' '144' '145' '146' '147' '219' '204' '205' '206' '210'
- '209' '084' '016' '017' '022' '010' '246' '029' '034' '031' '208' '018'
- '085' '087' '207' '137' '033' '078' '113' '014' '148' '149' '150' '151'
- '153' '154' '152' '175' '245' '248' '081' '025' '104' '139' '136' '099'
- '100' '101' '102' '103' '105' '159' '134' '157' '125' '037' '038' '039'
- '040' '041' '042' '036' '192' '194' '193']
-Columnas  Index(['C贸digo IE',
-       '1.1 En el plan de estudios se especifica como responsables de su elaboraci贸n a los docentes encargados del 谩rea',
-       '1.2 El plan de estudio incluye actividades b谩sicas de ofim谩tica y/o alfabetizaci贸n digital, y de programaci贸n y/o desarrollo del pensamiento computacional.',
+C骴igos despu閟 de filtrar:  ['063' '066' '107' '062' '092' '110' '252' '098' '064' '197' '198' '199'
+ '200' '067' '213' '055' '054' '053' '109' '119' '142' '059' '069' '027'
+ '026' '116' '236' '108' '121' '224' '218' '222' '238' '051' '056' '096'
+ '097' '201' '202' '237' '235' '061' '023' '070' '112' '072' '075' '231'
+ '226' '228' '088' '090' '068' '073' '071' '076' '111' '057' '077' '050'
+ '052' '230' '229' '122' '074' '250' '183' '185' '186' '189' '251' '117'
+ '004' '007' '002' '001' '006' '003' '005' '129' '130' '132' '221' '123'
+ '093' '095' '233' '162' '163' '165' '166' '167' '131' '028' '184' '094'
+ '058' '188' '187' '177' '180' '178' '176' '179' '114' '227' '015' '181'
+ '019' '021' '020' '035' '232' '249' '225' '239' '138' '241' '243' '011'
+ '013' '008' '009' '012' '168' '164' '045' '044' '049' '182' '106' '240'
+ '089' '032' '118' '115' '190' '196' '127' '048' '128' '133' '047' '086'
+ '140' '046' '030' '173' '169' '170' '124' '171' '172' '120' '223' '220'
+ '065' '091' '203' '244' '024' '155' '156' '158' '160' '161' '247' '043'
+ '126' '191' '234' '212' '060' '211' '214' '215' '217' '216' '079' '135'
+ '080' '082' '083' '141' '144' '145' '146' '147' '219' '204' '205' '206'
+ '210' '209' '084' '016' '017' '022' '010' '246' '029' '034' '031' '208'
+ '018' '085' '087' '207' '137' '033' '078' '113' '014' '148' '149' '150'
+ '151' '153' '154' '152' '175' '245' '248' '081' '025' '104' '139' '136'
+ '099' '100' '101' '102' '103' '105' '159' '134' '157' '125' '037' '038'
+ '039' '040' '041' '042' '036' '192' '194' '193' '143' '195' '242']
+Columnas  Index(['C骴igo IE',
+       '1.1 En el plan de estudios se especifica como responsables de su elaboraci髇 a los docentes encargados del 醨ea',
+       '1.2 El plan de estudio incluye actividades b醩icas de ofim醫ica y/o alfabetizaci髇 digital, y de programaci髇 y/o desarrollo del pensamiento computacional.',
        '1.3 En el plan de estudio se da mayor relevancia al pensamiento computacional',
-       '1.4 El plan de estudio del 谩rea promueve la transici贸n desde la alfabetizaci贸n digital a las ciencias de la computaci贸n.',
-       '1.5 El plan de estudios del 谩rea le permite al docente destacar la importancia del pensamiento computacional y su influencia en la formaci贸n de los estudiantes',
-       '1.6 El plan de estudios del 谩rea es coherente con la transici贸n de un grado a otro y permite al estudiante desarrollar conocimientos, habilidades y comprensi贸n del pensamiento computacional',
-       '1.7 El plan de estudios del 谩rea incluye trabajo pr谩ctico para el desarrollo del pensamiento computacional.',
-       '1.8 El plan de estudio del 谩rea plantea espacios en los que personas que trabajan en ocupaciones relacionadas con 谩reas STEM socialicen sus experiencias con los/las estudiantes',
-       '1.9 El plan de estudio incluye actividades transversales con 谩reas No-STEM, para el desarrollo del pensamiento computacional',
-       '1.10 El plan de estudio considera aspectos para la inclusi贸n de estudiantes con trastornos de aprendizaje y/o discapacidad',
-       '1.11 Entre los responsables del plan de estudios del 谩rea y los recursos educativos se incluye personal experto en la atenci贸n a estudiantes con necesidades educativas especiales',
-       '1.12 El plan de estudios del 谩rea hace expl铆cita la pedagog铆a a utilizar y las adaptaciones para estudiantes con trastornos del aprendizaje y/o con discapacidad',
-       '1.13 El plan de estudio del 谩rea cuenta con una estructura clara que permite disminuir las diferencias en el desempe帽o de ni帽os y ni帽as',
-       'Comentarios P1', 'Informaci贸n otro plan de estudios',
-       'Misi贸n de la instituci贸n educativa',
-       'Visi贸n de la instituci贸n educativa', 'N registro', 'Fecha',
+       '1.4 El plan de estudio del 醨ea promueve la transici髇 desde la alfabetizaci髇 digital a las ciencias de la computaci髇.',
+       '1.5 El plan de estudios del 醨ea le permite al docente destacar la importancia del pensamiento computacional y su influencia en la formaci髇 de los estudiantes',
+       '1.6 El plan de estudios del 醨ea es coherente con la transici髇 de un grado a otro y permite al estudiante desarrollar conocimientos, habilidades y comprensi髇 del pensamiento computacional',
+       '1.7 El plan de estudios del 醨ea incluye trabajo pr醕tico para el desarrollo del pensamiento computacional.',
+       '1.8 El plan de estudio del 醨ea plantea espacios en los que personas que trabajan en ocupaciones relacionadas con 醨eas STEM socialicen sus experiencias con los/las estudiantes',
+       '1.9 El plan de estudio incluye actividades transversales con 醨eas No-STEM, para el desarrollo del pensamiento computacional',
+       '1.10 El plan de estudio considera aspectos para la inclusi髇 de estudiantes con trastornos de aprendizaje y/o discapacidad',
+       '1.11 Entre los responsables del plan de estudios del 醨ea y los recursos educativos se incluye personal experto en la atenci髇 a estudiantes con necesidades educativas especiales',
+       '1.12 El plan de estudios del 醨ea hace expl韈ita la pedagog韆 a utilizar y las adaptaciones para estudiantes con trastornos del aprendizaje y/o con discapacidad',
+       '1.13 El plan de estudio del 醨ea cuenta con una estructura clara que permite disminuir las diferencias en el desempe駉 de ni駉s y ni馻s',
+       'Comentarios P1', 'Informaci髇 otro plan de estudios',
+       'Misi髇 de la instituci髇 educativa',
+       'Visi髇 de la instituci髇 educativa', 'N registro', 'Fecha',
        'Instrumento'],
       dtype='object')
 Publicados  (257, 22)
-Eliminados  (6, 22)
+Eliminados  (9, 22)
