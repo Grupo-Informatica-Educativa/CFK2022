@@ -54,10 +54,11 @@ def app():
                              format_func=lambda itemArray: itemArray['title'])
     file = f"data/c_pages/cohorte1/inicial/{categoria['file']}"
     
-    col_preguntas = 30
+    col_preguntas = 20
 
     if file:
         datos = load_data(file)
+        datos = datos.rename(columns={'Tipo':'Instrumento'})
 
         pregunta, filtros_def, indices, lista_agrupadores, lista_grupo = filtros(
             datos, col_preguntas, chart_type, categoria, nombres_preguntas=nombres_preguntas)
