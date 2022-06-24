@@ -1,6 +1,6 @@
 /home/ubuntu/docker-compose/streamlit/CFK2022/utils/cleaners/bot
 Error!!  Inicial_Pre_Y_Post_Cohorte1.xlsx
-{'ID', 'N registro', 'Código IE', 'Instrumento'}
+{'ID', 'Código IE', 'Instrumento', 'N registro'}
 Error!!  Instrumentos_DetalleCFK.xlsx
 {'ID', 'N registro', 'Instrumento'}
 Error!!  InstrumentosCFK.xlsx
