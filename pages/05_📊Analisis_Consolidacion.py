@@ -40,8 +40,8 @@ def app():
     st.write("### Resultados agrupados por dimensión")
     plot1(pl_marco)
     st.write("### Distribución de clasificación en niveles por dimensión")
-    col_wrap = st.slider('Número de gráficas por columna',step=1, min_value=1, max_value=8)
-    height = st.slider('Alto de la grafica',step=10, min_value=100, max_value=1500)
+    col_wrap = st.slider('Número de gráficas por columna',step=1, min_value=1, max_value=8, value=4 )
+    height = st.slider('Alto de la grafica',step=10, min_value=600, max_value=1500)
     plot2(pl_marco, col_wrap, height)
     st.write("### Distribución de clasificación en niveles por zona")
     plot3(zonas_marco, col_wrap, height)
@@ -131,6 +131,7 @@ def plot2(pl_marco, col_wrap=2, height=1000):
         lambda a: a.update(text=a.text.split("=")[-1]))
     fig_v.for_each_yaxis(lambda yaxis: yaxis.update(tickformat=',.0%'))
     fig_v.update_traces(textposition='outside', texttemplate='%{text:,.1%}')
+    fig_v.for_each_xaxis(lambda xaxis: xaxis.update(showticklabels=True))
     st.plotly_chart(fig_v, config=config, use_container_width=True, heigth=1200)
 
 
@@ -169,6 +170,7 @@ def plot3(zonas_marco, col_wrap=2, height=1000):
     fig_z.for_each_annotation(
         lambda a: a.update(text=a.text.split("=")[-1]))
     fig_z.for_each_yaxis(lambda yaxis: yaxis.update(tickformat=',.0%'))
+    fig_z.for_each_xaxis(lambda xaxis: xaxis.update(showticklabels=True))
     fig_z.update_traces(textposition='outside', texttemplate='%{text:,.0%}')
     st.plotly_chart(fig_z, config=config, use_container_width=True, heigth=1200)
 
