@@ -6,8 +6,29 @@
   <component name="ChangeListManager">
     <list default="true" id="bc0c9467-b847-4fbd-9488-4b314c66b165" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/09_ Observaciones.py" beforePathEscaped="$PROJECT_DIR$/pages/09_🔍 Observaciones.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/09_ Observaciones.py" afterPathEscaped="$PROJECT_DIR$/pages/09_🔍 Observaciones.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/10_ Observaciones_Género.py" beforePathEscaped="$PROJECT_DIR$/pages/10_🔍 Observaciones_Género.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/10_ Observaciones_Género.py" afterPathEscaped="$PROJECT_DIR$/pages/10_🔍 Observaciones_Género.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/descargables/DirectivosCFK.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/data/descargables/DirectivosCFK.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/descargables/DocentesCFK.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/data/descargables/DocentesCFK.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/descargables/EstudiantesCFK.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/data/descargables/EstudiantesCFK.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/descargables/InstrumentosCFK.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/data/descargables/InstrumentosCFK.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/descargables/Instrumentos_DetalleCFK.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/data/descargables/Instrumentos_DetalleCFK.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/descargables/LideresCFK.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/data/descargables/LideresCFK.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/descargables/PlanCFK.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/data/descargables/PlanCFK.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/descargables/RecursosCFK.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/data/descargables/RecursosCFK.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/cleaners/Marco_consolidacion/Dimensión 1.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/utils/cleaners/Marco_consolidacion/Dimensión 1.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/cleaners/Marco_consolidacion/consolidacion_D1.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/utils/cleaners/Marco_consolidacion/consolidacion_D1.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/cleaners/Marco_consolidacion/consolidacion_D2.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/utils/cleaners/Marco_consolidacion/consolidacion_D2.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/cleaners/Marco_consolidacion/consolidacion_D3.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/utils/cleaners/Marco_consolidacion/consolidacion_D3.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/cleaners/Marco_consolidacion/consolidacion_D4.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/utils/cleaners/Marco_consolidacion/consolidacion_D4.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/cleaners/Marco_consolidacion/consolidacion_D5.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/utils/cleaners/Marco_consolidacion/consolidacion_D5.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/cleaners/Marco_consolidacion/consolidacion_D6.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/utils/cleaners/Marco_consolidacion/consolidacion_D6.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/cleaners/Marco_consolidacion/consolidacion_D7.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/utils/cleaners/Marco_consolidacion/consolidacion_D7.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/cleaners/bot/eliminados/Eliminados_directivos.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/utils/cleaners/bot/eliminados/Eliminados_directivos.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/cleaners/bot/eliminados/Eliminados_docentes.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/utils/cleaners/bot/eliminados/Eliminados_docentes.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/cleaners/bot/eliminados/Eliminados_equipos.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/utils/cleaners/bot/eliminados/Eliminados_equipos.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/cleaners/bot/eliminados/Eliminados_estudiantes.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/utils/cleaners/bot/eliminados/Eliminados_estudiantes.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/cleaners/bot/eliminados/Eliminados_lideres.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/utils/cleaners/bot/eliminados/Eliminados_lideres.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/cleaners/bot/eliminados/Eliminados_plan.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/utils/cleaners/bot/eliminados/Eliminados_plan.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/cleaners/bot/log_pivot.txt" beforeDir="false" afterPath="$PROJECT_DIR$/utils/cleaners/bot/log_pivot.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
