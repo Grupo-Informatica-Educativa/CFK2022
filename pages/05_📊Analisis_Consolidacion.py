@@ -40,9 +40,11 @@ def app():
     st.write("### Resultados agrupados por dimensión")
     plot1(pl_marco)
     st.write("### Distribución de clasificación en niveles por dimensión")
-    plot2(pl_marco)
+    col_wrap = st.slider('Número de gráficas por columna',step=1, min_value=1, max_value=8)
+    height = st.slider('Alto de la grafica',step=10, min_value=100, max_value=1500)
+    plot2(pl_marco, col_wrap, height)
     st.write("### Distribución de clasificación en niveles por zona")
-    plot3(zonas_marco)
+    plot3(zonas_marco, col_wrap, height)
 
 
 
@@ -78,7 +80,7 @@ def prepare_data(marco):
     marco_m = marco_m[marco_m['Nivel']!=0]
     return marco_m
 
-def grouped_global_data(marco_m):
+def grouped_global_data(marco_m, col_wrap=2):
     pl_marco = marco_m[marco_m['Tipo de observación'] == 'Institución']
     pl_marco = pl_marco.pivot_table(index=['Dimensión','Nivel'],
                                    values='Color IE',
@@ -94,7 +96,7 @@ def grouped_global_data(marco_m):
     pl_marco = pl_marco.merge(dimensiones, on='Dimensión', how='left')
     return pl_marco
 
-def plot1(pl_marco):
+def plot1(pl_marco, col_wrap=2):
     ### Gráfica agrupada horizontal
     fig_h = px.bar(pl_marco, y="Dimensión", x="Frecuencia",
                  orientation='h',color="Nivel",
@@ -111,10 +113,10 @@ def plot1(pl_marco):
     fig_h.update_traces(textposition='inside', texttemplate='%{text:,.1%}')
     st.plotly_chart(fig_h, config=config, use_container_width=True)
 
-def plot2(pl_marco):
+def plot2(pl_marco, col_wrap=2, height=1000):
     ### Gráfica vertical dividida por col
     fig_v = px.bar(pl_marco, y="Frecuencia", x="Nivel", facet_col='Dimensión',
-                 barmode='group', facet_col_wrap=2,
+                 barmode='group', facet_col_wrap=col_wrap,
                  orientation='v',
                  category_orders={'Nivel':['1A', '1B', '2A', '2B', '3', '4', '5'],
                                   'Dim':["Dimensión "+str(x) for x in range(1,9)],
@@ -124,7 +126,7 @@ def plot2(pl_marco):
                  hover_name='Dim',
                  hover_data={'Nivel':True, 'Descripción':True},
                  color_discrete_sequence=px.colors.qualitative.Pastel,
-                height=1200)
+                height=height)
     fig_v.for_each_annotation(
         lambda a: a.update(text=a.text.split("=")[-1]))
     fig_v.for_each_yaxis(lambda yaxis: yaxis.update(tickformat=',.0%'))
@@ -150,10 +152,10 @@ def grouped_zone_data(marco_m):
     zonas_marco = zonas_marco.merge(dimensiones, on='Dimensión', how='left')
     return zonas_marco
 
-def plot3(zonas_marco):
+def plot3(zonas_marco, col_wrap=2, height=1000):
     ### Gráfica vertical dividida por col
     fig_z = px.bar(zonas_marco, y="Frecuencia", x="Nivel", facet_col='Dimensión',
-                   barmode='group', facet_col_wrap=2, color='Zona',
+                   barmode='group', facet_col_wrap=col_wrap, color='Zona',
                    orientation='v',
                    category_orders={'Nivel':['1A', '1B', '2A', '2B', '3', '4', '5'],
                                     'Dim':["Dimensión "+str(x) for x in range(1,9)],
@@ -163,7 +165,7 @@ def plot3(zonas_marco):
                    hover_name='Dim',
                    hover_data={'Nivel':True, 'Descripción':True},
                    color_discrete_sequence=px.colors.qualitative.Pastel,
-                   height=1200)
+                   height=height)
     fig_z.for_each_annotation(
         lambda a: a.update(text=a.text.split("=")[-1]))
     fig_z.for_each_yaxis(lambda yaxis: yaxis.update(tickformat=',.0%'))
