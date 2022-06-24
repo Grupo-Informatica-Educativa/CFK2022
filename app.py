@@ -8,17 +8,13 @@ def main():
     page_icon="🤖")
     st.sidebar.title("CFK 2022")
 
-    st.title('Coding For Kids 2022')
-
-    st.write("Resumen del Proyecto")
-    c1 = st.container()
-    c1.title('Formación')
-    c2 = st.container()
-    c2.title('Colegios CFK')
-    c3 = st.container()
-    c3.title('Comunidad de aprendizaje')
-    c4 = st.container()
-    c4.title('Greentic')
+    st.title('Monitoreo y evaluación Coding For Kids 2022')
+    st.write('''
+    
+    
+    
+    ''')
+    st.image('pages/inicio.png',use_column_width=None, width=500)
 
 if __name__=="__main__":
     main()

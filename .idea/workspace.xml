@@ -5,19 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bc0c9467-b847-4fbd-9488-4b314c66b165" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/pages/01_️‍Monitoreo.py" afterPathEscaped="$PROJECT_DIR$/pages/01_🕵️‍Monitoreo.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/c_pages/Monitoreo/monitoreo_cons.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/utils/cleaners/Monitoreo/cumplimiento.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_23_06_2022_10_24_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_23_06_2022_10_24_PM__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_23_06_2022_10_24_PM__Changes_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_23_06_2022_10_24_PM__Changes_1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_23_06_2022_10_25_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_23_06_2022_10_25_PM__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/02_Tablero_consolidacion.py" beforePathEscaped="$PROJECT_DIR$/pages/02_🎈Tablero_consolidacion.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/02_Tablero_consolidacion.py" afterPathEscaped="$PROJECT_DIR$/pages/02_🎈Tablero_consolidacion.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/cleaners/Marco_consolidacion/Acumulativo.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/utils/cleaners/Marco_consolidacion/Acumulativo.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/cleaners/Marco_consolidacion/consolidacion_D3.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/utils/cleaners/Marco_consolidacion/consolidacion_D3.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/cleaners/Marco_consolidacion/consolidacion_D6.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/utils/cleaners/Marco_consolidacion/consolidacion_D6.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/cleaners/Marco_consolidacion/consolidacion_D7.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/utils/cleaners/Marco_consolidacion/consolidacion_D7.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/cleaners/caracterizacion.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/utils/cleaners/caracterizacion.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/cleaners/dashboard_doc_con.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/utils/cleaners/Monitoreo/dashboard_doc_con.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/plots.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/plots.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/read_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/read_data.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,7 +26,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="mariana" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -76,15 +68,15 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/marianaarboleda/DataspellProjects/CFK2022/pages",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/marianaarboleda/DataspellProjects/CFK2022/pages&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\marianaarboleda\DataspellProjects\CFK2022\pages" />
