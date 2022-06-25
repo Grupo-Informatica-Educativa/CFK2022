@@ -32,9 +32,9 @@ def app():
     file=True
     if file:
         datos = read_data_xlsx(files[0]["file"])
-
         datos = datos.dropna(subset=['Género'])
         datos['Género'] = datos['Género'].replace({1:'Masculino',2:'Femenino'})
+        datos = datos[datos['Género'].isin(['Masculino', 'Femenino'])]
         datos['Año'] = datos['Año'].astype(str)
         #st.dataframe(datos.head())
 
