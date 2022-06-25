@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 import plotly.express as px
 import utils.plots as plots
-from utils.read_data import read_data
+from utils.read_data import read_data, read_data_xlsx
 import streamlit as st
 from utils.chart_funcs import *
 from utils.helper_funcs import *
@@ -31,7 +31,7 @@ def app():
 
     file=True
     if file:
-        datos = read_data(files[0]["file"])
+        datos = read_data_xlsx(files[0]["file"])
 
         datos = datos.dropna(subset=['Género'])
         datos['Género'] = datos['Género'].replace({1:'Masculino',2:'Femenino'})

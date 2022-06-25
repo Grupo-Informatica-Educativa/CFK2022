@@ -59,6 +59,7 @@ def app():
     if file:
         datos = load_data(file)
         datos = datos.rename(columns={'Tipo':'Instrumento'})
+        datos = datos[datos['4. Género'].isin(['Femenino','Masculino'])]
 
         pregunta, filtros_def, indices, lista_agrupadores, lista_grupo = filtros(
             datos, col_preguntas, chart_type, categoria, nombres_preguntas=nombres_preguntas)
