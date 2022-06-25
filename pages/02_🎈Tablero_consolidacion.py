@@ -13,7 +13,7 @@ config = plots.get_config()
 def app():
     plots.plotly_settings(px)
     st.title('Consolidación')
-    _type = st.selectbox('Elija el grupo que desea ver',["Monitoreo","Estudiantes","Docentes","Directivos"])
+    _type = st.selectbox('Elija el grupo que desea ver',["Estudiantes","Docentes","Directivos"])
     st.write("##")
 
     df = get_data(_type)

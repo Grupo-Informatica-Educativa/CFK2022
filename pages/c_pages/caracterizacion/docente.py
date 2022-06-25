@@ -11,7 +11,8 @@ config = plots.get_config()
 def app(df=None):
     if df is not None:
         plots.plotly_settings(px)
-
+        df['Formado TeI'] = "Sí"
+        df.loc[df['Formado tecnología e informática']=='No','Formado TeI'] = 'No'
         col_m1, col_m2, col_m3, col_m4 = st.columns(4)
         st.write("Fecha de actualización", df.Fecha.max())
         col_m1.metric("Número de docentes", len(df.ID.unique()))
@@ -27,8 +28,8 @@ def app(df=None):
                             texttemplate='%{text}')
         col1.plotly_chart(fig_1, config=config)
 
-        pivot_2 = pd.pivot_table(df, index=['Formado tecnología e informática','Sexo'],values='ID', aggfunc='nunique').reset_index()
-        fig_2 = px.bar(pivot_2, y='ID', x='Formado tecnología e informática', color='Sexo', barmode='group', text='ID', color_discrete_sequence= px.colors.qualitative.Set2)
+        pivot_2 = pd.pivot_table(df, index=['Formado TeI','Sexo'],values='ID', aggfunc='nunique').reset_index()
+        fig_2 = px.bar(pivot_2, y='ID', x='Formado TeI', color='Sexo', barmode='group', text='ID', color_discrete_sequence= px.colors.qualitative.Set2)
         fig_2.update_traces(textposition='outside',
                             texttemplate='%{text}')
         col2.plotly_chart(fig_2, config=config)
@@ -59,6 +60,12 @@ def app(df=None):
         # ¿Cuales son esas materias?
         _df = pd.read_feather(f'{DATA_PATH}/preguntas/pregunta2_docentes_pre.feather')
         st.write(_df)
+
+
+def prommedio_institucion(df):
+    pivot=df.pivot_table(index=['Código IE', 'Sexo'],values='ID', aggfunc='count').reset_index()
+    pivot=pivot.rename(columns={'ID':'Cantidad de Docentes'})
+    pivot2=pivot.pivot_table(index=['Sexo'],values='Cantidad de Docentes', aggfunc='mean').reset_index().rename(columns={'Cantidad de Docentes':'Promedio de docentes'})
 
 
 def country_map():
