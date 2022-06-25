@@ -37,7 +37,7 @@ def legend_position(fig,orientation="h",yanchor="bottom",xanchor="left",y=-0.2, 
     ))
 
 def text_position(fig,pos="outside"):
-    fig.update_traces(textposition=pos)
+    fig.update_traces(textposition=pos,  texttemplate='%{text}')
 
 def labels(fig,xlabel=None,ylabel=None):
     fig.update_layout(xaxis_title=xlabel, yaxis_title=ylabel)
@@ -45,6 +45,7 @@ def labels(fig,xlabel=None,ylabel=None):
 def percentage_labelsy(fig,xlabel=None,ylabel=None):
     fig.for_each_yaxis(lambda yaxis: yaxis.update(tickformat=',.0%'))
     fig.update_traces(texttemplate='%{text:,.0%}')
+
 
 def percentage_labelsx(fig,xlabel=None,ylabel=None):
     fig.for_each_xaxis(lambda yaxis: yaxis.update(tickformat=',.0%'))

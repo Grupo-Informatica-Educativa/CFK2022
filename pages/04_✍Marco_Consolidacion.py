@@ -77,8 +77,13 @@ def app():
             hover_name='Dim',
             hover_data={'Color IE': False,'Código IE':True,'Nivel':True, 'Descripción':True},
             range_r=['-1','6'], markers=True, render_mode='svg',
-            color_discrete_sequence=px.colors.qualitative.Set2)
+            color_discrete_sequence=px.colors.qualitative.Set2,
+            height=600)
             if not separar:
+                if st.checkbox('Ver solo lineas'):
+                    fig.update_traces(fill=None)
+                else:
+                    fig.update_traces(fill='toself')
                 st.plotly_chart(fig, config=config)
 
 
