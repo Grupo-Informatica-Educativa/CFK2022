@@ -29,7 +29,9 @@ def app(df=None):
 
         formado_cfk_sexo(df)
         formado_cfk_porcentaje(df)
+        formado_sexonivel_porcentaje(df)
         implementa_porcentaje(df)
+        implementa_nivel(df)
         distribucion_cfk(df)
 
 
@@ -181,6 +183,29 @@ def formado_cfk_porcentaje(df,col=None):
     fig.update_yaxes( range=(0,1.05))
     st.plotly_chart(fig, config=config,use_container_width=True)
 
+def formado_sexonivel_porcentaje(df,col=None):
+    formados = df[df['Formado CFK']=='Sí']
+    pivotf=formados.pivot_table(index=['Sexo','Nivel'],values='ID', aggfunc='nunique').reset_index()
+    pivotf=pivotf.rename(columns={'ID':'Cantidad de Docentes'})
+    total = len(set(formados.ID))
+    pivotf['% formado CFK'] = pivotf['Cantidad de Docentes']/total
+
+    fig =px.bar(pivotf,x='Nivel',
+                y='% formado CFK',
+                color='Sexo',
+                template="plotly_white",
+                text='% formado CFK',
+                barmode='group',
+                title='% de docentes formado CFK por sexo y nivel de enseñanza',
+                color_discrete_sequence=px.colors.qualitative.Set2,
+                category_orders={'Nivel':['Primaria','Secundaria','Ambos']})
+    fig.for_each_annotation(lambda a: a.update(text=a.text.split("=")[-1]))
+
+    plots.text_position(fig, pos="outside")
+    plots.percentage_labelsy(fig)
+    fig.update_yaxes( range=(0,1.05))
+    st.plotly_chart(fig, config=config,use_container_width=True)
+
 
 def implementa_porcentaje(df,col=None):
     pivotf=df.pivot_table(index=['Formado CFK','Implementa fichas', 'Sexo'],values='ID', aggfunc='nunique').reset_index()
@@ -198,6 +223,32 @@ def implementa_porcentaje(df,col=None):
                 text='% implementa fichas',
                 title='% de docentes formados en CFK que implementan fichas',
                 color_discrete_sequence=px.colors.qualitative.Set2)
+    fig.for_each_annotation(lambda a: a.update(text=a.text.split("=")[-1]))
+    plots.text_position(fig, 'outside')
+    plots.percentage_labelsy(fig)
+    fig.update_yaxes( range=(0,1.05))
+    st.plotly_chart(fig, config=config,use_container_width=True)
+
+def implementa_nivel(df,col=None):
+    pivotf=df.pivot_table(index=['Formado CFK','Implementa fichas', 'Sexo','Nivel'],values='ID', aggfunc='nunique').reset_index()
+    pivotf=pivotf.rename(columns={'ID':'Cantidad de Docentes'})
+    pivotf = pivotf.loc[pivotf['Formado CFK']=='Sí',:]
+
+
+    total = pivotf.groupby(['Sexo'])['Cantidad de Docentes'].sum().reset_index().rename(columns={'Cantidad de Docentes':'Total'})
+    pivotf = pivotf.merge(total, on=['Sexo'])
+    pivotf['% implementa fichas'] = pivotf['Cantidad de Docentes']/pivotf['Total']
+
+    fig =px.bar(pivotf,x='Implementa fichas',
+                y='% implementa fichas',
+                facet_col='Nivel',
+                color='Sexo',
+                barmode='group',
+                template="plotly_white",
+                text='% implementa fichas',
+                title='% de docentes formados en CFK que implementan fichas',
+                color_discrete_sequence=px.colors.qualitative.Set2,
+                 category_orders={'Nivel':['Primaria','Secundaria','Ambos']})
     fig.for_each_annotation(lambda a: a.update(text=a.text.split("=")[-1]))
     plots.text_position(fig, 'outside')
     plots.percentage_labelsy(fig)
