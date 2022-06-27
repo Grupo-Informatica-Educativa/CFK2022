@@ -25,18 +25,18 @@ def app():
     grafica5()
     st.write("## Momentos Progresión Usa-Modifica-Crea")
     grafica6()
-    st.write("¿Se usa el vocabulario adecuado para la enseñanza del pensamiento computacional (terminología correcta)?")
+    st.write("## ¿Se usa el vocabulario adecuado para la enseñanza del pensamiento computacional (terminología correcta)?")
     grafica7()
-    st.write("¿Se hace uso de la memoria colectiva?")
+    st.write("## ¿Se hace uso de la memoria colectiva?")
     grafica8()
-    st.write("Fidelidad de implementación de la ficha")
+    st.write("## Fidelidad de implementación de la ficha")
     grafica9() 
-    st.write("Cantidad de graficas pedagogicas implementadas")
+    st.write("## Cantidad de graficas pedagogicas implementadas")
     grafica10()
-    st.write("Fidelidad de la implementación")
+    st.write("## Fidelidad de la implementación")
 
     graficajose_unida()
-    st.write("Fidelidad de la implementación por ficha")
+    st.write("## Fidelidad de la implementación por ficha")
     for f in ['Ficha 1', 'Ficha 2', 'Ficha 3', 'Ficha 4', 'Sin respuesta']:
         st.write(f)
         graficajose(f)
@@ -49,10 +49,9 @@ def grafica1():
              barmode="group",
              color_discrete_sequence=px.colors.qualitative.Set2,
              template="plotly_white",
-            # title="Observaciones acorde asignaturas STEM - NO STEM",
              text_auto=True)
     fig.update_layout(autosize=True)
-    plots.text_position(fig)
+    fig.update_traces(textposition='outside')
     plots.legend_position(fig)
     plots.labels(fig)
     st.plotly_chart(fig,use_container_width=True, config=config)
@@ -82,7 +81,7 @@ def grafica3():
             color_discrete_sequence=px.colors.qualitative.Set2,
             text_auto=True,
             template="plotly_white")
-    plots.text_position(fig)
+    fig.update_traces(textposition='outside')
     st.plotly_chart(fig,use_container_width=True, config=config)
 
 # Exploración de los conocimientos previos"
@@ -94,7 +93,7 @@ def grafica4():
             color_discrete_sequence=px.colors.qualitative.Set2,
             text_auto=True,
             template="plotly_white")
-    plots.text_position(fig)
+    fig.update_traces(textposition='outside')
     st.plotly_chart(fig,use_container_width=True, config=config)
 
 # Actividad desconectada
@@ -106,7 +105,7 @@ def grafica5():
                 color_discrete_sequence=px.colors.qualitative.Set2,
                 template="plotly_white",
                 text_auto=True)
-    plots.text_position(fig)
+    fig.update_traces(textposition='outside')
     plots.legend_position(fig)
     fig.update_layout(xaxis_title=None)
     st.plotly_chart(fig,use_container_width=True, config=config)
@@ -121,7 +120,7 @@ def grafica6():
              template="plotly_white",
              orientation='h',
              text_auto=True)
-    plots.text_position(fig)
+    fig.update_traces(textposition='outside')
     plots.legend_position(fig)
     plots.labels(fig)
     st.plotly_chart(fig,use_container_width=True, config=config)
@@ -135,7 +134,7 @@ def grafica7():
             color_discrete_sequence=px.colors.qualitative.Set2,
             text_auto=True,
             template="plotly_white")
-    plots.text_position(fig)
+    fig.update_traces(textposition='outside')
     plots.labels(fig)
     st.plotly_chart(fig,use_container_width=True, config=config)
 
@@ -149,7 +148,7 @@ def grafica8():
         color_discrete_sequence=px.colors.qualitative.Set2,
         text_auto='0.3s',
         template="plotly_white")
-    plots.text_position(fig)
+    fig.update_traces(textposition='outside')
     fig.update_layout(yaxis_title=None)
     st.plotly_chart(fig,use_container_width=True, config=config)
 
@@ -162,7 +161,7 @@ def grafica9():
         color_discrete_sequence=px.colors.qualitative.Set2,
         text_auto='0.3s',
         template="plotly_white")
-    plots.text_position(fig)
+    fig.update_traces(textposition='outside')
     fig.update_layout(yaxis_title=None)
     st.plotly_chart(fig,use_container_width=True, config=config)
 
@@ -175,7 +174,7 @@ def grafica10():
         color_discrete_sequence=px.colors.qualitative.Set2,
         text_auto='0.3s',
         template="plotly_white")
-    plots.text_position(fig)
+    fig.update_traces(textposition='outside')
     plots.labels(fig)
     st.plotly_chart(fig,use_container_width=True, config=config)
 

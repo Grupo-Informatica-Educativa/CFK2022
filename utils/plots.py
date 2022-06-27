@@ -36,8 +36,8 @@ def legend_position(fig,orientation="h",yanchor="bottom",xanchor="left",y=-0.2, 
         x=x
     ))
 
-def text_position(fig,pos="outside"):
-    fig.update_traces(textposition=pos,  texttemplate='%{text}')
+def text_position(fig,pos="outside",texttemplate='%{text}'):
+    fig.update_traces(textposition=pos,  texttemplate=texttemplate)
 
 def labels(fig,xlabel=None,ylabel=None):
     fig.update_layout(xaxis_title=xlabel, yaxis_title=ylabel)
