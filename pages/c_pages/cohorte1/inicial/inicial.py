@@ -83,6 +83,7 @@ def app():
         category_orders = categories_order(
             set(datos[pregunta]), pregunta, orden_grupos)
 
+
         if lista_grupo != []:
             datos = datos.loc[datos.Grupo.isin(lista_grupo)]
 
