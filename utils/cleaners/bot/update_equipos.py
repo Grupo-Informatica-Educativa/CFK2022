@@ -38,18 +38,20 @@ print(df0['Fecha'][-5:])
 
 df0 = df0.drop(columns='Timestamp')
 
-df6=df0.copy()
+df6=df0.copy(deep=True)
+
 df6['Instrumento']="Encuesta Equipos"
-
+print("Indice ",df6.index)
 df6 = df6[df6['N registro']>0]
-
+print("forma ",df6.shape)
 df6=df6.rename(columns={'Código de la Institución Educativa, provisto por el proyecto':'Código IE'})
 
-df6=df6.drop([15,16,18,36,72,79,125,134,147,153,204,206,208,223,226],axis=0)
+df6=df6.drop([15,16,18,36,72,79,134,147,153,204,206,208,226],axis=0)
 
+# que ya no las quieren eliminar: 125,223
 df6.loc[(df6['N registro']==125),'Código IE'] = 39
 df6.loc[(df6['N registro']==228),'Código IE'] = 126
-
+print(df6.loc[df6['N registro'].isin([125,223]),'Código IE'], "verificando ie 39")
 df6=df6.dropna(subset=['Código IE'],inplace=False)
 
 df6['Código IE']=df6['Código IE'].astype(int)
