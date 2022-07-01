@@ -1,0 +1,20 @@
+respuestas_correctas_estudiantes = {
+    "Un algoritmo es:":"Una secuencia lógica de pasos para realizar una tarea",
+    "¿Para qué sirven los algoritmos?":"Para planificar la solución a un problema",
+    "Un bucle es:":"Un conjunto de instrucciones que se ejecuta mientras se cumpla una condición",
+    "¿Cuál de las siguientes opciones sí le permite al robot completar la misión de fotografiar cada tortuga?":"a.",
+    "¿Qué mensaje deseaba enviar la líder Wayuú?":"c. Nublado",
+    "¿Cuál de los siguientes códigos permite que el robot complete su misión sembrando café?":"a.",
+    "¿Cuál será la foto con más vistas?":"c) Julio",
+    "Ayuda al robot verde a salir del laberinto":"b.",
+    "Óscar lleva 2 loncheras a la escuela todos los días ¿Cuál de las siguientes afirmaciones es falsa?":"c) Si Óscar empaca Deditos para merendar, puede hacer Arroz de pollo para almorzar",
+    "¿Cuál de las siguientes hamburguesas tiene los ingredientes A, E y F?":"a.",
+    "¿Qué botella debe cambiarse de color para que el resultado final sea una botella de color blanco?":"a) La botella B debe ser verde"}
+
+
+respuestas_correctas_docentes = {
+    "Un algoritmo es:":"Una secuencia lógica de pasos para realizar una tarea.",
+    "¿Para qué sirven los algoritmos?":"Para planificar la solución a un problema",
+    "Un bucle es:":"Un conjunto de instrucciones que se ejecuta mientras se cumpla una condición",
+    '¿Cuál es el error conceptual de Tim?':"Cree que, si la condición se cumple, todo lo que sigue se va a ejecutar",
+    '¿Cuál es el error conceptual de Ana?':"No tiene claro el concepto de bucle y por eso no logra identificar que A y C hacen lo mismo"}
