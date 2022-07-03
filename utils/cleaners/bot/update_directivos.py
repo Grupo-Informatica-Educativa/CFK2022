@@ -11,7 +11,7 @@ import sys
 temp = sys.stdout                 # store original stdout object for later
 sys.stdout = open('log_directivos.txt', 'w') # redirect all prints to this log file
 
-## Estudiantes
+## Directivos
 
 ruta =Path(__file__).parent
 

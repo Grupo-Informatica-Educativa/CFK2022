@@ -4,5 +4,10 @@
 268    09/06
 269    18/06
 Name: Fecha, dtype: object
-Publicados  (251, 32)
-Eliminados  (19, 32)
+Indice  RangeIndex(start=0, stop=270, step=1)
+forma  (269, 37)
+125    39
+223    99
+Name: Código IE, dtype: int64 verificando ie 39
+Publicados  (253, 32)
+Eliminados  (17, 32)

@@ -1,8 +1,8 @@
 C:\Users\marianaarboleda\DataspellProjects\CFK2022\utils\cleaners\bot
 Error!!  InstrumentosCFK.xlsx
-{'ID', 'N registro', 'Instrumento'}
+{'N registro', 'Instrumento', 'ID'}
 Error!!  Instrumentos_DetalleCFK.xlsx
-{'ID', 'N registro', 'Instrumento'}
+{'N registro', 'Instrumento', 'ID'}
   N registro          Instrumento Código IE        ID
 0          3  Encuesta Directivos     206.0  93410609
 1          4  Encuesta Directivos     206.0   5933717

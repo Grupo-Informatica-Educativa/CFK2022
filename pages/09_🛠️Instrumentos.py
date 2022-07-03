@@ -4,9 +4,9 @@ import streamlit as st
 from pages.c_pages.equipos.genero import app as page_equipos_genero
 from pages.c_pages.equipos.genero2022 import app as page_equipos_genero_2022
 
-from pages.c_pages.cohorte1.inicial.inicial import app as page_instrumentos_inicial_cohorte1
 
-instrumentos_list = ["Equipos","Graficador"]
+
+instrumentos_list = ["Equipos"]
 
 instrumentos_map = {
     "Equipos": [
@@ -21,8 +21,8 @@ instrumentos_map = {
     ],
     "Graficador": [
         {
-            'title': "Inicial - Cohorte 1",
-            'page': page_instrumentos_inicial_cohorte1
+            'title': "",
+            'page': None
         },
     ]
 }
