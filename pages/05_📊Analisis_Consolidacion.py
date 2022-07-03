@@ -9,7 +9,7 @@ from io import BytesIO
 from plotly.subplots import make_subplots
 from pages.c_pages.analisis_consolidacion.directivos import app as page_directivos_app
 from pages.c_pages.analisis_consolidacion.estudiantes import app as page_estudiantes_app
-
+from pages.c_pages.analisis_consolidacion.docentes import app as page_docentes_app
 
 config = plots.get_config()
 
@@ -238,6 +238,10 @@ paginas_array = [
         {
             'title': "Estudiantes",
             'page': page_estudiantes_app
+        },
+        {
+            'title': "Docentes",
+            'page': page_docentes_app
         }
 ]
 

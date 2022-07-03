@@ -10,28 +10,16 @@ preguntas_cols = [
     "Un algoritmo es:",
     "¿Para qué sirven los algoritmos?",
     "Un bucle es:",
-    "¿Cuál de las siguientes opciones sí le permite al robot completar la misión de fotografiar cada tortuga?",
-    "¿Qué mensaje deseaba enviar la líder Wayuú?",
-    "¿Cuál de los siguientes códigos permite que el robot complete su misión sembrando café?",
-    "¿Cuál será la foto con más vistas?",
-    "Ayuda al robot verde a salir del laberinto",
-    "Óscar lleva 2 loncheras a la escuela todos los días ¿Cuál de las siguientes afirmaciones es falsa?",
-    "¿Cuál de las siguientes hamburguesas tiene los ingredientes A, E y F?",
-    "¿Qué botella debe cambiarse de color para que el resultado final sea una botella de color blanco?"
+    '¿Cuál es el error conceptual de Tim?',
+    '¿Cuál es el error conceptual de Ana?'
 ]
 
-respuestas_correctas_estudiantes = {
-    "Un algoritmo es:":"Una secuencia lógica de pasos para realizar una tarea",
+respuestas_correctas_docentes = {
+    "Un algoritmo es:":"Una secuencia lógica de pasos para realizar una tarea.",
     "¿Para qué sirven los algoritmos?":"Para planificar la solución a un problema",
     "Un bucle es:":"Un conjunto de instrucciones que se ejecuta mientras se cumpla una condición",
-    "¿Cuál de las siguientes opciones sí le permite al robot completar la misión de fotografiar cada tortuga?":"a.",
-    "¿Qué mensaje deseaba enviar la líder Wayuú?":"c. Nublado",
-    "¿Cuál de los siguientes códigos permite que el robot complete su misión sembrando café?":"a.",
-    "¿Cuál será la foto con más vistas?":"c) Julio",
-    "Ayuda al robot verde a salir del laberinto":"b.",
-    "Óscar lleva 2 loncheras a la escuela todos los días ¿Cuál de las siguientes afirmaciones es falsa?":"c) Si Óscar empaca Deditos para merendar, puede hacer Arroz de pollo para almorzar",
-    "¿Cuál de las siguientes hamburguesas tiene los ingredientes A, E y F?":"a.",
-    "¿Qué botella debe cambiarse de color para que el resultado final sea una botella de color blanco?":"a) La botella B debe ser verde"
+    '¿Cuál es el error conceptual de Tim?':"Cree que, si la condición se cumple, todo lo que sigue se va a ejecutar",
+    '¿Cuál es el error conceptual de Ana?':"No tiene claro el concepto de bucle y por eso no logra identificar que A y C hacen lo mismo"
 }
 
 caracterizacion_cols = [
@@ -42,7 +30,7 @@ caracterizacion_cols = [
 
 @st.cache(persist=True)
 def fetch():
-    data = read_data_xlsx("estudiantes2022")
+    data = read_data_xlsx("docentes2022")
     cols = list(itertools.chain(*[caracterizacion_cols,preguntas_cols]))
     return data[cols].copy()
 
@@ -66,7 +54,7 @@ def app():
         pregunta, filtros_def, indices, lista_agrupadores, lista_grupo = filtros(
             datos, col_preguntas, chart_type, categoria, nombres_preguntas={})
 
-        resp_correct = respuestas_correctas_estudiantes[pregunta]
+        resp_correct = respuestas_correctas_docentes[pregunta]
         datos = datos[[columna_unica,pregunta]]
         datos["Respuesta"] = datos[pregunta].apply(lambda x: "Correcto" if x == resp_correct else "Incorrecto")
         
