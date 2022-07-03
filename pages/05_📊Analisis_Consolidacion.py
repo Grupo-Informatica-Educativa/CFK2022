@@ -12,6 +12,8 @@ from pages.c_pages.analisis_consolidacion.estudiantes import app as page_estudia
 from pages.c_pages.analisis_consolidacion.docentes import app as page_docentes_app
 from pages.c_pages.analisis_consolidacion.lideres import app as page_lideres_app
 from pages.c_pages.analisis_consolidacion.plan import app as page_plan_app
+from pages.c_pages.analisis_consolidacion.equipos import app as page_equipo_app
+
 
 
 config = plots.get_config()
@@ -257,6 +259,10 @@ paginas_array = [
         {
             'title': "Plan",
             'page': page_plan_app
+        },
+         {
+            'title': "Equipos",
+            'page': page_equipo_app
         }
 ]
 
