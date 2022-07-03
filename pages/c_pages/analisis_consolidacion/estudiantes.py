@@ -35,7 +35,25 @@ respuestas_correctas_estudiantes = {
 }
 
 caracterizacion_cols = [
-    'Código IE'
+    'N registro',
+    'Deseo participar en el estudio',
+    'Código IE',
+    'Grupo',
+    'Nombre',
+    'Fecha',
+    'ID',
+    'Número de lista',
+    'Edad',
+    'Sexo',
+    'Sector vivienda',
+    'Internet',
+    'Uso del dispositivo móvil',
+    'Nivel escolaridad madre',
+    'Nivel escolaridad padre',
+    'Ocupación madre',
+    'Ocupación padre',
+    '¿Con quién vives?',
+    'Grado'
 ]
 
 
@@ -43,11 +61,16 @@ caracterizacion_cols = [
 @st.cache(persist=True)
 def fetch():
     data = read_data_xlsx("estudiantes2022")
-    cols = list(itertools.chain(*[caracterizacion_cols,preguntas_cols]))
-    return data[cols].copy()
+    other_cols = []
+    for col in data.columns:
+        if col not in caracterizacion_cols:
+            other_cols.append(col)
+    data = data[caracterizacion_cols + sorted(other_cols)]
+    return data.copy()
 
 def app():
-    col_preguntas = 1
+    
+    col_preguntas = caracterizacion_cols.__len__()
     columna_unica = 'Código IE'
     datos = fetch()
     list_of_ie = datos[columna_unica].unique()
@@ -64,21 +87,21 @@ def app():
 
     if datos is not None:
         pregunta, filtros_def, indices, lista_agrupadores, lista_grupo = filtros(
-            datos, col_preguntas, chart_type, categoria, nombres_preguntas={})
+            datos, col_preguntas, chart_type, categoria, nombres_preguntas={},questions_sorted=False)
 
-        resp_correct = respuestas_correctas_estudiantes[pregunta]
-        datos = datos[[columna_unica,pregunta]]
-        datos["Respuesta"] = datos[pregunta].apply(lambda x: "Correcto" if x == resp_correct else "Incorrecto")
-        
         ejex, color, columna, fila = filtros_def
-        color = "Respuesta"        
-        
+
+        hasAnswer = False
+
+        if pregunta in respuestas_correctas_estudiantes:
+            resp_correct = respuestas_correctas_estudiantes[pregunta]
+            datos["Respuesta"] = datos[pregunta].apply(lambda x: "Correcto" if x == resp_correct else "Incorrecto")
+            hasAnswer = True
+            color = "Respuesta"
+
         if chart_type != "Tabla resumen":
             height = st.slider(
                 "Ajuste el tamaño vertical de la gráfica", 500, 1000)
-
-        if color == "Eficacia":
-            datos = graph_answer(datos, pregunta, categoria)
 
         orden_grupos = ["I"+str(x) for x in range(87)]
 
@@ -115,8 +138,11 @@ def app():
             # Selecciona tipo de gráfica
             if chart_type == "Barras":
                 """ Los diagramas de barra exigen agrupar la información antes de graficar """
-                indices.append("Respuesta")
+                if hasAnswer:
+                    indices.append("Respuesta")
+
                 pivot = pivot_data(datos, indices, columna_unica)
+
                 fig = bar_chart(columna_unica=columna_unica,
                                 pivot=pivot, ejex=ejex, color=color,
                                 fila=fila, columna=columna, indices=indices,
