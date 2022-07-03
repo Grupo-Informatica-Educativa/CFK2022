@@ -23,6 +23,8 @@ def read_data_xlsx(file,number=None):
                   "integrados_formacion": "data/integradosFormacion.xlsx",
                   "directivos2022": "data/descargables/DirectivosCFK.xlsx",
                   "estudiantes2022": "data/descargables/EstudiantesCFK.xlsx",
-                  "docentes2022": "data/descargables/DocentesCFK.xlsx"
+                  "docentes2022": "data/descargables/DocentesCFK.xlsx",
+                  "lideres2022": "data/descargables/LideresCFK.xlsx",
+                  "plan2022": "data/descargables/PlanCFK.xlsx",
                   }
     return pd.read_excel(file_dict[file])

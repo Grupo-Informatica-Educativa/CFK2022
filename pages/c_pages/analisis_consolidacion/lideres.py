@@ -9,26 +9,17 @@ from utils.read_data import read_data_xlsx
 
 caracterizacion_cols = [
     'N registro',
-    'Instrumento',
     'Fecha',
-    'Política de datos',
-    'ID',
-    'Edad',
-    'Sexo',
+    'Instrumento',
     'Código IE',
-    'Tipo de ID',
-    'Cabeza de hogar',
-    'Estado civil',
-    'Líder comunitario',
-    'Formación STEM',
-    'Rol en IE',
+    'ID',
 ]
 
 
 
 @st.cache()
 def fetch():
-    data = read_data_xlsx("directivos2022")
+    data = read_data_xlsx("lideres2022")
     other_cols = []
     for col in data.columns:
         if col not in caracterizacion_cols:

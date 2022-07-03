@@ -58,7 +58,7 @@ caracterizacion_cols = [
 
 
 
-@st.cache(persist=True)
+@st.cache()
 def fetch():
     data = read_data_xlsx("estudiantes2022")
     other_cols = []

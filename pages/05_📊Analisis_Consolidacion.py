@@ -10,6 +10,9 @@ from plotly.subplots import make_subplots
 from pages.c_pages.analisis_consolidacion.directivos import app as page_directivos_app
 from pages.c_pages.analisis_consolidacion.estudiantes import app as page_estudiantes_app
 from pages.c_pages.analisis_consolidacion.docentes import app as page_docentes_app
+from pages.c_pages.analisis_consolidacion.lideres import app as page_lideres_app
+from pages.c_pages.analisis_consolidacion.plan import app as page_plan_app
+
 
 config = plots.get_config()
 
@@ -242,6 +245,18 @@ paginas_array = [
         {
             'title': "Docentes",
             'page': page_docentes_app
+        },
+        {
+            'title': "Directivos",
+            'page': page_directivos_app
+        },
+        {
+            'title': "Lideres",
+            'page': page_lideres_app
+        },
+        {
+            'title': "Plan",
+            'page': page_plan_app
         }
 ]
 
