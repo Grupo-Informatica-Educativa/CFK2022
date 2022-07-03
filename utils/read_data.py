@@ -21,5 +21,8 @@ def read_data(file, number=None):
 def read_data_xlsx(file,number=None):
     file_dict  = {'observaciones_gen': f'data/c_pages/observaciones/datasets/gen{number}.xlsx',
                   "integrados_formacion": "data/integradosFormacion.xlsx",
+                  "directivos2022": "data/descargables/DirectivosCFK.xlsx",
+                  "estudiantes2022": "data/descargables/EstudiantesCFK.xlsx"
+                  
                   }
     return pd.read_excel(file_dict[file])

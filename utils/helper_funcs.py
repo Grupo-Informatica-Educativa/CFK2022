@@ -73,6 +73,8 @@ def filtros(datos, col_preguntas, tipo_grafica, categoria=None, nombres_pregunta
     elif tipo_grafica == 'Tendencia':
         lista_filtros.append(st.selectbox(
             "Seleccione el eje x", lista_agrupadores))
+    elif tipo_grafica == None:
+        pass
 
     else:
         lista_filtros.append(st.selectbox("Seleccione el eje x", [
