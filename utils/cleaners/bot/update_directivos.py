@@ -103,10 +103,6 @@ df4.loc[(df4['N registro']==109),'ID'] = 456
 
 df4=df4.dropna(subset=['ID'],inplace=False)
 
-print("antes de quitar duplicados ID", df4.shape)
-df4 = df4.drop_duplicates(subset="ID", keep="first")
-print("despues de quitar duplicados ID", df4.shape)
-
 df4.loc[(df4['N registro']==290),'ID'] =6882411
 df4.loc[(df4['N registro']==291),'ID'] =17323767
 df4.loc[(df4['N registro']==292),'ID'] =60252841

@@ -44,7 +44,7 @@ df5=df0.copy()
 df5['Instrumento']="Encuesta Líderes"
 
 df5=df5.dropna(subset=['Código IE'],inplace=False)
-df5=df5.drop([0,1,2,3,24,34,70,104,149,162,253,255,272],axis=0)
+df5=df5.drop([0,1,2,3,5,24,34,70,104,149,162,253,255,272],axis=0)
 
 df5['Código IE']=df5['Código IE'].astype(int)
 df5=df5[df5['Código IE'] > 0]

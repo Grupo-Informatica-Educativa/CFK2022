@@ -1,4 +1,4 @@
-C:\Users\marianaarboleda\DataspellProjects\CFK2022\utils\cleaners\bot
+C:\Users\cvieira\Desktop\CFK2022\utils\cleaners\bot
 Error!!  InstrumentosCFK.xlsx
 {'N registro', 'Instrumento', 'ID'}
 Error!!  Instrumentos_DetalleCFK.xlsx

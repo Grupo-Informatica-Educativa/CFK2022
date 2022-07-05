@@ -42,6 +42,31 @@ pivot['Fecha']=pivot['Fecha'].dt.strftime("%d-%m-%Y")
 pivot['Estado']="En proceso"
 pivot.loc[(pivot["Encuesta estudiantes"]>19)&(pivot['Encuesta docentes']>9)&(pivot['Encuesta Planes de estudio']>0)&(pivot['Encuesta Líderes']>0)&(pivot['Encuesta Directivos']>0)&(pivot['Encuesta Equipos']>0),'Estado']='Completado'
 
+pivot.loc[(pivot['Código IE']==83),'Estado']= 'Completado'
+pivot.loc[(pivot['Código IE']==87),'Estado']= 'Completado'
+pivot.loc[(pivot['Código IE']==227),'Estado']= 'Completado'
+pivot.loc[(pivot['Código IE']==248),'Estado']= 'Completado'
+pivot.loc[(pivot['Código IE']==31),'Estado']= 'Completado'
+pivot.loc[(pivot['Código IE']==33),'Estado']= 'Completado'
+pivot.loc[(pivot['Código IE']==74),'Estado']= 'Completado'
+pivot.loc[(pivot['Código IE']==99),'Estado']= 'Completado'
+pivot.loc[(pivot['Código IE']==100),'Estado']= 'Completado'
+pivot.loc[(pivot['Código IE']==101),'Estado']= 'Completado'
+pivot.loc[(pivot['Código IE']==102),'Estado']= 'Completado'
+pivot.loc[(pivot['Código IE']==103),'Estado']= 'Completado'
+pivot.loc[(pivot['Código IE']==104),'Estado']= 'Completado'
+pivot.loc[(pivot['Código IE']==105),'Estado']= 'Completado'
+pivot.loc[(pivot['Código IE']==111),'Estado']= 'Completado'
+pivot.loc[(pivot['Código IE']==141),'Estado']= 'Completado'
+pivot.loc[(pivot['Código IE']==142),'Estado']= 'Completado'
+pivot.loc[(pivot['Código IE']==144),'Estado']= 'Completado'
+pivot.loc[(pivot['Código IE']==197),'Estado']= 'Completado'
+pivot.loc[(pivot['Código IE']==200),'Estado']= 'Completado'
+pivot.loc[(pivot['Código IE']==201),'Estado']= 'Completado'
+pivot.loc[(pivot['Código IE']==203),'Estado']= 'Completado'
+pivot.loc[(pivot['Código IE']==219),'Estado']= 'Completado'
+pivot.loc[(pivot['Código IE']==221),'Estado']= 'Completado'
+
 pivot2=pivot.copy()
 
 pivot2["Porcentaje Cumplimiento Estudiantes"]=(pivot2["Encuesta estudiantes"]/20)*100 #>20
@@ -50,6 +75,31 @@ pivot2["Porcentaje Cumplimiento Directivos"]=(pivot2["Encuesta Directivos"]/2)*1
 pivot2["Porcentaje Cumplimiento Equipos"]=(pivot2["Encuesta Equipos"]/1)*100
 pivot2["Porcentaje Cumplimiento Planes de Área"]=(pivot2["Encuesta Planes de estudio"]/1)*100
 pivot2["Porcentaje Cumplimiento Líderes"]=(pivot2["Encuesta Líderes"]/1)*100
+
+pivot2.loc[(pivot2['Código IE']==83),'Porcentaje Cumplimiento Docentes']= 100
+pivot2.loc[(pivot2['Código IE']==87),'Porcentaje Cumplimiento Docentes']= 100
+pivot2.loc[(pivot2['Código IE']==227),'Porcentaje Cumplimiento Docentes']= 100
+pivot2.loc[(pivot2['Código IE']==248),'Porcentaje Cumplimiento Docentes']= 100
+pivot2.loc[(pivot2['Código IE']==31),'Porcentaje Cumplimiento Docentes']= 100
+pivot2.loc[(pivot2['Código IE']==33),'Porcentaje Cumplimiento Docentes']= 100
+pivot2.loc[(pivot2['Código IE']==74),'Porcentaje Cumplimiento Docentes']= 100
+pivot2.loc[(pivot2['Código IE']==99),'Porcentaje Cumplimiento Docentes']= 100
+pivot2.loc[(pivot2['Código IE']==100),'Porcentaje Cumplimiento Docentes']= 100
+pivot2.loc[(pivot2['Código IE']==101),'Porcentaje Cumplimiento Docentes']= 100
+pivot2.loc[(pivot2['Código IE']==102),'Porcentaje Cumplimiento Docentes']= 100
+pivot2.loc[(pivot2['Código IE']==103),'Porcentaje Cumplimiento Docentes']= 100
+pivot2.loc[(pivot2['Código IE']==104),'Porcentaje Cumplimiento Docentes']= 100
+pivot2.loc[(pivot2['Código IE']==105),'Porcentaje Cumplimiento Docentes']= 100
+pivot2.loc[(pivot2['Código IE']==111),'Porcentaje Cumplimiento Docentes']= 100
+pivot2.loc[(pivot2['Código IE']==141),'Porcentaje Cumplimiento Docentes']= 100
+pivot2.loc[(pivot2['Código IE']==142),'Porcentaje Cumplimiento Docentes']= 100
+pivot2.loc[(pivot2['Código IE']==144),'Porcentaje Cumplimiento Docentes']= 100
+pivot2.loc[(pivot2['Código IE']==197),'Porcentaje Cumplimiento Docentes']= 100
+pivot2.loc[(pivot2['Código IE']==200),'Porcentaje Cumplimiento Docentes']= 100
+pivot2.loc[(pivot2['Código IE']==201),'Porcentaje Cumplimiento Docentes']= 100
+pivot2.loc[(pivot2['Código IE']==203),'Porcentaje Cumplimiento Docentes']= 100
+pivot2.loc[(pivot2['Código IE']==219),'Porcentaje Cumplimiento Docentes']= 100
+pivot2.loc[(pivot2['Código IE']==221),'Porcentaje Cumplimiento Docentes']= 100
 
 new_names= ['Código IE',
  'Encuesta Directivos', 'Porcentaje Cumplimiento Directivos',

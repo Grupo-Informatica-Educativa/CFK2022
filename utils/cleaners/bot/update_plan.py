@@ -43,7 +43,7 @@ df7['Instrumento']="Encuesta Planes de estudio"
 
 df7=df7.dropna(subset=['Código IE'],inplace=False)
 
-df7=df7.drop([1,57,78,114,140,160,210,262],axis=0)
+df7=df7.drop([1,57,78,114,140,210,221,262],axis=0)
 
 df7['Código IE']=df7['Código IE'].astype(int)
 df7=df7[df7['Código IE']<253]
