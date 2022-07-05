@@ -8,7 +8,7 @@ def load_data(file):
     return pd.read_excel(file)
 
 
-def filtros(datos, col_preguntas, tipo_grafica, categoria=None, nombres_preguntas={}, pregunta_con_numero=True, preguntas_en_ejex=False):
+def filtros(datos, col_preguntas, tipo_grafica, categoria=None, nombres_preguntas={}, pregunta_con_numero=True, preguntas_en_ejex=False,questions_sorted=True):
     if tipo_grafica == "Tabla resumen":
         # TODO: guardar la salida de este checkbox
         if not st.checkbox("Habilitar filtros"):
@@ -32,30 +32,33 @@ def filtros(datos, col_preguntas, tipo_grafica, categoria=None, nombres_pregunta
         lista_agrupadores = list(datos.iloc[:, 1:].columns)
 
     # Se incluyen las preguntas (sean o no divisibles)
-    lista_preguntas = set()
+    if questions_sorted:
+        lista_preguntas = set()
 
-    for preg in lista_preguntas_subpreguntas:
-        try:
-            pos_punto = preg.index(".")
-        except:
-            pos_punto = 0
-        num_preg = preg[:pos_punto]
-        pregunta = nombres_preguntas[num_preg] if num_preg in nombres_preguntas else preg
-        lista_preguntas.add(pregunta)
-    pregunta = st.selectbox("Seleccione la pregunta: ",
-                            sorted(list(lista_preguntas)))
+        for preg in lista_preguntas_subpreguntas:
+            try:
+                pos_punto = preg.index(".")
+            except:
+                pos_punto = 0
+            num_preg = preg[:pos_punto]
+            pregunta = nombres_preguntas[num_preg] if num_preg in nombres_preguntas else preg
+            lista_preguntas.add(pregunta)
 
-    numero = pregunta.split(' ')[0]
+        pregunta = st.selectbox("Seleccione la pregunta: ",sorted(list(lista_preguntas)))
 
-    if numero[:-1].isdigit():
-        lista_subpreguntas = [
-            x for x in datos.columns if x.startswith(numero) and x != pregunta]
+        numero = pregunta.split(' ')[0]
+
+        if numero[:-1].isdigit():
+            lista_subpreguntas = [
+                x for x in datos.columns if x.startswith(numero) and x != pregunta]
+        else:
+            lista_subpreguntas = []
+        if len(lista_subpreguntas) > 0:
+            pregunta = st.selectbox(
+                "Seleccione la subpregunta:", lista_subpreguntas)
     else:
-        lista_subpreguntas = []
-    if len(lista_subpreguntas) > 0:
-        pregunta = st.selectbox(
-            "Seleccione la subpregunta:", lista_subpreguntas)
-
+        pregunta = st.selectbox("Seleccione la pregunta: ",lista_preguntas_subpreguntas)
+            
     try:
         cursos = datos.Grupo.unique()
         cursos.sort()
@@ -73,6 +76,8 @@ def filtros(datos, col_preguntas, tipo_grafica, categoria=None, nombres_pregunta
     elif tipo_grafica == 'Tendencia':
         lista_filtros.append(st.selectbox(
             "Seleccione el eje x", lista_agrupadores))
+    elif tipo_grafica == None:
+        pass
 
     else:
         lista_filtros.append(st.selectbox("Seleccione el eje x", [

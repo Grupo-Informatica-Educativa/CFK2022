@@ -7,6 +7,14 @@ import plotly.graph_objects as go
 from io import BytesIO
 
 from plotly.subplots import make_subplots
+from pages.c_pages.analisis_consolidacion.directivos import app as page_directivos_app
+from pages.c_pages.analisis_consolidacion.estudiantes import app as page_estudiantes_app
+from pages.c_pages.analisis_consolidacion.docentes import app as page_docentes_app
+from pages.c_pages.analisis_consolidacion.lideres import app as page_lideres_app
+from pages.c_pages.analisis_consolidacion.plan import app as page_plan_app
+from pages.c_pages.analisis_consolidacion.equipos import app as page_equipo_app
+
+
 
 config = plots.get_config()
 
@@ -22,48 +30,7 @@ def to_excel(df):
     writer.save()
     processed_data = output.getvalue()
     return processed_data
-
-def app():
-    st.title('Marco de consolidación institucional 2022')
-    marco = pd.read_excel('data/Marco con categorias.xlsx')
-    df_xlsx = to_excel(marco)
-    st.download_button(
-    label="Descargar Resultados por institución",
-    data=df_xlsx,
-    file_name='Consolidado_Marco.xlsx',
-    mime='text/xlsx',key=1)
-
-    marco_m=prepare_data(marco)
-    pl_marco=grouped_global_data(marco_m)
-    zonas_marco = grouped_zone_data(marco_m)
-
-    st.write("### Resultados agrupados por dimensión")
-    plot1(pl_marco)
-    st.write("### Distribución de clasificación en niveles por dimensión")
-    col_wrap = st.slider('Número de gráficas por columna',step=1, min_value=1, max_value=8, value=4 )
-    height = st.slider('Alto de la grafica',step=10, min_value=600, max_value=1500)
-    plot2(pl_marco, col_wrap, height)
-    st.write("Dimensiones 1 a 4")
-    dimensiones1_4 = ['Liderazgo','Currículo', 'Enseñanza',
-    'Dllo profesional']
-    plot4(pl_marco.loc[pl_marco['Dimensión'].isin(dimensiones1_4)], col_wrap, height, dimensiones=dimensiones1_4)
-
-    st.write("Dimensiones 5 a 8")
-    dimensiones5_8 = ['EDI','Ed.Terciaria',
-    'Impacto','Género']
-    plot4(pl_marco.loc[pl_marco['Dimensión'].isin(dimensiones5_8)], col_wrap, height, dimensiones=dimensiones5_8)
-
-
-    st.write("### Distribución de clasificación en niveles por zona")
-    plot3(zonas_marco, col_wrap, height)
-    st.write("Dimensiones 1 a 4 por zona")
-    plot5(zonas_marco.loc[zonas_marco['Dimensión'].isin(dimensiones1_4)], col_wrap, height, dimensiones=dimensiones1_4)
-    st.write("Dimensiones 5 a 8 por zona")
-    plot5(zonas_marco[zonas_marco['Dimensión'].isin(dimensiones5_8)], col_wrap, height, dimensiones=dimensiones5_8)
-
-
-
-
+ 
 def prepare_data(marco):
     marco['Tipo de observación'] = 'Institución'
     marco.loc[marco['Código IE']=='Moda','Tipo de observación'] = "Moda"
@@ -230,7 +197,89 @@ def plot5(zonas_marco, col_wrap=2, height=1000, dimensiones=None):
     fig_z.update_traces(textposition='outside', texttemplate='%{text:,.0%}')
     st.plotly_chart(fig_z, config=config, use_container_width=True, heigth=1200)
 
+def main_app():
+    st.title('Marco de consolidación institucional 2022')
+    marco = pd.read_excel('data/Marco con categorias.xlsx')
+    df_xlsx = to_excel(marco)
+    st.download_button(
+    label="Descargar Resultados por institución",
+    data=df_xlsx,
+    file_name='Consolidado_Marco.xlsx',
+    mime='text/xlsx',key=1)
 
+    marco_m=prepare_data(marco)
+    pl_marco=grouped_global_data(marco_m)
+    zonas_marco = grouped_zone_data(marco_m)
+
+    st.write("### Resultados agrupados por dimensión")
+    plot1(pl_marco)
+    st.write("### Distribución de clasificación en niveles por dimensión")
+    col_wrap = st.slider('Número de gráficas por columna',step=1, min_value=1, max_value=8, value=4 )
+    height = st.slider('Alto de la grafica',step=10, min_value=600, max_value=1500)
+    plot2(pl_marco, col_wrap, height)
+    st.write("Dimensiones 1 a 4")
+    dimensiones1_4 = ['Liderazgo','Currículo', 'Enseñanza',
+    'Dllo profesional']
+    plot4(pl_marco.loc[pl_marco['Dimensión'].isin(dimensiones1_4)], col_wrap, height, dimensiones=dimensiones1_4)
+
+    st.write("Dimensiones 5 a 8")
+    dimensiones5_8 = ['EDI','Ed.Terciaria',
+    'Impacto','Género']
+    plot4(pl_marco.loc[pl_marco['Dimensión'].isin(dimensiones5_8)], col_wrap, height, dimensiones=dimensiones5_8)
+
+
+    st.write("### Distribución de clasificación en niveles por zona")
+    plot3(zonas_marco, col_wrap, height)
+    st.write("Dimensiones 1 a 4 por zona")
+    plot5(zonas_marco.loc[zonas_marco['Dimensión'].isin(dimensiones1_4)], col_wrap, height, dimensiones=dimensiones1_4)
+    st.write("Dimensiones 5 a 8 por zona")
+    plot5(zonas_marco[zonas_marco['Dimensión'].isin(dimensiones5_8)], col_wrap, height, dimensiones=dimensiones5_8)
+
+paginas_array = [
+        {
+            'title': "Principal",
+            'page': main_app
+        },
+        {
+            'title': "Estudiantes",
+            'page': page_estudiantes_app
+        },
+        {
+            'title': "Docentes",
+            'page': page_docentes_app
+        },
+        {
+            'title': "Directivos",
+            'page': page_directivos_app
+        },
+        {
+            'title': "Lideres",
+            'page': page_lideres_app
+        },
+        {
+            'title': "Plan",
+            'page': page_plan_app
+        },
+         {
+            'title': "Equipos",
+            'page': page_equipo_app
+        }
+]
+
+
+
+
+def app():
+    ### Doing this the long way due to streamlit being a massive cunt with format_func 
+    names = []
+    paginas_dict = {}
+
+    for item in paginas_array:
+        names.append(item["title"]) 
+        paginas_dict[item["title"]] = item["page"]
+
+    selected = st.sidebar.radio("Páginas",options=names)
+    paginas_dict[selected]()
 
 if __name__=="__main__":
     app()
