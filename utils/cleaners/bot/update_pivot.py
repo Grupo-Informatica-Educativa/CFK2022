@@ -71,7 +71,7 @@ pivot2=pivot.copy()
 
 pivot2["Porcentaje Cumplimiento Estudiantes"]=(pivot2["Encuesta estudiantes"]/20)*100 #>20
 pivot2["Porcentaje Cumplimiento Docentes"]=(pivot2["Encuesta docentes"]/10)*100 #>10
-pivot2["Porcentaje Cumplimiento Directivos"]=(pivot2["Encuesta Directivos"]/2)*100 #>1
+pivot2["Porcentaje Cumplimiento Directivos"]=(pivot2["Encuesta Directivos"]/1)*100 #>1
 pivot2["Porcentaje Cumplimiento Equipos"]=(pivot2["Encuesta Equipos"]/1)*100
 pivot2["Porcentaje Cumplimiento Planes de Área"]=(pivot2["Encuesta Planes de estudio"]/1)*100
 pivot2["Porcentaje Cumplimiento Líderes"]=(pivot2["Encuesta Líderes"]/1)*100
