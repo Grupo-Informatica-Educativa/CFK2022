@@ -50,7 +50,7 @@ df3[df3.filter(regex='^Comentarios*').columns] = df3[df3.filter(regex='^Comentar
 df3.loc[(df3['N registro'].isin(range(5535,5846)))&(df3['Código IE']==14),'Código IE'] = 13
 df3.loc[(df3['N registro'].isin(range(170,1799)))&(df3['Código IE']==247),'Código IE'] = None
 
-df3=df3.drop([321,389,489,494,538,1694,3758,4116,4361,4367,4440,4442,4446,4449,4460,4465,5101,5633,5837,6205,6301,6578],axis=0)
+df3=df3.drop([321,389,296,489,494,538,1694,3758,4116,4361,4367,4440,4442,4446,4449,4460,4465,5101,5633,5837,6205,6301,6578],axis=0)
 df3=df3.dropna(subset=["Código IE"], inplace=False)
 
 diccionariodocentes={'Nueva Esperanza La Palma ':150}
@@ -85,11 +85,10 @@ df3.loc[(df3['N registro']==3730),'ID'] = 42489542
 df3.loc[(df3['N registro']==1819),'ID'] = 35601960
 df3.loc[(df3['N registro']==1196),'ID'] = 21994344
 df3.loc[(df3['N registro']==955),'ID'] = 31377497
+df3.loc[(df3['N registro']==6853),'ID'] = 52270750
 
 #excepciones a la regla de número de cédula
-df3.loc[(df3['N registro']==296),'ID'] = 22534255
 df3.loc[(df3['N registro']==554),'ID'] = 22534255
-df3.loc[(df3['N registro']==6853),'ID'] = 22534255
 
 df3.loc[(df3['N registro']==6853),'Implementa fichas'] = 'No'
 
@@ -112,9 +111,7 @@ df3['ID']=df3['ID'].astype(float).astype("int64")
 df3= df3[df3['ID'] >= 1000000]
 df3= df3[df3['ID'] < 3000000000]
 
-df3.loc[(df3['N registro']==296),'ID'] = 3146635187
 df3.loc[(df3['N registro']==554),'ID'] = 479159
-df3.loc[(df3['N registro']==6853),'ID'] = 3104790177
 
 new_index = ['N registro', 'Instrumento', 'Fecha','Política de datos', 'Código IE',
              'Tipo ID', 'ID', 'Email', 'Edad', 'Sexo', 'Cabeza de hogar', 'Estado civil',
