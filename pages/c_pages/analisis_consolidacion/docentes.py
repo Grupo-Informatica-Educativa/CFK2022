@@ -33,6 +33,30 @@ files = [
     },
 ]
 
+def stats(datos_og,selected_ies):
+    st.write("**Puntaje promedio IE**")
+    total = len(selected_ies) 
+    cols = st.columns(total)
+    hasPromedio = False
+    if "Promedio" in selected_ies:
+        promedio = datos_og[datos_og['Código IE'] == 'Promedio']['conocimiento'].iloc[0]
+        cols[0].metric("Promedio nacional",promedio)
+        cols.pop(0)
+        selected_ies.remove('Promedio')
+        total -= 1
+        hasPromedio = True
+
+    for (ie,col) in zip(selected_ies,cols):
+        val = round(datos_og[datos_og['Código IE'] == ie]['conocimiento'].mean(),2)
+        if hasPromedio:
+            col.metric("IE "+str(ie),f"{val} %",f"{round(val-promedio,2)}%")
+        else:
+            col.metric("IE "+str(ie),f"{val} %" )
+
+@st.experimental_memo
+def fetch_data(file):
+    return read_data_xlsx(file)
+
 def app():
     # Nombre de la columna cuyos datos son únicos para cada respuesta
     columna_unica = 'ID'
@@ -49,14 +73,14 @@ def app():
     
 
     if file:
-        datos = read_data_xlsx(file)
+        datos = fetch_data(file)
         #datos = datos.rename(columns={'Tipo':'Instrumento'})
         #datos = datos[datos['4. Género'].isin(['Femenino','Masculino'])]
 
         list_of_ie = datos['Código IE'].unique()
         list_of_ie = filter(lambda x: type(x) is int, list_of_ie)
-        selected_ies = st.multiselect("Filtrar por código de institución educativa",options=sorted(list_of_ie),help="Por defecto se muestran resultados de todas las IE")
-        
+        selected_ies = st.multiselect("Filtrar por código de institución educativa",options=sorted(list_of_ie)+["Promedio"],help="Por defecto se muestran resultados de todas las IE")
+        datos_og = datos.copy()
         if len(selected_ies)  > 0:
             datos = datos[datos['Código IE'].isin(selected_ies)]
 
@@ -87,6 +111,8 @@ def app():
         category_orders = categories_order(
             set(datos[pregunta]), pregunta, orden_grupos)
 
+        if categoria['title'] == 'Conocimientos' and len(selected_ies) > 0 :
+            stats(datos_og,selected_ies)
 
         if lista_grupo != []:
             datos = datos.loc[datos.Grupo.isin(lista_grupo)]
