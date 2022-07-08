@@ -50,7 +50,7 @@ def app():
                              format_func=lambda itemArray: itemArray['title'])
     file = categoria['file']
     
-    col_preguntas = 0
+    col_preguntas = 17
 
     
 
