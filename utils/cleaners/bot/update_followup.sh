@@ -12,6 +12,7 @@ python3 ~/docker-compose/streamlit/CFK2022/utils/cleaners/bot/update_equipos.py
 python3 ~/docker-compose/streamlit/CFK2022/utils/cleaners/bot/update_pivot.py
 
 python3 ~/docker-compose/streamlit/CFK2022/utils/cleaners/bot/calificar_doc.py
+python3 ~/docker-compose/streamlit/CFK2022/utils/cleaners/bot/calificar_est.py
 
 cd ~/mariana
 ./gdrive sync upload ~/docker-compose/streamlit/CFK2022/data/descargables/ 10-vecqL2rtGRXkZ4H6xkI4DY1Z5wr7fw

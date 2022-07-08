@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-import pickle
 
 import pandas as pd
 import numpy as np
@@ -126,7 +125,7 @@ media['N registro'] = "Promedio"
 doc_escalas = pd.concat([doc_escalas,media],ignore_index=True)
 doc_escalas = doc_escalas.fillna(doc_escalas.mode().iloc[0])
 print('Validar promedio: ', doc_escalas.tail())
-print("Shape de docentes y escalas: ", doc_escalas)
+print("Shape de docentes y escalas: ", doc_escalas.shape)
 
 ruta_pagina_doc = rutagit/'data/c_pages/consolidacion_pre/Docentes'
 

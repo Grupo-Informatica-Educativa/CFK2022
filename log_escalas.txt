@@ -1,33 +1,19 @@
-col genero  ['8.1 Es preferible que las mujeres enseñen ciencias sociales y los hombres ciencias exactas.', '8.2 Es normal que la mayoría de ingenieros mecánicos sean varones porque los hombres son mejores para los números.', '8.3 Por su esencia una mujer tiene mejor desempeño en un proyecto de alto impacto social que en un proyecto de robótica industrial.', '8.4 Los hombres son mejores para la tecnología que las mujeres.', '8.5 Las mujeres tienen mayores habilidades para proyectos sociales que tecnológicos.', '8.6 Los grandes aportes en la computación han sido hechos por hombres.', '8.7 Que la mayoría de mujeres no opte por áreas exactas es simplemente una cuestión de preferencias.', '8.8 Que la mayoría de personas en artes y humanidades sean mujeres es muestra de su sensibilidad.', '8.9 Es natural que los hombres sean buenos para los números y las mujeres para las letras.', '8.10 Los hombres son muy ágiles tomando decisiones importantes.', '8.11 Las niñas son más ordenadas que los niños.', '8.12 Muchas mujeres se caracterizan por una pureza que pocos hombres poseen.', '8.13 Las mujeres deben ser queridas y protegidas por los hombres.', '8.14 Todo hombre debe tener una mujer a quien amar.', '8.15 El hombre está incompleto sin la mujer.', '8.16 Las mujeres en comparación con los hombres, tienden a tener un sentido más refinado de la cultura y el buen gusto.']
-Shape de docentes:  (6738, 91)
-Info de resultados:  count    6738.000000
-mean        1.983229
-std         1.318456
-min         0.000000
-25%         1.000000
-50%         2.000000
-75%         3.000000
-max         5.000000
-dtype: float64
-Validar promedio:       N registro        Instrumento  Fecha Política de datos Código IE  ... sexismoBenev estereoBenev autoeficaciaPC  autoeficaciaTec sentidoComunidad
-6734       7008  Encuesta docentes  21/06                Sí       192  ...    39.228080    41.892956      82.975880        81.030332        73.644412
-6735       7009  Encuesta docentes  21/06                Sí       192  ...    77.911512    75.009839      80.371578        75.000000        75.000000
-6736       7010  Encuesta docentes  21/06                Sí       195  ...    13.286713    25.000000      41.522164        31.030332        75.000000
-6737       7011  Encuesta docentes  21/06                Sí       195  ...     0.000000    16.214089     100.000000        91.706789        48.773515
-6738   Promedio  Encuesta docentes  03/05                Sí  Promedio  ...    27.457445    40.719809      58.801783        61.433740        60.793413
+columnas género est:  ['5.1 ¿Quién crees que ganará el concurso de matemáticas?', '5.2 ¿Quién crees que es capitán del barco?', '5.3 ¿Quién es la persona excluida de la construcción de la casa de madera?', '5.4 ¿Quién crees que es el personaje que está sentado y esperando junto a la ventana?', '5.5 ¿Quién es la persona que trabaja en educación?', '5.6 ¿Quién crees que es la persona que prefiere estudiar ingeniería?']
+Head de estudiantes numerico:    N registro  ...  3.10 Siento que puedo utilizar la computación para resolver problemas simples
+0          1  ...                                                  3                            
+1          2  ...                                                  5                            
+2          3  ...                                                  2                            
+3          4  ...                                                  5                            
+4          5  ...                                                  3                            
 
-[5 rows x 100 columns]
-Shape de docentes y escalas:       N registro        Instrumento  Fecha Política de datos Código IE  ... sexismoBenev estereoBenev autoeficaciaPC  autoeficaciaTec sentidoComunidad
-0             4  Encuesta docentes  18/04                Sí       206  ...    50.000000    50.000000      61.290743        66.706789        64.597934
-1             5  Encuesta docentes  18/04                Sí       206  ...    30.392684    16.214089      44.256845        66.706789        62.799705
-2             6  Encuesta docentes  18/04                Sí       206  ...     0.000000     0.000000      47.294654        28.767453        55.763556
-3             7  Encuesta docentes  18/04                Sí       206  ...    25.000000    25.000000      16.958931         8.293211         6.335301
-4             8  Encuesta docentes  18/04                Sí       206  ...    49.536041    41.214089      38.784224        62.060664        60.531169
-...         ...                ...    ...               ...       ...  ...          ...          ...            ...              ...              ...
-6734       7008  Encuesta docentes  21/06                Sí       192  ...    39.228080    41.892956      82.975880        81.030332        73.644412
-6735       7009  Encuesta docentes  21/06                Sí       192  ...    77.911512    75.009839      80.371578        75.000000        75.000000
-6736       7010  Encuesta docentes  21/06                Sí       195  ...    13.286713    25.000000      41.522164        31.030332        75.000000
-6737       7011  Encuesta docentes  21/06                Sí       195  ...     0.000000    16.214089     100.000000        91.706789        48.773515
-6738   Promedio  Encuesta docentes  03/05                Sí  Promedio  ...    27.457445    40.719809      58.801783        61.433740        60.793413
+[5 rows x 45 columns]
+shape de estudiantes completo  (22982, 80)
+Validar promedio:        N registro Deseo participar en el estudio Código IE  ...  medioambiente Puntaje interes Interesado en tecnologia
+22978      D2013                             Sí       134  ...      69.184322        0.000000                 0.000000
+22979      D2014                             Sí       134  ...      93.241525        0.000000                 0.000000
+22980      D2015                             Sí       134  ...      56.281780        0.000000                 0.000000
+22981      D2016                             Sí       134  ...      82.436441        0.000000                 0.000000
+22982   Promedio                             Sí  Promedio  ...      74.319049       32.323122                 0.472979
 
-[6739 rows x 100 columns]
+[5 rows x 80 columns]
+Shape de docentes y escalas:  (22983, 80)
