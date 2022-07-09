@@ -78,13 +78,26 @@ def app():
             hover_data={'Color IE': False,'Código IE':True,'Nivel':True, 'Descripción':True},
             range_r=['-1','6'], markers=True, render_mode='svg',
             color_discrete_sequence=px.colors.qualitative.Set2,
-            height=600)
+            height=600,
+            template='plotly_white')
             if not separar:
                 if st.checkbox('Ver solo lineas'):
                     fig.update_traces(fill=None)
                 else:
                     fig.update_traces(fill='toself')
-                st.plotly_chart(fig, config=config)
+
+
+            fig.update_polars(
+                   radialaxis_gridcolor="#b0cbf8",
+                   radialaxis_griddash="dot",
+                   radialaxis_gridwidth=0.2,
+                                    radialaxis_linecolor="#b0cbf8",
+                   radialaxis_tickcolor="#b0cbf8",
+                angularaxis_gridcolor="#b0cbf8",
+            angularaxis_gridwidth=0.2)
+                #fig.update_xaxes(gridcolor="#b0cbf8")
+
+            st.plotly_chart(fig, config=config)
 
 
         with st.container():
@@ -92,7 +105,6 @@ def app():
             spfig = make_subplots(
             cols=2,rows=filas,
             specs=[[{"type": "polar"}]*2]*filas,
-            subplot_titles=["IE. " + str(ie) for ie in IE],
             vertical_spacing=0.2, horizontal_spacing=0.2
         )
         # use base go capability and copy wanted parameters from px trace
@@ -121,13 +133,15 @@ def app():
                                 "marker": {
                                     **fig.to_dict()["data"][0]["marker"],
                                     "color": pl_marcot["Color IE"]},
+
                                 },
                             },
-                            fill = "toself"
+                            fill = "toself",
                     ),
 
                     row=fila,
                     col=col,
+
                 )
                 #spfig.update_layout(polar=dict(radialaxis = dict(visible = False,
                 # range = [0, 6])),

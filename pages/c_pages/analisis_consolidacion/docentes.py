@@ -4,95 +4,115 @@ from st_aggrid import AgGrid, GridOptionsBuilder
 from utils.chart_funcs import *
 from utils.helper_funcs import *
 from utils.answer_funcs import *
-from utils.read_data import read_data_xlsx
+from utils.read_data import read_data, read_data_xlsx
 
-preguntas_cols = [
-    "Un algoritmo es:",
-    "¿Para qué sirven los algoritmos?",
-    "Un bucle es:",
-    '¿Cuál es el error conceptual de Tim?',
-    '¿Cuál es el error conceptual de Ana?'
+
+files = [
+    {
+        "title": "Apoyo",
+        "file":  "docentes2022_consolidacion_apoyo",
+    },
+    {
+        "title": "Conocimientos",
+        "file":  "docentes2022_consolidacion_conocimiento",
+        "respuestas": {
+            "Un algoritmo es:":"Una secuencia lógica de pasos para realizar una tarea.",
+            "¿Para qué sirven los algoritmos?":"Para planificar la solución a un problema",
+            "Un bucle es:":"Un conjunto de instrucciones que se ejecuta mientras se cumpla una condición",
+            '¿Cuál es el error conceptual de Tim?':"Cree que, si la condición se cumple, todo lo que sigue se va a ejecutar",
+            '¿Cuál es el error conceptual de Ana?':"No tiene claro el concepto de bucle y por eso no logra identificar que A y C hacen lo mismo"
+        }
+    },
+    {
+        "title": "Autoeficacia",
+        "file":  "docentes2022_consolidacion_autoeficacia",
+    },
+        {
+        "title": "Genero",
+        "file":  "docentes2022_consolidacion_genero",
+    },
 ]
 
-respuestas_correctas_docentes = {
-    "Un algoritmo es:":"Una secuencia lógica de pasos para realizar una tarea.",
-    "¿Para qué sirven los algoritmos?":"Para planificar la solución a un problema",
-    "Un bucle es:":"Un conjunto de instrucciones que se ejecuta mientras se cumpla una condición",
-    '¿Cuál es el error conceptual de Tim?':"Cree que, si la condición se cumple, todo lo que sigue se va a ejecutar",
-    '¿Cuál es el error conceptual de Ana?':"No tiene claro el concepto de bucle y por eso no logra identificar que A y C hacen lo mismo"
-}
+def stats(datos_og,selected_ies):
+    st.write("**Puntaje promedio IE**")
+    total = len(selected_ies) 
+    cols = st.columns(total)
+    hasPromedio = False
+    if "Promedio" in selected_ies:
+        promedio = datos_og[datos_og['Código IE'] == 'Promedio']['conocimiento'].iloc[0]
+        cols[0].metric("Promedio nacional",promedio)
+        cols.pop(0)
+        selected_ies.remove('Promedio')
+        total -= 1
+        hasPromedio = True
 
-caracterizacion_cols = [
-    'N registro',
-    'Instrumento',
-    'Fecha',
-    'Política de datos',
-    'Código IE',
-    'Tipo ID',
-    'ID',
-    'Email',
-    'Edad',
-    'Sexo',
-    'Cabeza de hogar',
-    'Estado civil',
-    'Líder comunitario',
-    'Formado CFK',
-    'Implementa fichas',
-    'Formado tecnología e informática'
-]
+    for (ie,col) in zip(selected_ies,cols):
+        val = round(datos_og[datos_og['Código IE'] == ie]['conocimiento'].mean(),2)
+        if hasPromedio:
+            col.metric("IE "+str(ie),f"{val} %",f"{round(val-promedio,2)}%")
+        else:
+            col.metric("IE "+str(ie),f"{val} %" )
 
-
-
-@st.cache()
-def fetch():
-    data = read_data_xlsx("docentes2022")
-    other_cols = []
-    for col in data.columns:
-        if col not in caracterizacion_cols:
-            other_cols.append(col)
-    data = data[caracterizacion_cols + sorted(other_cols)]
-    return data.copy()
+@st.experimental_memo
+def fetch_data(file):
+    return read_data_xlsx(file)
 
 def app():
+    # Nombre de la columna cuyos datos son únicos para cada respuesta
+    columna_unica = 'ID'
     
-    col_preguntas = caracterizacion_cols.__len__()
-    columna_unica = 'Código IE'
-    datos = fetch()
-    list_of_ie = datos[columna_unica].unique()
-    selected_ies = st.multiselect("Filtrar por código de institución educativa",options=sorted(list_of_ie),help="Por defecto se muestran resultados de todas las IE")
-    
-    if len(selected_ies)  > 0:
-        datos = datos[datos[columna_unica].isin(selected_ies)]
-  
     chart_type = st.radio("Tipo de visualización ",
                           ("Barras", "Dispersión", "Cajas", "Tendencia", "Tabla resumen"))
 
+    categoria = st.selectbox("Seleccione la categoría", files,
+                             format_func=lambda itemArray: itemArray['title'])
+    file = categoria['file']
     
-    categoria = "Conocimientos"
+    col_preguntas = 15
 
-    if datos is not None:
+    
+
+    if file:
+        datos = fetch_data(file)
+        #datos = datos.rename(columns={'Tipo':'Instrumento'})
+        #datos = datos[datos['4. Género'].isin(['Femenino','Masculino'])]
+
+        list_of_ie = datos['Código IE'].unique()
+        list_of_ie = filter(lambda x: type(x) is int, list_of_ie)
+        selected_ies = st.multiselect("Filtrar por código de institución educativa",options=sorted(list_of_ie)+["Promedio"],help="Por defecto se muestran resultados de todas las IE")
+        datos_og = datos.copy()
+        if len(selected_ies)  > 0:
+            datos = datos[datos['Código IE'].isin(selected_ies)]
+
         pregunta, filtros_def, indices, lista_agrupadores, lista_grupo = filtros(
-            datos, col_preguntas, chart_type, categoria, nombres_preguntas={},questions_sorted=False)
+            datos, col_preguntas, chart_type, categoria, nombres_preguntas={})
+
 
         ejex, color, columna, fila = filtros_def
 
+        
         hasAnswer = False
 
-        if pregunta in respuestas_correctas_docentes:
-            resp_correct = respuestas_correctas_docentes[pregunta]
-            datos["Respuesta"] = datos[pregunta].apply(lambda x: "Correcto" if x == resp_correct else "Incorrecto")
-            hasAnswer = True
-            color = "Respuesta"
-
+        if categoria['title'] == 'Conocimientos':
+            if pregunta in categoria['respuestas']:
+                resp_correct = categoria['respuestas'][pregunta]
+                datos["Respuesta"] = datos[pregunta].apply(lambda x: "Correcto" if x == resp_correct else "Incorrecto")
+                hasAnswer = True
+                color = "Respuesta"
         if chart_type != "Tabla resumen":
             height = st.slider(
                 "Ajuste el tamaño vertical de la gráfica", 500, 1000)
+
+        if color == "Eficacia":
+            datos = graph_answer(datos, pregunta, categoria)
 
         orden_grupos = ["I"+str(x) for x in range(87)]
 
         category_orders = categories_order(
             set(datos[pregunta]), pregunta, orden_grupos)
 
+        if categoria['title'] == 'Conocimientos' and len(selected_ies) > 0 :
+            stats(datos_og,selected_ies)
 
         if lista_grupo != []:
             datos = datos.loc[datos.Grupo.isin(lista_grupo)]
@@ -110,7 +130,10 @@ def app():
             filters_off = (pregunta == datos.columns[col_preguntas] and filtros_def == [None]*4
                            and indices == None and lista_agrupadores == [])
 
-        
+            if filters_off:
+                df = datos.iloc[:, 1:]  # Don't show ids
+            else:
+                df = pivot_data(datos, indices, columna_unica)
 
             gb = GridOptionsBuilder.from_dataframe(df)
             gb.configure_default_column(wrapText=True, autoHeight=True)

@@ -22,7 +22,17 @@ def read_data_xlsx(file,number=None):
     file_dict  = {'observaciones_gen': f'data/c_pages/observaciones/datasets/gen{number}.xlsx',
                   "integrados_formacion": "data/integradosFormacion.xlsx",
                   "directivos2022": "data/descargables/DirectivosCFK.xlsx",
-                  "estudiantes2022": "data/descargables/EstudiantesCFK.xlsx",
+                  "estudiantes2022_consolidacion_autoeficacia": "data/c_pages/consolidacion_pre/Estudiantes/Autoeficacia.xlsx",
+                  "estudiantes2022_consolidacion_conocimiento": "data/c_pages/consolidacion_pre/Estudiantes/Conocimiento.xlsx",
+                  "estudiantes2022_consolidacion_genero": "data/c_pages/consolidacion_pre/Estudiantes/Genero.xlsx",
+                  "estudiantes2022_consolidacion_medioambiente": "data/c_pages/consolidacion_pre/Estudiantes/Medioambiente.xlsx",
+
+                  "docentes2022_consolidacion_apoyo": "data/c_pages/consolidacion_pre/Docentes/Apoyo.xlsx",
+                  "docentes2022_consolidacion_autoeficacia": "data/c_pages/consolidacion_pre/Docentes/Autoeficacia.xlsx",
+                  "docentes2022_consolidacion_conocimiento": "data/c_pages/consolidacion_pre/Docentes/Conocimiento.xlsx",
+                  "docentes2022_consolidacion_genero": "data/c_pages/consolidacion_pre/Docentes/Genero.xlsx",
+
+
                   "docentes2022": "data/descargables/DocentesCFK.xlsx",
                   "lideres2022": "data/descargables/LideresCFK.xlsx",
                   "plan2022": "data/descargables/PlanCFK.xlsx",
