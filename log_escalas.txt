@@ -1,19 +1,19 @@
 columnas género est:  ['5.1 ¿Quién crees que ganará el concurso de matemáticas?', '5.2 ¿Quién crees que es capitán del barco?', '5.3 ¿Quién es la persona excluida de la construcción de la casa de madera?', '5.4 ¿Quién crees que es el personaje que está sentado y esperando junto a la ventana?', '5.5 ¿Quién es la persona que trabaja en educación?', '5.6 ¿Quién crees que es la persona que prefiere estudiar ingeniería?']
-Head de estudiantes numerico:    N registro  Edad  ... 3.9 Siento que puedo automatizar tareas a través de la programación 3.10 Siento que puedo utilizar la computación para resolver problemas simples
-0          1    14  ...                                                  2                                                                   3                           
-1          2    16  ...                                                  5                                                                   5                           
-2          3    14  ...                                                  2                                                                   2                           
-3          4    15  ...                                                  3                                                                   5                           
-4          5    14  ...                                                  3                                                                   3                           
+Head de estudiantes numerico:    N registro  ...  3.10 Siento que puedo utilizar la computación para resolver problemas simples
+0          1  ...                                                  3                            
+1          2  ...                                                  5                            
+2          3  ...                                                  2                            
+3          4  ...                                                  5                            
+4          5  ...                                                  3                            
 
 [5 rows x 45 columns]
 shape de estudiantes completo  (22983, 80)
-Validar promedio:        N registro Deseo participar en el estudio Código IE     Grupo  ... autoeficaciaProg medioambiente Puntaje interes  Interesado en tecnologia
-22979      D2013                             Sí       134  6.000000  ...        58.557875     69.184322        0.000000                  0.000000
-22980      D2014                             Sí       134  6.000000  ...        88.206831     93.241525        0.000000                  0.000000
-22981      D2015                             Sí       134  6.000000  ...        80.749526     56.281780        0.000000                  0.000000
-22982      D2016                             Sí       134  6.000000  ...        77.495256     82.436441        0.000000                  0.000000
-22983   Promedio                             Sí  Promedio  2.745464  ...        61.925682     74.318952       32.326067                  0.473002
+Validar promedio:        N registro  ... Interesado en tecnologia
+22979      D2013  ...                 0.000000
+22980      D2014  ...                 0.000000
+22981      D2015  ...                 0.000000
+22982      D2016  ...                 0.000000
+22983   Promedio  ...                 0.473002
 
 [5 rows x 80 columns]
 Shape de docentes y escalas:  (22984, 80)
