@@ -74,7 +74,7 @@ def app():
                              format_func=lambda itemArray: itemArray['title'])
     file = categoria['file']
     
-    col_preguntas = 17
+    col_preguntas = 17 # Aqui ponemos donde comienza la división si es que hay  (caracterización)
 
     
 
