@@ -7,13 +7,13 @@ Head de estudiantes numerico:    N registro  ...  3.10 Siento que puedo utilizar
 4          5  ...                                                  3                            
 
 [5 rows x 45 columns]
-shape de estudiantes completo  (22983, 80)
+shape de estudiantes completo  (22984, 80)
 Validar promedio:        N registro  ... Interesado en tecnologia
-22979      D2013  ...                 0.000000
-22980      D2014  ...                 0.000000
-22981      D2015  ...                 0.000000
-22982      D2016  ...                 0.000000
-22983   Promedio  ...                 0.473002
+22980      D2013  ...                 0.000000
+22981      D2014  ...                 0.000000
+22982      D2015  ...                 0.000000
+22983      D2016  ...                 0.000000
+22984   Promedio  ...                 0.473025
 
 [5 rows x 80 columns]
-Shape de docentes y escalas:  (22984, 80)
+Shape de docentes y escalas:  (22985, 80)
