@@ -1,8 +1,8 @@
-686    06/10
 687    06/11
 688    16/06
 689    17/06
 690    17/06
+691    22/07
 Name: Fecha, dtype: object
 Cantidad de códigos IE después de filtrar mayor y menor  252
 Códigos que se mantienen:  ['206.0' '235.0' '32.0' '211.0' '21.0' '198.0' '166.0' '92.0' '66.0' '4.0'
@@ -34,4 +34,4 @@ Códigos que se mantienen:  ['206.0' '235.0' '32.0' '211.0' '21.0' '198.0' '166.
  '192.0' '134.0' '25.0' '38.0' '33.0' '124.0' '122.0' '125.0' '40.0'
  '143.0' '195.0']
 Publicados  (659, 42)
-Eliminados  (32, 42)
+Eliminados  (33, 42)
